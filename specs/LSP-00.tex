@@ -1,0 +1,53 @@
+\subsection{LSP-00: Portal and API Aspect Deployment of a Wide-Area Dataset}
+\label{lsp-00}
+
+\subsubsection{Objective}
+
+This test demonstrates the deployment of the Portal and API Aspects of the LSST Science Platform to serve all-sky precursor data, including catalogs totaling of order 50-100 billion rows, on the Prototype Data Access Center.
+The Prototype Data Access Center relies on a set of hardware and a network environment at NCSA that are part of the Integration Cluster.
+
+The chosen datasets for LSP-00 are from the WISE and NEOWISE missions, 
+including all the major catalog data tables from the AllWISE data release, 
+as well as the single-epoch source photometry from the original, pre-hibernation mission and from the ``warm'' post-reactivation operations period.
+The number of years of post-reactivation data included in the milestone test will be determined by the availability of bulk downloads from IRSA and balancing of the time required to perform the database ingest with other required activities of the WBS 1.02C.06 Data Access group.
+
+LSP-00 also continues the use of the SDSS Stripe 82 (2013 LSST reprocessing) dataset that was used for the earliest Prototype Data Access Center demonstrations [ref: test report].
+
+This test will not include service of the WISE image data in PDAC, as this would require substantial effort to generate a camera model and Butler interface.  
+The SDSS data will continue to be used to demonstrate capabilities related to image access.
+
+This test will demonstrate:
+
+\begin{itemize}
+\item{Service of a scientifically meaningful all-sky catalog dataset of 50-100 billion rows in Qserv;}
+\item{Access to queries against that dataset via a prototype version of the DAX dbserv Web API;}
+\item{Interactive access to the data via a prototype of the the Portal Aspect user interface;}
+\item{Visualization and exploration of catalog query results in the Portal Aspect;}
+\item{Service of image metadata and images via the DAX dbserv and imgserv Web APIs;}
+\item{Provision of an image cutout service;}
+\item{Visualization of retrieved images and cutouts;}
+\item{Linkage of catalog and image data in the Portal Aspect;}
+\item{Linkage of related catalog data in the Portal Aspect; and}
+\item{Download of query results from the Portal Aspect.}
+\end{itemize}
+
+Note that this test specification addresses only functional requirements, and not performance requirements or user-facing performance KPMs.
+These will be addressed in subsequent tests.
+However, the performance of representative operations will be recorded as part of the test report and will be compared, where feasible, with the performance of comparable queries on the WISE and NEOWISE data in the IRSA archive.
+
+\subsubsection{Test case identification}
+
+\begin{longtable} {|p{0.4\textwidth}|p{0.6\textwidth}|}\hline
+\textbf{Test Case}  & \textbf{Description} \\\hline
+
+\hyperref[lsp-00-00]{LSP-00-00} & Verification of the presence of the expected WISE data \\\hline
+\hyperref[lsp-00-05]{LSP-00-05} & Demonstration of low-volume and/or indexed queries against the WISE data via API \\\hline
+\hyperref[lsp-00-10]{LSP-00-10} & Demonstration of table-scan queries against the WISE data via API \\\hline
+\hyperref[lsp-00-15]{LSP-00-15} & Execution of basic catalog queries in the Portal \\\hline
+\hyperref[lsp-00-20]{LSP-00-20} & Operation of the UI for interaction with tabular data results \\\hline
+\hyperref[lsp-00-25]{LSP-00-25} & Image metadata, image, and image cutout queries \\\hline
+\hyperref[lsp-00-30]{LSP-00-30} & Linkage of catalog query results with associated images \\\hline
+\hyperref[lsp-00-35]{LSP-00-35} & Linkage of catalog query results to related catalog data \\\hline
+% \hyperref[lsp-00-]{LSP-00-} &  \\\hline
+
+\end{longtable}
