@@ -1,0 +1,88 @@
+\subsection{LSP-00-10: Demonstration of table-scan queries against the WISE data via API}
+\label{lsp-00-10}
+
+\subsubsection{Requirements}
+
+???
+
+\subsubsection{Test items}
+
+This test exercises a range of table-scan-type queries against the WISE data.
+Queries shall be performed against the Object-like table, the Forced-Source-like table, and against at least one of the Source-like tables.
+A range of query result sizes should be exercised, and shall include at least:
+
+\begin{itemize}
+
+  \item{Queries returning a very small amount of data, fewer than 100 rows, and a small subset of columns;}
+  \item{Queries matching a scaled version of the ``low volume'' query definition from the Data Access White Paper; and}
+  \item{Queries matching a scaled version of the ``high volume'' query definition from the Data Access White Paper.}
+
+\end{itemize}
+
+The scaling of the ``low volume'' query definition (``50 simultaneous queries against 10 million objects in the catalog, response 10 sec, result data set: ~0.1 GB'') is based on a assumption that the ``against 10 million objects'' is applied against the O(20 billion) rows anticipated in the Object table,
+and that it contemplates reducing the scope of any non-indexed portion of the WHERE clause of the query to that fraction of one in $\sim 2000$ of the rows in the table.
+Scaled to the $\sim 750$ million rows in the WISE Object-like (AllWISE ``Source Catalog'') table, this would be $\sim 375,000$ rows.
+Similarly scaling the result set size suggests a result set of $\sim 3.7$ MB.
+
+Successful completion will be evaluated based on the system's ability to perform the query at all and to return a result with characteristics corresponding to plausible estimates or extrapolations from scaled-down queries against the IRSA WISE archive.
+Exact verification may not be realistic because of the lack of a system capable of performing the equivalent queries in the production WISE archive.
+
+At a later date it may be possible to attempt equivalent queries using a non-database system and verify the exact correspondence of results, but the non-database system does not presently exist\footnote{An example of such a system might involve the conversion of one or more WISE all-sky tables to a columnar file-oriented format such as Parquet, and the implementation of queries in Apache Spark or an equivalent system.}.
+
+\subsubsection{Intercase dependencies}
+
+This case depends on the verification by LSP-00-00 of the accessibility of the tables at all.
+
+\subsubsection{Environmental needs}
+
+The test must, and can only, be carried out on the PDAC instance of the Science Platform.
+It relies on the availability of the IRSA deployment of the WISE and ALLWISE data to use in order to perform comparisons on content and performance.
+
+The test may be performed from any client computer on the public Internet.
+The computer used, and the network connection involved, shall be documented in the test report.
+
+The test requires access via the NCSA VPN from the client to the PDAC data services 
+(which means that the performance of the VPN is a contributor to the performance observed).
+
+The client computer must have an up-to-date mainstream Web browser, the identity of which shall be documented in the test report.
+
+The tests will be captured in a Jupyter notebook run locally on the client computer, so the client system must have a recent production version of Jupyter installed.
+(The test does \emph{not} depend on features of JupyterLab in any way, only the standard Notebook.)
+
+
+\subsubsection{Input specification}
+
+This test requires the presence of the following WISE tables on the PDAC systems:
+
+\begin{itemize}
+
+  \item{The Source Catalog table from the AllWISE data release;}
+  \item{The Multi-Epoch Photometry (MEP) table from the AllWISE data release;}
+
+\end{itemize}
+
+The results are assumed to apply to the other tables in the PDAC WISE dataset, all of which are comparable or smaller in size.
+
+\subsubsection{Output specification}
+
+The output will consist of:
+
+\begin{itemize}
+  \item{A Jupyter notebook of the API Aspect tests performed; and}
+  \item{A collection of the files that resulted from data download actions performed as part of the tests.}
+\end{itemize}
+
+
+\subsubsection{Procedure}
+
+\begin{enumerate}
+
+  \item{Clone the Github lsst/LDM-540 package.  Record the SHA1 for the version of the package to be used.  [Additional procedures, e.g., tagging, are still to be confirmed.]}
+  \item{Log host and networking details of the client host to be used.
+ Log the Web browser version to be used.
+ Log the version of Jupyter to be used.}
+  \item{Establish VPN connectivity to the PDAC at NCSA.}
+  \item{Execute the LDM-540/test\textunderscore scripts/lsp-00-10.ipynb notebook to perform the tests listed above against the API Aspect.}
+  \item{Preserve any outputs of the script that are in the form of files outside the notebook.}
+
+\end{enumerate}

@@ -1,0 +1,80 @@
+\subsection{LSP-00-05: Demonstration of low-volume and/or indexed queries against the WISE data via API}
+\label{lsp-00-05}
+
+\subsubsection{Requirements}
+
+???
+
+\subsubsection{Test items}
+
+This test will check that the following low-volume queries can be performed against the WISE catalogs via the API Aspect.
+
+\begin{itemize}
+
+  \item{Small cone searches against the Object-like, ForcedSource-like, and Source-like tables; and}
+  \item{Searches by exact ID matching against the Object-like, ForcedSource-like, and Source-like tables.}
+
+\end{itemize}
+
+The tests will record their performance for comparison against similar queries in the production WISE archive at IRSA,
+and the returned data will be compared to that for similar queries against the API services provided by IRSA.
+
+\subsubsection{Intercase dependencies}
+
+Several of the queries performed under LSP-00-15, from the Portal Aspect, cover the same ground and will depend on their successful completion under this test case.
+
+\subsubsection{Environmental needs}
+
+The test must, and can only, be carried out on the PDAC instance of the Science Platform.
+It relies on the availability of the IRSA deployment of the WISE and ALLWISE data to use in order to perform comparisons on content and performance.
+
+The test may be performed from any client computer on the public Internet.
+The computer used, and the network connection involved, shall be documented in the test report.
+
+The test requires access via the NCSA VPN from the client to the PDAC data services 
+(which means that the performance of the VPN is a contributor to the performance observed).
+
+The client computer must have an up-to-date mainstream Web browser, the identity of which shall be documented in the test report.
+
+The tests will be captured in a Jupyter notebook run locally on the client computer, so the client system must have a recent production version of Jupyter installed.
+(The test does \emph{not} depend on features of JupyterLab in any way, only the standard Notebook.)
+
+
+\subsubsection{Input specification}
+
+The test requires, the presence of the following WISE tables on the PDAC systems:
+
+\begin{itemize}
+
+  \item{The Source Catalog table from the AllWISE data release;}
+  \item{The Multi-Epoch Photometry (MEP) table from the AllWISE data release;}
+  \item{The Single-exposure Source Database from the WISE All-Sky data release (i.e., from the full-cryo 4-band phase of the original mission); and}
+  \item{The Single-exposure Source Database from the NEOWISE Reactivation 2015 data release (i.e., from the first year of the 2-band post-reactivation phase of the mission).}
+\end{itemize}
+
+(The 3-band and 2-band Single-exposure Source Database tables from the pre-hibernation mission are not queried in this test case, for the sake of simplicity.
+These tables are smaller than the two Single-exposure Source Database tables that are included in the test case.)
+
+\subsubsection{Output specification}
+
+The output will consist of:
+
+\begin{itemize}
+  \item{A Jupyter notebook of the API Aspect tests performed; and}
+  \item{A collection of the files that resulted from data download actions performed as part of the tests.}
+\end{itemize}
+
+
+\subsubsection{Procedure}
+
+\begin{enumerate}
+
+  \item{Clone the Github lsst/LDM-540 package.  Record the SHA1 for the version of the package to be used.  [Additional procedures, e.g., tagging, are still to be confirmed.]}
+  \item{Log host and networking details of the client host to be used.
+ Log the Web browser version to be used.
+ Log the version of Jupyter to be used.}
+  \item{Establish VPN connectivity to the PDAC at NCSA.}
+  \item{Execute the LDM-540/test\textunderscore scripts/lsp-00-05.ipynb notebook to perform the tests listed above against the API Aspect.}
+  \item{Preserve any outputs of the script that are in the form of files outside the notebook.}
+
+\end{enumerate}

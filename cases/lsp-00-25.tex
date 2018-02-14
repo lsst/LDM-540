@@ -1,0 +1,94 @@
+\subsection{LSP-00-25: Image metadata, image, and image cutout queries}
+\label{lsp-00-25}
+
+\subsubsection{Requirements}
+
+???
+
+\subsubsection{Test items}
+
+This test will check basic functionality related to image search and retrieval, via both the API Aspect and the Portal Aspect of the LSST Science Platform:
+
+\begin{itemize}
+
+  \item{Searching for images containing a specified point;}
+  \item{Displaying selected images;}
+  \item{Obtaining and displaying image cutouts at a specified point; and}
+  \item{Downloading selected images and image cutouts.}
+
+\end{itemize}
+
+Because of limited staff resources, these tests will be based on the original PDAC dataset, the LSST Summer 2013 processing of the SDSS Stripe 82 data.
+The image data for the WISE and NEOWISE missions have not been loaded into PDAC.
+
+\subsubsection{Intercase dependencies}
+
+LSP-00-30 relies on functionality explored by this test case.
+
+\subsubsection{Environmental needs}
+
+The test must, and can only, be carried out on the PDAC instance of the Science Platform.
+
+The test may be performed from any client computer on the public Internet.
+The computer used, and the network connection involved, shall be documented in the test report.
+
+The test requires access via the NCSA VPN from the client to the PDAC data services 
+(which means that the performance of the VPN is a contributor to the performance observed).
+
+The client computer must have an up-to-date mainstream Web browser, the identity of which shall be documented in the test report.
+
+The API Aspect tests will be captured in a Jupyter notebook run locally on the client computer, so the client system must have a recent production version of Jupyter installed.
+(The test does \emph{not} depend on features of JupyterLab in any way, only the standard Notebook.)
+
+
+\subsubsection{Input specification}
+
+The test requires the presence of the following SDSS data, from the Summer 2013 LSST processing, in the PDAC systems:
+
+\begin{itemize}
+
+  \item{The catalog of coadded image tiles;}
+  \item{The catalog of calibrated single-epoch images, including photometric zero points;}
+  \item{The coadded image data; and}
+  \item{The single-epoch calibrated image data.}
+\end{itemize}
+
+Note that a significant fraction of the single-epoch calibrated images are known to have been lost between 2013 and the loading of the data into PDAC.
+The test report will note where that affects the result.
+
+\subsubsection{Output specification}
+
+The output will consist of:
+
+\begin{itemize}
+  \item{A Jupyter notebook of the API Aspect tests performed;}
+  \item{A written log of the tests performed on the GUI-based Portal Aspect; and}
+  \item{A collection of the files that resulted from data download actions performed as part of the tests.}
+\end{itemize}
+
+
+\subsubsection{Procedure}
+
+\begin{enumerate}
+
+  \item{Clone the Github lsst/LDM-540 package.  Record the SHA1 for the version of the package to be used.  [Additional procedures, e.g., tagging, are still to be confirmed.]}
+  \item{Log host and networking details of the client host to be used.
+ Log the Web browser version to be used.
+ Log the version of Jupyter to be used.}
+  \item{Establish VPN connectivity to the PDAC at NCSA.}
+  \item{Execute the LDM-540/test\textunderscore scripts/lsp-00-25.ipynb notebook to perform the tests listed above against the API Aspect.}
+  \item{Preserve any outputs of the script that are in the form of files outside the notebook.}
+  \item{Manually perform, and log, the following steps against the Portal Aspect:
+    \begin{enumerate}
+      \item{Navigate to the PDAC Portal.  Log the URL used to do so.}
+      \item{Perform image queries against the SDSS Stripe 82 coadded and single-epoch image data.
+ These queries should match ones in the API Aspect test notebook.
+ Document the query results with screen shots.}
+      \item{Download an example of each type of image.}
+      \item{Using the public SDSS archive, attempt to retrieve corresponding images and visually compare them.}
+      \item{Perform image cutout requests for $300\times 300$ fields at the same targets used in the full-image queries.}
+      \item{Download the cutouts.}
+    \end{enumerate}
+  }
+
+\end{enumerate}
