@@ -3,7 +3,9 @@
 
 \subsubsection{Requirements}
 
-???
+LSP-level Requirements: DMS-LSP-REQ-0014, Download Data; DMS-LSP-REQ-0017, Tabular Data Download File Formats
+
+Portal-level Requirements: DMS-PRTL-REQ-0049, Display of Tabular Data; DMS-PRTL-REQ-0053, Row Selection of Tabular Data; partial coverage of DMS-PRTL-REQ-0050, Column Selection of Tabular Data; DMS-PRTL-REQ-0054, Paging of Tabular Data; DMS-PRTL-REQ-0055, XY Scatter Plots; partial coverage of DMS-PRTL-REQ-0056, Histograms
 
 \subsubsection{Test items}
 
@@ -70,7 +72,8 @@ The output will consist of:
       \item{Navigate to the PDAC Portal.  Log the URL used to do so.}
       \item{Perform a cone search around (ra=0,dec=0), of a radius that produces a result of at least $10,000$ records.
  (Note again that this is a \emph{functionality} test, not a scaling test, however.)}
-      \item{Download the query result. 
+      \item{Download the query result.
+ Log the file type used for the download, and the file types offered.
  Confirm that the download includes the same number of rows reported by the UI.
  Confirm by sampling at the beginning and end that the sort order of the download and that shown in the UI are the same.}
       \item{Exercise sorting of the table, including both numeric and text columns.
