@@ -1,0 +1,102 @@
+\subsection{LSP-00-20: Operation of the UI for interaction with tabular data results}
+\label{lsp-00-20}
+
+\subsubsection{Requirements}
+
+LSP-level Requirements: DMS-LSP-REQ-0014, Download Data; DMS-LSP-REQ-0017, Tabular Data Download File Formats
+
+Portal-level Requirements: DMS-PRTL-REQ-0049, Display of Tabular Data; DMS-PRTL-REQ-0053, Row Selection of Tabular Data; partial coverage of DMS-PRTL-REQ-0050, Column Selection of Tabular Data; DMS-PRTL-REQ-0054, Paging of Tabular Data; DMS-PRTL-REQ-0055, XY Scatter Plots; partial coverage of DMS-PRTL-REQ-0056, Histograms
+
+\subsubsection{Test items}
+
+This test will test the functional requirements to be able to perform certain basic exploratory data analysis functions on tabular data results in the Portal Aspect UI:
+
+\begin{itemize}
+
+  \item{Sort tabular results;}
+  \item{Filter tabular results based on the contents of columns;}
+  \item{Perform per-row selections from a table;}
+  \item{Display 1D histograms of selected attributes;}
+  \item{Display 2D scatter plots of selected attributes;}
+  \item{Perform graphical selections of rows from plots; and}
+  \item{Download tabular query results reflecting sorting and selection.}
+
+\end{itemize}
+
+This test does not address the limits of scaling of these capabilities to large query results.
+That will be addressed in future test specifications.
+The test report should include notes on the sizes of results that were used.
+
+\subsubsection{Intercase dependencies}
+
+The ability to do these tests depends on the ability to perform tabular queries at all.
+
+\subsubsection{Environmental needs}
+
+The test must, and can only, be carried out on the PDAC instance of the Science Platform.
+It relies on the availability of the IRSA deployment of the WISE and ALLWISE data to use in order to perform comparisons on content and performance.
+
+The test may be performed from any client computer on the public Internet.
+The computer used, and the network connection involved, shall be documented in the test report.
+
+The test requires access via the NCSA VPN from the client to the PDAC data services 
+(which means that the performance of the VPN is a contributor to the performance observed).
+
+The client computer must have an up-to-date mainstream Web browser, the identity of which shall be documented in the test report.
+
+
+\subsubsection{Input specification}
+
+The test requires the presence of at least the Source Catalog table from the AllWISE data release.
+
+
+\subsubsection{Output specification}
+
+The output will consist of:
+
+\begin{itemize}
+  \item{A written log of the tests performed on the GUI-based Portal Aspect; and}
+  \item{A collection of the files that resulted from data download actions performed as part of the tests.}
+\end{itemize}
+
+
+\subsubsection{Procedure}
+
+\begin{enumerate}
+
+  \item{Log host and networking details of the client host to be used.
+ Log the Web browser version to be used.}
+  \item{Establish VPN connectivity to the PDAC at NCSA.}
+  \item{Manually perform, and log, the following steps against the Portal Aspect, recording the time required for a step if it is not trivial:
+    \begin{enumerate}
+      \item{Navigate to the PDAC Portal.  Log the URL used to do so.}
+      \item{Perform a cone search around (ra=0,dec=0), of a radius that produces a result of at least $10,000$ records.
+ (Note again that this is a \emph{functionality} test, not a scaling test, however.)}
+      \item{Download the query result.
+ Log the file type used for the download, and the file types offered.
+ Confirm that the download includes the same number of rows reported by the UI.
+ Confirm by sampling at the beginning and end that the sort order of the download and that shown in the UI are the same.}
+      \item{Exercise sorting of the table, including both numeric and text columns.
+ Download the results of performing a sort of each type.
+ Confirm by sampling that the sort order of the download matches that in the UI.}
+      \item{Verify using external tools (e.g., Unix command-line utilities) that the sort orders for text and numeric columns are appropriate.}
+      \item{Exercise filtering of a tabular result based on values of attributes.
+ Confirm that it is possible to download the filtered result.
+ Verify using external tools that the filter was applied as expected, by comparing the filtered download with the original one.}
+      \item{Perform selections of individual rows in the tabular result.
+ Confirm that it is possible to download only the selected rows.}
+      \item{Construct a 1D histogram of a numeric attribute.
+ Using the functionality of the UI, sample a few bin values.
+ Verify using external tools that the chosen bin values match those derived from the downloaded data.}
+      \item{Construct a 2D scatter plot of selected numeric attributes.
+ By inspecting extrema of those attributes in the table, and outlying points in the scatterplot, confirm that the plot appears to contain the expected data.
+ (This is not meant to be an exhaustive test of completeness.)}
+      \item{Perform a (rectangular) graphical selection from a 2D plot.
+ Record the approximate dimensions of the selection as judged from the display.
+ Record the exact values for the region boundaries reported by the UI.
+ Download the selected data.
+ Verify using external tools that the expected selection was applied.}
+    \end{enumerate}
+  }
+
+\end{enumerate}

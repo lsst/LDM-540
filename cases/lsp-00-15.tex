@@ -1,0 +1,97 @@
+\subsection{LSP-00-15: Execution of basic catalog queries in the Portal}
+\label{lsp-00-15}
+
+\subsubsection{Requirements}
+
+LSP-level Requirements: DMS-LSP-REQ-0002, [existence of the] Portal Aspect; DMS-LSP-REQ-0014, Download Data
+
+Portal-level Requirements: DMS-PRTL-REQ-0022, Positional Query: Astrophysical Coordinate Systems; DMS-PRTL-REQ-0021, Positional Query: Astrophysical Source Name Lookup; DMS-PRTL-REQ-0021, Positional Query: Multiple Positions/Objects; DMS-PRTL-REQ-0026, Positional Query by Region: Cone-Search; DMS-PRTL-REQ-0027, Positional Query by Region: Box-Search; DMS-PRTL-REQ-0028, Query by Identifier; DMS-PRTL-REQ-0016, Generic Query: Form-based
+
+\subsubsection{Test items}
+
+This test will test the functional requirements to be able to perform a range of basic queries through the Portal Aspect of the LSP:
+
+\begin{itemize}
+
+  \item{Cone searches on the Object-like, ForcedSource-like, and Source-like WISE tables;}
+  \item{Multi-target cone searches;}
+  \item{Form-based searches for exact equality, e.g., for row IDs; and}
+  \item{Form-based searches for sets of object attributes.}
+
+\end{itemize}
+
+In addition, it tests the ability to download tabular query results from the Portal Aspect.
+
+\subsubsection{Intercase dependencies}
+
+As the Portal's implementation of queries of this nature is based on the invocation of the same APIs that will be invoked by LSP-00-05 and LSP-00-10, successful completion of this test case is likely contingent on the success of those two - but does not explicitly depend on them.
+
+Some of the execution of these test cases relies on features of the UI which are formally tested in case LSP-00-20.
+
+\subsubsection{Environmental needs}
+
+The test must, and can only, be carried out on the PDAC instance of the Science Platform.
+It relies on the availability of the IRSA deployment of the WISE and ALLWISE data to use in order to perform comparisons on content and performance.
+
+The test may be performed from any client computer on the public Internet.
+The computer used, and the network connection involved, shall be documented in the test report.
+
+The test requires access via the NCSA VPN from the client to the PDAC data services 
+(which means that the performance of the VPN is a contributor to the performance observed).
+
+The client computer must have an up-to-date mainstream Web browser, the identity of which shall be documented in the test report.
+
+\subsubsection{Input specification}
+
+The test requires the presence of the following WISE tables on the PDAC systems:
+
+\begin{itemize}
+
+  \item{The Source Catalog table from the AllWISE data release;}
+  \item{The Multi-Epoch Photometry (MEP) table from the AllWISE data release;}
+  \item{The Single-exposure Source Database from the WISE All-Sky data release (i.e., from the full-cryo 4-band phase of the original mission);}
+  \item{The Single-exposure Source Database from the NEOWISE Reactivation 2015 data release (i.e., from the first year of the 2-band post-reactivation phase of the mission).}
+\end{itemize}
+
+
+\subsubsection{Output specification}
+
+The output will consist of:
+
+\begin{itemize}
+  \item{A written log of the tests performed on the GUI-based Portal Aspect; and}
+  \item{A collection of the files that resulted from data download actions performed as part of the tests.}
+\end{itemize}
+
+
+\subsubsection{Procedure}
+
+\begin{enumerate}
+
+  \item{Log host and networking details of the client host to be used.
+ Log the Web browser version to be used.}
+  \item{Establish VPN connectivity to the PDAC at NCSA.}
+  \item{Manually perform, and log, the following steps against the Portal Aspect:
+    \begin{enumerate}
+      \item{Navigate to the PDAC Portal.  Log the URL used to do so.}
+      \item{Perform a cone search around (ra=0,dec=0), radius 300 arcseconds, in each of the Object-like, ForcedSource-like, and a Source-like catalog.
+ Choose a row from each search and record the primary key value for each for later use.
+ Take screen shots of the search form and of the results of the three searches.
+ Record the wall clock time required for the searches, if long enough to measure.}
+      \item{Perform a multi-object cone search based on the coordinates in the file LDM-540/test\textunderscore scripts/lsp-00-15.coords in the Object-like table.
+ Take screen shots of the search form and of the results of the search.
+ Record the wall clock time required for the searches, if long enough to measure.}
+      \item{Perform a search on each of the Object-like, ForcedSource-like, and Source-like catalogs for the IDs previously saved.
+ Confirm that each search is successful and returns the same information as in the original search from which the ID was taken.
+ Perform a search on the ForcedSource-like catalog using the ID from the Object-like catalog.
+ Confirm that a time series of measurements of that object in multiple epochs is returned.
+ Take screen shots of the search forms and of the results of the searches.
+ Record the wall clock time required for the searches, if long enough to measure.}
+      \item{On each of the Object-like catalog and a Source-like catalog, by performing searches over small regions of sky and exploring the results, choose a set of attributes and search parameters which should select a relatively small number of rows ($<100,000$) when applied to the entire sky.
+ This may require some iterative experimentation at increasingly larger scales.
+ Take screen shots of the final search forms and of the results of the searches.
+ Record the wall clock time required for the searches, if long enough to measure.}
+    \end{enumerate}
+  }
+
+\end{enumerate}

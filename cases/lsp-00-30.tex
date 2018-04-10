@@ -1,0 +1,82 @@
+\subsection{LSP-00-30: Linkage of catalog query results with associated images}
+\label{lsp-00-30}
+
+\subsubsection{Requirements}
+
+Requirement: DMS-LSP-REQ-0008, Semantic Linkage; partial coverage of DMS-PRTL-REQ-0004, Semantic Linkage: Portal Workflows
+
+\subsubsection{Test items}
+
+This test will check for the ability, in the Portal Aspect of the LSST Science Platform, to match catalog data with the image data on which the measurements were performed, specifically:
+
+\begin{itemize}
+
+  \item{Navigating from a catalog query result to the associated images; and}
+  \item{Overlaying catalog query results on associated images.}
+
+\end{itemize}
+
+Because of limited staff resources, these tests will be based on the original PDAC dataset, the LSST Summer 2013 processing of the SDSS Stripe 82 data.
+The image data for the WISE and NEOWISE missions have not been loaded into PDAC.
+
+\subsubsection{Intercase dependencies}
+
+This test case relies on multiple behaviors explored by other LSP-00-* test cases.
+
+\subsubsection{Environmental needs}
+
+The test must, and can only, be carried out on the PDAC instance of the Science Platform.
+
+The test may be performed from any client computer on the public Internet.
+The computer used, and the network connection involved, shall be documented in the test report.
+
+The test requires access via the NCSA VPN from the client to the PDAC data services 
+(which means that the performance of the VPN is a contributor to the performance observed).
+
+The client computer must have an up-to-date mainstream Web browser, the identity of which shall be documented in the test report.
+
+
+\subsubsection{Input specification}
+
+The test requires the presence of the following SDSS data, from the Summer 2013 LSST processing, in the PDAC systems:
+
+\begin{itemize}
+
+  \item{The coadded source catalog;}
+  \item{The forced photometry catalog driven from the $i$-band coadded sources;}
+  \item{The catalog of coadded image tiles;}
+  \item{The catalog of calibrated single-epoch images, including photometric zero points;}
+  \item{The coadded image data; and}
+  \item{The single-epoch calibrated image data.}
+\end{itemize}
+
+Note that a significant fraction of the single-epoch calibrated images are known to have been lost between 2013 and the loading of the data into PDAC.
+The test report will note where that affects the result.
+
+\subsubsection{Output specification}
+
+The output will consist of:
+
+\begin{itemize}
+  \item{A written log of the tests performed on the GUI-based Portal Aspect.}
+\end{itemize}
+
+
+\subsubsection{Procedure}
+
+\begin{enumerate}
+
+  \item{Log host and networking details of the client host to be used.
+ Log the Web browser version to be used.}
+  \item{Establish VPN connectivity to the PDAC at NCSA.}
+  \item{Manually perform, and log, the following steps against the Portal Aspect:
+    \begin{enumerate}
+      \item{Navigate to the PDAC Portal.  Log the URL used to do so.}
+      \item{Perform a catalog query against the i-band coadded source catalog within the Stripe 82 area.}
+      \item{Request the time series from the forced photometry catalog for a selected source.}
+      \item{Confirm that the images associated with the forced photometry measurements are available.}
+      \item{Document the query results with screen shots.}
+    \end{enumerate}
+  }
+
+\end{enumerate}
