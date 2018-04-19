@@ -54,7 +54,7 @@ A full description of this product is provided in \citeds{LDM-542}, with require
 
 This document builds on the description of LSST Data Management's approach to testing as described in \citeds{LDM-503} to describe the detailed tests that will be performed on the \product{} as part of the verification of the DM system.
 
-It identifies test designs, test cases and procedures for the tests, and the pass/fail criteria for each test.
+It identifies test cases and procedures for the tests, and the pass/fail criteria for each test.
 
 \subsection{Scope}
 \label{sec:scope}
@@ -195,19 +195,15 @@ Refer to individual test cases where applicable.
 
 \subsection{Naming convention}
 
-All tests are named according to the pattern \textsc{prod-xx-yy} where:
+All tests are named according to the pattern \textsc{LSP-xx-yy} where:
 
-%% \begin{description}[font=\normalfont\scshape]
+\begin{description}[font=\normalfont\scshape]
 
-%%   \item[prod]{The product under test. Relevant entries for this document are:
-%%     \begin{description}[font=\normalfont\scshape,topsep=-1.0ex]
-%%       \item[AA]{The A A}
-%%     \end{description}
-%%   }
-%%   \item[xx]{Test specification number (in increments of 10)}
-%%   \item[yy]{Test case number (in increments of 5)}
+  \item[LSP]{The product under test: the LSST Science Platform}
+  \item[xx]{Test specification number (in increments of 10)}
+  \item[yy]{Test case number (in increments of 5)}
 
-%% \end{description}
+\end{description}
 
 \input{specs/specs.tex}
 \input{cases/cases.tex}
