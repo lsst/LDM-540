@@ -1,8 +1,14 @@
 \documentclass[DM,lsstdraft,STS,toc]{lsstdoc}
 \usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{arydshln}
+
 \input meta.tex
 
 \begin{document}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \def\product{LSST Science Platform}
 
@@ -196,7 +202,16 @@ Refer to individual test cases where applicable.
 
 \subsection{Naming convention}
 
-All tests are named according to the pattern \textsc{LSP-xx-yy} where:
+With the introduction of Jira ATM plugin, the adopted naming convention is based on the corresponding Jira objects:
+
+\begin{description}
+  \item[LVV]{: Is the label for the ``LSST Verification and Validation'' project in Jira.}
+  \item[LVV-XXX]{: Are Verification Elements, where XXX is the Verification Element identifier.  Each Verification Element has at least one Test Case. }
+  \item[LVV-TYYY]{: Are Test Cases. Each Test Case is associated with a Verification Element, where YYY is the Test Case identifier.}
+\end{description}
+
+
+A few deprecated test cases are still reporting in the name the old identification, that was according to the pattern \textsc{LSP-xx-yy} where:
 
 \begin{description}
 
@@ -206,15 +221,6 @@ All tests are named according to the pattern \textsc{LSP-xx-yy} where:
 
 \end{description}
 
-\input{specs/specs.tex}
-\input{cases/cases.tex}
-
-\appendix
-
-\section{Precursor test datasets}
-
-\subsection{Summer 2013 SDSS Stripe 82 Processing}
-
-\subsection{Data from the WISE and NEOWISE missions}
+\input{jira_docugen.tex}
 
 \end{document}

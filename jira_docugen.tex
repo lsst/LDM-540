@@ -1,0 +1,4518 @@
+% generated from JIRA project LVV
+% using template at /usr/local/lib/python3.6/site-packages/docsteady/templates/dm-spec.latex.jinja2.
+% Collecting ATM data from folder: "/Data Management/Services/LSP Services"
+% using docsteady version 1.1
+% Please do not edit -- update information in Jira instead
+
+\section{Test Cases Summary}\label{test-cases-summary}
+
+\begin{longtable}[]{p{3cm}p{13cm}}
+\toprule
+Test Id & Test Name\tabularnewline
+\midrule
+\endhead
+    \hyperref[lvv-t2]{LVV-T2} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2}{LSP-00-00: Verification of the presence of the expected WISE data} \tabularnewline
+    \hyperref[lvv-t3]{LVV-T3} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T3}{LSP-00-05: Demonstration of low-volume and/or indexed queries against the WISE data via API} \tabularnewline
+    \hyperref[lvv-t4]{LVV-T4} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T4}{LSP-00-10: Demonstration of table-scan queries against the WISE data via API} \tabularnewline
+    \hyperref[lvv-t5]{LVV-T5} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T5}{LSP-00-15: Execution of basic catalog queries in the Portal} \tabularnewline
+    \hyperref[lvv-t6]{LVV-T6} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T6}{LSP-00-20: Operation of the UI for interaction with tabular data results} \tabularnewline
+    \hyperref[lvv-t7]{LVV-T7} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T7}{LSP-00-25: Image metadata, image, and image cutout queries} \tabularnewline
+    \hyperref[lvv-t8]{LVV-T8} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T8}{LSP-00-30: Linkage of catalog query results with associated images} \tabularnewline
+    \hyperref[lvv-t9]{LVV-T9} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T9}{LSP-00-35: Linkage of catalog query results to related catalog data} \tabularnewline
+    \hyperref[lvv-t598]{LVV-T598} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T598}{Verify access to All Released or Authorized Data Products} \tabularnewline
+    \hyperref[lvv-t600]{LVV-T600} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T600}{Verify LSP provides a portal aspect} \tabularnewline
+    \hyperref[lvv-t601]{LVV-T601} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T601}{Verify LSP provides a notebook aspect} \tabularnewline
+    \hyperref[lvv-t602]{LVV-T602} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T602}{Verify LSP provides web API} \tabularnewline
+    \hyperref[lvv-t603]{LVV-T603} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T603}{Verify data access through multiple linked aspects} \tabularnewline
+    \hyperref[lvv-t604]{LVV-T604} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T604}{Verify use of VO standards} \tabularnewline
+    \hyperref[lvv-t605]{LVV-T605} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T605}{Verify that LSP complies with LSST data access policies} \tabularnewline
+    \hyperref[lvv-t606]{LVV-T606} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T606}{Verify semantic linkages between data items} \tabularnewline
+    \hyperref[lvv-t607]{LVV-T607} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T607}{Verify semantic linkages between data items and uncertainties} \tabularnewline
+    \hyperref[lvv-t608]{LVV-T608} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T608}{Verify transfer of Portal data references to Notebook aspect} \tabularnewline
+    \hyperref[lvv-t609]{LVV-T609} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T609}{Verify providing user file storage in LSP} \tabularnewline
+    \hyperref[lvv-t610]{LVV-T610} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T610}{Verify providing user generated database in LSP} \tabularnewline
+    \hyperref[lvv-t611]{LVV-T611} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T611}{Verify access controls in user workspace} \tabularnewline
+    \hyperref[lvv-t612]{LVV-T612} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T612}{Verify ability to download data from LSP} \tabularnewline
+    \hyperref[lvv-t613]{LVV-T613} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T613}{Verify ability to upload data to LSP} \tabularnewline
+    \hyperref[lvv-t614]{LVV-T614} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T614}{Verify ability to transfer data to and from the Workspace} \tabularnewline
+    \hyperref[lvv-t615]{LVV-T615} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T615}{Verify file formats provided for tabular data download} \tabularnewline
+    \hyperref[lvv-t616]{LVV-T616} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T616}{Verify file formats provided for image data download} \tabularnewline
+    \hyperref[lvv-t617]{LVV-T617} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T617}{Verify support for peak volume of moderate-sized queries} \tabularnewline
+    \hyperref[lvv-t618]{LVV-T618} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T618}{Verify support for peak volume of queries on all Objects} \tabularnewline
+    \hyperref[lvv-t619]{LVV-T619} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T619}{Verify LSP handles peak volume of queries} \tabularnewline
+    \hyperref[lvv-t620]{LVV-T620} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T620}{Verify LSP supports required download bandwidth} \tabularnewline
+    \hyperref[lvv-t621]{LVV-T621} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T621}{Verify LSP user reference and documentation} \tabularnewline
+    \hyperref[lvv-t622]{LVV-T622} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T622}{Verify LSP only available to authenticated users} \tabularnewline
+    \hyperref[lvv-t623]{LVV-T623} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T623}{Verify support for new LSP users} \tabularnewline
+    \hyperref[lvv-t624]{LVV-T624} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T624}{Verify implementation of common identity across LSP aspects} \tabularnewline
+    \hyperref[lvv-t625]{LVV-T625} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T625}{Verify authentication via external identity providers} \tabularnewline
+    \hyperref[lvv-t626]{LVV-T626} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T626}{Verify LSP identity can have multiple associated credentials} \tabularnewline
+    \hyperref[lvv-t627]{LVV-T627} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T627}{Verify implementation of Acceptable Use Policy} \tabularnewline
+    \hyperref[lvv-t628]{LVV-T628} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T628}{Verify LSP connections encrypted} \tabularnewline
+    \hyperref[lvv-t629]{LVV-T629} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T629}{Verify privacy of users' activities} \tabularnewline
+    \hyperref[lvv-t630]{LVV-T630} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T630}{Verify multiple LSP instances} \tabularnewline
+    \hyperref[lvv-t631]{LVV-T631} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T631}{Verify LSP access from the public Internet (IPv4)} \tabularnewline
+    \hyperref[lvv-t632]{LVV-T632} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T632}{Verify LSP access from the public Internet (IPv6)} \tabularnewline
+    \hyperref[lvv-t633]{LVV-T633} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T633}{Verify indication of system availability} \tabularnewline
+    \hyperref[lvv-t668]{LVV-T668} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T668}{Verify access to original alert state} \tabularnewline
+    \hyperref[lvv-t669]{LVV-T669} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T669}{Verify query for single-epoch visit images} \tabularnewline
+    \hyperref[lvv-t670]{LVV-T670} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T670}{Verify query for single-epoch raft images} \tabularnewline
+    \hyperref[lvv-t671]{LVV-T671} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T671}{Verify query for single-epoch CCD images} \tabularnewline
+    \hyperref[lvv-t672]{LVV-T672} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T672}{Verify metadata query for single-epoch images} \tabularnewline
+    \hyperref[lvv-t673]{LVV-T673} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T673}{Verify query for coadds by image metadata} \tabularnewline
+    \hyperref[lvv-t674]{LVV-T674} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T674}{Verify query for coadd image cutouts} \tabularnewline
+    \hyperref[lvv-t675]{LVV-T675} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T675}{Verify query for single-epoch image cutouts} \tabularnewline
+\bottomrule
+\end{longtable}
+
+\newpage
+
+\section{Test Cases}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2}{LVV-T2}
+    - LSP-00-00: Verification of the presence of the expected WISE data}\label{lvv-t2}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9807}{LVV-9807} - DMS-LSP-REQ-0001-V-01: Access to All Released or Authorized Data
+Products\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9809}{LVV-9809} - DMS-LSP-REQ-0005-V-01: Linkage of Aspects\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test will check:
+
+\begin{itemize}
+\tightlist
+\item
+  That the expected tables are present in the database and accessible
+  via the API Aspect and the Portal Aspect;
+\item
+  That the tables are present with the expected schema as documented in
+  the IPAC- provided WISE documentation;
+\item
+  That the row counts in the tables are as expected;
+\item
+  That the tables cover essentially the entire sky, as expected from the
+  characteristics of the WISE mission.
+\end{itemize}
+
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0001
+\item
+  DMS-LSP-REQ-0005
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+None.
+
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform. It relies on the availability of the IRSA deployment
+of the WISE and ALLWISE data to use in order to perform comparisons on
+content and performance.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.\\
+The API Aspect tests will be captured in a Jupyter notebook run locally
+on the client computer, so the client system must have a recent
+production version of Jupyter installed. (The test does not depend on
+features of JupyterLab in any way, only the standard Notebook.)
+
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+The test verifies, and therefore requires, the presence of the following
+WISE tables on the PDAC systems:
+
+\begin{itemize}
+\tightlist
+\item
+  The Source Catalog table from the AllWISE data release;
+\item
+  The Multi-Epoch Photometry (MEP) table from the AllWISE data release;
+\item
+  The Single-exposure Source Database from the WISE All-Sky data release
+  (i.e., from the full-cryo 4-band phase of the original mission);
+\item
+  The Single-exposure Source Database from the WISE 3-Band Cryo data
+  release (i.e.,from the 3-band, inner-cryogen-tank-only phase of the
+  mission);
+\item
+  The Single-exposure Source Database from the NEOWISE Post-Cryo data
+  release (i.e., from the 2-band warm phase of the mission,
+  pre-hibernation);and
+\item
+  The Single-exposure Source Database from the NEOWISE Reactivation 2015
+  data release (i.e., from the first year of the 2-band
+  post-reactivation phase of the mission).
+\end{itemize}
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A Jupyter notebook of the API Aspect tests performed;
+\item
+  A written log of the tests performed on the GUI-based Portal Aspect;
+  and
+\item
+  A collection of the files that resulted from data download actions
+  performed as part of the tests.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Clone the Github lsst/LDM-540 package. Record the SHA1 for the version
+of the package to be used. {[}Additional procedures, e.g., tagging, are
+still to be confirmed.{]}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used. Log the version of Jupyter to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Execute the LDM-540/test\_scripts/lsp-00-00.ipynb notebook to perform
+the tests listed above against the API Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Preserve any outputs of the script that are in the form of files outside
+the notebook.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Manually perform, and log, the following steps against the Portal
+Aspect:
+
+\begin{enumerate}
+\tightlist
+\item
+  Navigate to the PDAC Portal. Log the URL used to do so.
+\item
+  Navigate to the list of WISE catalogs available. Preserve screen shots
+  as needed to document that the UI offers access to the required
+  catalogs.
+\item
+  Perform a trivial query against each required catalog to confirm that
+  the UI does in- deed provide access. These queries should match ones
+  in the API Aspect test note- book and will generally be small cone
+  searches around (ra=0, dec=0). Document the query results with screen
+  shots. It is not necessary at this time to exhaustively verify that
+  the Portal provides access to every column of every table; spot checks
+  should be performed and documented. (A later test will perform a full
+  column-by- column verification, once test data more closely matching
+  the final DPDD-driven LSST data products are available.)
+\end{enumerate}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T3}{LVV-T3}
+    - LSP-00-05: Demonstration of low-volume and/or indexed queries against the WISE data via API}\label{lvv-t3}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9808}{LVV-9808} - DMS-LSP-REQ-0004-V-01: API (Data Access) Aspect\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test will check that the following low-volume queries can be
+performed against the WISE catalogs via the API Aspect.
+
+\begin{itemize}
+\tightlist
+\item
+  Small cone searches against the Object-like, ForcedSource-like, and
+  Source-like tables; and
+\item
+  Searches by exact ID matching against the Object-like,
+  ForcedSource-like, and Source- like tables
+\end{itemize}
+
+~\\
+The tests will record their performance for comparison against similar
+queries in the produc- tion WISE archive at IRSA, and the returned data
+will be compared to that for similar queries against the API services
+provided by IRSA.\\
+~\\
+\textbf{Requirement (to remove once requirements are synchronized from
+magic draw)}\\
+DMS-LSP-REQ-004
+
+
+
+\subsubsection{Predecessors}
+LSP-00-15
+
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform. It relies on the availability of the IRSA deployment
+of the WISE and ALLWISE data to use in order to perform comparisons on
+content and performance.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.\\
+The tests will be captured in a Jupyter notebook run locally on the
+client computer, so the client system must have a recent production
+version of Jupyter installed.~(The test does not depend on features of
+JupyterLab in any way, only the standard Notebook.)\\
+~\\
+
+
+\subsubsection{Input Specification}
+The test requires, the presence of the following WISE tables on the PDAC
+systems:
+
+\begin{itemize}
+\tightlist
+\item
+  The Source Catalog table from the AllWISE data release;
+\item
+  The Multi-Epoch Photometry (MEP) table from the AllWISE data release;
+\item
+  The Single-exposure Source Database from the WISE All-Sky data release
+  (i.e., from the full-cryo 4-band phase of the original mission); and
+\item
+  TheSingle-exposureSourceDatabasefromtheNEOWISEReactivation2015datarelease
+  (i.e., from the first year of the 2-band post-reactivation phase of
+  the mission).
+\end{itemize}
+
+(The 3-band and 2-band Single-exposure Source Database tables from the
+pre-hibernation mission are not queried in this test case, for the sake
+of simplicity. These tables are smaller than the two Single-exposure
+Source Database tables that are included in the test case.)\\
+~\\
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A Jupyter notebook of the API Aspect tests performed; and
+\item
+  A collection of the files that resulted from data download actions
+  performed as part of the tests.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Clone the Github lsst/LDM-540 package. Record the SHA1 for the version
+of the package to be used. {[}Additional procedures, e.g., tagging, are
+still to be confirmed.{]}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used. Log the version of Jupyter to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Execute the LDM-540/test\_scripts/lsp-00-05.ipynb notebook to perform
+the tests listed above against the API Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Preserve any outputs of the script that are in the form of files outside
+the notebook.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T4}{LVV-T4}
+    - LSP-00-10: Demonstration of table-scan queries against the WISE data via API}\label{lvv-t4}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9824}{LVV-9824} - DMS-LSP-REQ-0028-V-01: Peak Volume for Moderate-Sized Queries\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9825}{LVV-9825} - DMS-LSP-REQ-0029-V-01: Peak Volume for Queries on all Objects\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test exercises a range of table-scan-type queries against the WISE
+data. Queries shall be performed against the Object-like table, the
+Forced-Source-like table, and against at least one of the Source-like
+tables. A range of query result sizes should be exercised, and shall
+include at least:
+
+\begin{itemize}
+\tightlist
+\item
+  Queries returning a very small amount of data, fewer than 100 rows,
+  and a small subset of columns;
+\item
+  Queries matching a scaled version of the ``low volume'' query
+  definition from the Data Access White Paper; and
+\item
+  Queries matching a scaled version of the ``high volume'' query
+  definition from the Data Access White Paper.
+\end{itemize}
+
+The scaling of the ``low volume'' query definition (``50 simultaneous
+queries against 10 million objects in the catalog, response 10 sec,
+result data set: 0.1 GB'') is based on a assumption that the ``against
+10 million objects'' is applied against the O(20 billion) rows
+anticipated in the Object table, and that it contemplates reducing the
+scope of any non-indexed portion of the WHERE clause of the query to
+that fraction of one in ∼ 2000 of the rows in the table. Scaled to the ∼
+750 million rows in the WISE Object-like (AllWISE ``Source Catalog'')
+table, this would be ∼ 375,000 rows. Similarly scaling the result set
+size suggests a result set of ∼ 3.7 MB.\\
+Successful completion will be evaluated based on the system's ability to
+perform the query at all and to return a result with characteristics
+corresponding to plausible estimates or extrap- olations from
+scaled-down queries against the IRSA WISE archive. Exact verification
+may not be realistic because of the lack of a system capable of
+performing the equivalent queries in the production WISE archive.\\
+At a later date it may be possible to attempt equivalent queries using a
+non-database sys- tem and verify the exact correspondence of results,
+but the non-database system does not presently exist1.\\
+~\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0028~
+\item
+  DMS-LSP-REQ-0029
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+LSP-00-00
+
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform. It relies on the availability of the IRSA deployment
+of the WISE and ALLWISE data to use in order to perform comparisons on
+content and performance.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.\\
+The tests will be captured in a Jupyter notebook run locally on the
+client computer, so the client system must have a recent production
+version of Jupyter installed. (The test does not depend on features of
+JupyterLab in any way, only the standard Notebook.)
+
+
+\subsubsection{Input Specification}
+This test requires the presence of the following WISE tables on the PDAC
+systems:
+
+\begin{itemize}
+\tightlist
+\item
+  The Source Catalog table from the AllWISE data release;
+\item
+  The Multi-Epoch Photometry (MEP) table from the AllWISE data release;
+\end{itemize}
+
+The results are assumed to apply to the other tables in the PDAC WISE
+dataset, all of which are comparable or smaller in size.
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A Jupyter notebook of the API Aspect tests performed; and
+\item
+  A collection of the files that resulted from data download actions
+  performed as part of the tests.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Clone the Github lsst/LDM-540 package. Record the SHA1 for the version
+of the package to be used. {[}Additional procedures, e.g., tagging, are
+still to be confirmed.{]}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used. Log the version of Jupyter to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Execute the LDM-540/test\_scripts/lsp-00-10.ipynb notebook to perform
+the tests listed above against the API Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Preserve any outputs of the script that are in the form of files outside
+the notebook.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T5}{LVV-T5}
+    - LSP-00-15: Execution of basic catalog queries in the Portal}\label{lvv-t5}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9811}{LVV-9811} - DMS-LSP-REQ-0002-V-01: Portal Aspect\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9819}{LVV-9819} - DMS-LSP-REQ-0014-V-01: Download Data\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9862}{LVV-9862} - DMS-PRTL-REQ-0022-V-01: Positional Query: Astrophysical Coordinate
+Systems\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9865}{LVV-9865} - DMS-PRTL-REQ-0021-V-01: Positional Query: Multiple Positions/Objects\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9869}{LVV-9869} - DMS-PRTL-REQ-0026-V-01: Positional Query by Region: Cone-Search\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9868}{LVV-9868} - DMS-PRTL-REQ-0027-V-01: Positional Query by Region: Box-Search\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9859}{LVV-9859} - DMS-PRTL-REQ-0028-V-01: Query by Identifier\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9856}{LVV-9856} - DMS-PRTL-REQ-0016-V-01: Generic Query - Form-based\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test will test the functional requirements to be able to perform a
+range of basic queries through the Portal Aspect of the LSP:
+
+\begin{itemize}
+\tightlist
+\item
+  Cone searches on the Object-like, ForcedSource-like, and Source-like
+  WISE tables; • Multi-target cone searches;
+\item
+  Form-based searches for exact equality, e.g., for row IDs; and
+\item
+  Form-based searches for sets of object attributes.
+\end{itemize}
+
+In addition, it tests the ability to download tabular query results from
+the Portal Aspect.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0002
+\item
+  DMS-LSP-REQ-0014
+\item
+  DMS-PRTL-REQ-0022
+\item
+  DMS-PRTL-REQ-0021
+\item
+  DMS-PRTL-REQ-0026
+\item
+  DMS-PRTL-REQ-0027
+\item
+  DMS-PRTL-REQ-0028
+\item
+  DMS-PRTL-REQ-0016
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+LSP-00-05\\
+LSP-00-10\\
+LSP-00-20
+
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform. It relies on the availability of the IRSA deployment
+of the WISE and ALLWISE data to use in order to perform comparisons on
+content and performance.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.
+
+
+\subsubsection{Input Specification}
+The test requires the presence of the following WISE tables on the PDAC
+systems:
+
+\begin{itemize}
+\tightlist
+\item
+  The Source Catalog table from the AllWISE data release;
+\item
+  The Multi-Epoch Photometry (MEP) table from the AllWISE data release;
+\item
+  The Single-exposure Source Database from the WISE All-Sky data release
+  (i.e., from the full-cryo 4-band phase of the original mission);
+\item
+  TheSingle-exposure Source Database from the NEOWISE Reactivation 2015
+  data release (i.e., from the first year of the 2-band
+  post-reactivation phase of the mission).
+\end{itemize}
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A written log of the tests performed on the GUI-based Portal Aspect;
+  and
+\item
+  A collection of the files that resulted from data download actions
+  performed as part of the tests.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Manually perform, and log, the following steps against the Portal
+Aspect:
+
+\begin{enumerate}
+\tightlist
+\item
+  Navigate to the PDAC Portal. Log the URL used to do so.
+\item
+  Perform a cone search around (ra=0,dec=0), radius 300 arcseconds, in
+  each of the Object-like, ForcedSource-like, and a Source-like catalog.
+  Choose a row from each search and record the primary key value for
+  each for later use. Take screen shots of the search form and of the
+  results of the three searches. Record the wall clock time required for
+  the searches, if long enough to measure.
+\item
+  Perform a multi-object cone search based on the coordinates in the
+  file LDM-540/test\_scripts/lsp-00-15.coords in the Object-like table.
+  Take screen shots of the search form and of the results of the search.
+  Record the wall clock time required for the searches, if long enough
+  to measure.
+\item
+  Perform a search on each of the Object-like, ForcedSource-like, and
+  Source-like catalogs for the IDs previously saved. Confirm that each
+  search is successful and re- turns the same information as in the
+  original search from which the ID was taken. Perform a search on the
+  ForcedSource-like catalog using the ID from the Object- like catalog.
+  Confirm that a time series of measurements of that object in multiple
+  epochs is returned. Take screen shots of the search forms and of the
+  results of the searches. Record the wall clock time required for the
+  searches, if long enough to measure.
+\item
+  On each of the Object-like catalog and a Source-like catalog, by
+  performing searches over small regions of sky and exploring the
+  results, choose a set of attributes and search parameters which should
+  select a relatively small number of rows (\textless{} 100, 000) when
+  applied to the entire sky. This may require some iterative
+  experimentation at increasingly larger scales. Take screen shots of
+  the final search forms and of the results of the searches. Record the
+  wall clock time required for the searches, if long enough to measure.
+\end{enumerate}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T6}{LVV-T6}
+    - LSP-00-20: Operation of the UI for interaction with tabular data results}\label{lvv-t6}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9895}{LVV-9895} - DMS-PRTL-REQ-0056-V-01: Histograms\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9901}{LVV-9901} - DMS-PRTL-REQ-0055-V-01: XY Scatter Plots\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9893}{LVV-9893} - DMS-PRTL-REQ-0054-V-01: Paging of Tabular Data\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9889}{LVV-9889} - DMS-PRTL-REQ-0050-V-01: Column Selection of Tabular Data\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9894}{LVV-9894} - DMS-PRTL-REQ-0053-V-01: Row Selection of Tabular Data\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9891}{LVV-9891} - DMS-PRTL-REQ-0049-V-01: Display of Tabular Data\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9819}{LVV-9819} - DMS-LSP-REQ-0014-V-01: Download Data\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9821}{LVV-9821} - DMS-LSP-REQ-0017-V-01: Tabular Data Download File Formats\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test will test the functional requirements to be able to perform
+certain basic exploratory data analysis functions on tabular data
+results in the Portal Aspect UI:
+
+\begin{itemize}
+\tightlist
+\item
+  Sort tabular results;
+\item
+  Filter tabular results based on the contents of columns; • Perform
+  per-row selections from a table;
+\item
+  Display 1D histograms of selected attributes;
+\item
+  Display 2D scatter plots of selected attributes;
+\item
+  Perform graphical selections of rows from plots; and
+\item
+  Download tabular query results reflecting sorting and selection.
+\end{itemize}
+
+This test does not address the limits of scaling of these capabilities
+to large query results. That will be addressed in future test
+specifications. The test report should include notes on the sizes of
+results that were used.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0014
+\item
+  DMS-LSP-REQ-0017
+\item
+  DMS-PRTL-REQ-0049
+\item
+  DMS-PRTL-REQ-0053
+\item
+  DMS-PRTL-REQ-0050
+\item
+  DMS-PRTL-REQ-0054
+\item
+  DMS-PRTL-REQ-0055
+\item
+  DMS-PRTL-REQ-0056
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform. It relies on the availability of the IRSA deployment
+of the WISE and ALLWISE data to use in order to perform comparisons on
+content and performance.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.
+
+
+\subsubsection{Input Specification}
+The test requires the presence of at least the Source Catalog table from
+the AllWISE data release.
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A written log of the tests performed on the GUI-based Portal Aspect;
+  and
+\item
+  A collection of the files that resulted from data download actions
+  performed as part of the tests.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Manually perform, and log, the following steps against the Portal
+Aspect, recording the time required for a step if it is not trivial:
+
+\begin{enumerate}
+\tightlist
+\item
+  Navigate to the PDAC Portal. Log the URL used to do so.
+\item
+  Perform a cone search around (ra=0,dec=0), of a radius that produces a
+  result of at least 10,000 records. (Note again that this is a
+  functionality test, not a scaling test, however.)
+\item
+  Download the query result. Log the file type used for the download,
+  and the file types offered. Confirm that the download includes the
+  same number of rows re- ported by the UI. Confirm by sampling at the
+  beginning and end that the sort order of the download and that shown
+  in the UI are the same.
+\item
+  Exercise sorting of the table, including both numeric and text
+  columns. Download the results of performing a sort of each type.
+  Confirm by sampling that the sort order of the download matches that
+  in the UI.
+\item
+  Verify using external tools (e.g., Unix command-line utilities) that
+  the sort orders for text and numeric columns are appropriate.
+\item
+  Exercise filtering of a tabular result based on values of attributes.
+  Confirm that it is possible to download the filtered result. Verify
+  using external tools that the filter was applied as expected, by
+  comparing the filtered download with the original one.
+\item
+  Perform selections of individual rows in the tabular result. Confirm
+  that it is possi- ble to download only the selected rows.
+\item
+  Construct a 1D histogram of a numeric attribute. Using the
+  functionality of the UI, sample a few bin values. Verify using
+  external tools that the chosen bin values match those derived from the
+  downloaded data.
+\item
+  Construct a 2D scatter plot of selected numeric attributes. By
+  inspecting extrema of those attributes in the table, and outlying
+  points in the scatterplot, confirm that the plot appears to contain
+  the expected data. (This is not meant to be an exhaustive test of
+  completeness.)
+\item
+  Perform a (rectangular) graphical selection from a 2D plot. Record the
+  approximate dimensions of the selection as judged from the display.
+  Record the exact values for the region boundaries reported by the UI.
+  Download the selected data. Verify using external tools that the
+  expected selection was applied.
+\end{enumerate}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T7}{LVV-T7}
+    - LSP-00-25: Image metadata, image, and image cutout queries}\label{lvv-t7}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9819}{LVV-9819} - DMS-LSP-REQ-0014-V-01: Download Data\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9820}{LVV-9820} - DMS-LSP-REQ-0018-V-01: Image Data Download File Format\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9881}{LVV-9881} - DMS-PRTL-REQ-0040-V-01: Query for Single Epoch Image Cutouts\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9880}{LVV-9880} - DMS-PRTL-REQ-0041-V-01: Query for Coadded Image Cutouts\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test will check basic functionality related to image search and
+retrieval, via both the API Aspect and the Portal Aspect of the LSST
+Science Platform:
+
+\begin{itemize}
+\tightlist
+\item
+  Searching for images containing a specified point;
+\item
+  Displaying selected images;
+\item
+  Obtaining and displaying image cutouts at a specified point; and •
+  Downloading selected images and image cutouts.
+\end{itemize}
+
+Because of limited staff resources, these tests will be based on the
+original PDAC dataset, the LSST Summer 2013 processing of the SDSS
+Stripe 82 data. The image data for the WISE and NEOWISE missions have
+not been loaded into PDAC.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0014
+\item
+  DMS-LSP-REQ-0018
+\item
+  DMS-PRTL-REQ-0041
+\item
+  DMS-PRTL-REQ-0040
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.\\
+The API Aspect tests will be captured in a Jupyter notebook run locally
+on the client computer, so the client system must have a recent
+production version of Jupyter installed.~(The test does not depend on
+features of JupyterLab in any way, only the standard Notebook.\\
+~\\
+
+
+\subsubsection{Input Specification}
+The test requires the presence of the following SDSS data, from the
+Summer 2013 LSST pro- cessing, in the PDAC systems:
+
+\begin{itemize}
+\tightlist
+\item
+  The catalog of coadded image tiles;
+\item
+  The catalog of calibrated single-epoch images, including photometric
+  zero points; • The coadded image data; and
+\item
+  The single-epoch calibrated image data.
+\end{itemize}
+
+Note that a significant fraction of the single-epoch calibrated images
+are known to have been lost between 2013 and the loading of the data
+into PDAC. The test report will note where that affects the result.
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A Jupyter notebook of the API Aspect tests performed;
+\item
+  A written log of the tests performed on the GUI-based Portal Aspect;
+  and
+\item
+  A collection of the files that resulted from data download actions
+  performed as part of the tests.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Clone the Github lsst/LDM-540 package. Record the SHA1 for the version
+of the package to be used. {[}Additional procedures, e.g., tagging, are
+still to be confirmed.{]}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used. Log the version of Jupyter to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            \emph{}Execute the LDM-540/test\_scripts/lsp-00-25.ipynb notebook to
+perform the tests listed above against the API Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Preserve any outputs of the script that are in the form of files outside
+the notebook.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Manually perform, and log, the following steps against the Portal
+Aspect:
+
+\begin{enumerate}
+\tightlist
+\item
+  Navigate to the PDAC Portal. Log the URL used to do so.
+\item
+  Perform image queries against the SDSS Stripe 82 coadded and
+  single-epoch image data. These queries should match ones in the API
+  Aspect test notebook. Document the query results with screen shots.
+\item
+  Download an example of each type of image.
+\item
+  Using the public SDSS archive, attempt to retrieve corresponding
+  images and visu- ally compare them.
+\item
+  Perform image cutout requests for 300 × 300 fields at the same targets
+  used in the full-image queries.
+\item
+  Download the cutouts.
+\end{enumerate}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T8}{LVV-T8}
+    - LSP-00-30: Linkage of catalog query results with associated images}\label{lvv-t8}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9848}{LVV-9848} - DMS-PRTL-REQ-0004-V-01: Semantic Linkage: Portal Workflows\_1
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-9814}{LVV-9814} - DMS-LSP-REQ-0008-V-01: Semantic Linkage\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test will check for the ability, in the Portal Aspect of the LSST
+Science Platform, to match catalog data with the image data on which the
+measurements were performed, specifically:
+
+\begin{itemize}
+\tightlist
+\item
+  Navigating from a catalog query result to the associated images; and~
+\item
+  Overlaying catalog query results on associated images.
+\end{itemize}
+
+Because of limited staff resources, these tests will be based on the
+original PDAC dataset, the LSST Summer 2013 processing of the SDSS
+Stripe 82 data. The image data for the WISE and NEOWISE missions have
+not been loaded into PDAC.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0008
+\item
+  DMS-PRTL-REQ-0004
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+LSP-00-*
+
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.
+
+
+\subsubsection{Input Specification}
+The test requires the presence of the following SDSS data, from the
+Summer 2013 LSST pro- cessing, in the PDAC systems:
+
+\begin{itemize}
+\tightlist
+\item
+  The coadded source catalog;
+\item
+  The forced photometry catalog driven from the i-band coadded sources;
+\item
+  The catalog of coadded image tiles;
+\item
+  The catalog of calibrated single-epoch images, including photometric
+  zero points; • The coadded image data; and
+\item
+  The single-epoch calibrated image data.
+\end{itemize}
+
+Note that a significant fraction of the single-epoch calibrated images
+are known to have been lost between 2013 and the loading of the data
+into PDAC. The test report will note where that affects the result.
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A written log of the tests performed on the GUI-based Portal Aspect.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Manually perform, and log, the following steps against the Portal
+Aspect:
+
+\begin{enumerate}
+\tightlist
+\item
+  Navigate to the PDAC Portal. Log the URL used to do so.
+\item
+  Perform a catalog query against the i-band coadded source catalog
+  within the Stripe 82 area.
+\item
+  Request the time series from the forced photometry catalog for a
+  selected source.
+\item
+  Confirm that the images associated with the forced photometry
+  measurements are available.
+\item
+  Document the query results with screen shots.
+\end{enumerate}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T9}{LVV-T9}
+    - LSP-00-35: Linkage of catalog query results to related catalog data}\label{lvv-t9}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Deprecated & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9814}{LVV-9814} - DMS-LSP-REQ-0008-V-01: Semantic Linkage\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test will check for the ability, in the Portal Aspect of the LSST
+Science Platform, to match catalog data with related catalog data.
+Specifically, the test verifies the ability to navigate from a coadded
+source catalog entry to the associated forced photometry.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0008
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+LSP-00-*
+
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+The test must, and can only, be carried out on the PDAC instance of the
+Science Platform.\\
+The test may be performed from any client computer on the public
+Internet. The computer used, and the network connection involved, shall
+be documented in the test report.\\
+The test requires access via the NCSA VPN from the client to the PDAC
+data services (which means that the performance of the VPN is a
+contributor to the performance observed).\\
+The client computer must have an up-to-date mainstream Web browser, the
+identity of which shall be documented in the test report.
+
+
+\subsubsection{Input Specification}
+The test requires the presence of the following SDSS data, from the
+Summer 2013 LSST pro- cessing, in the PDAC systems:
+
+\begin{itemize}
+\tightlist
+\item
+  The coadded source catalog; and
+\item
+  The forced photometry catalog driven from the i-band coadded sources.
+\end{itemize}
+
+
+\subsubsection{Output Specification}
+The output will consist of:
+
+\begin{itemize}
+\tightlist
+\item
+  A written log of the tests performed on the GUI-based Portal Aspect.
+\end{itemize}
+
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log host and networking details of the client host to be used. Log the
+Web browser version to be used.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Establish VPN connectivity to the PDAC at NCSA.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Manually perform, and log, the following steps against the Portal
+Aspect:
+
+\begin{enumerate}
+\tightlist
+\item
+  Navigate to the PDAC Portal. Log the URL used to do so.
+\item
+  Perform a catalog query against the i-band coadded source catalog
+  within the Stripe 82 area.
+\item
+  Request the time series from the forced photometry catalog for a
+  selected source.
+\item
+  Confirm that the data retrieved corresponds to the selected coadded
+  source.
+\item
+  Document the query results with screen shots.
+\end{enumerate}
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T598}{LVV-T598}
+    - Verify access to All Released or Authorized Data Products}\label{lvv-t598}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9807}{LVV-9807} - DMS-LSP-REQ-0001-V-01: Access to All Released or Authorized Data
+Products\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP can access all data products defined in the DPDD,
+and additional data products.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T600}{LVV-T600}
+    - Verify LSP provides a portal aspect}\label{lvv-t600}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9811}{LVV-9811} - DMS-LSP-REQ-0002-V-01: Portal Aspect\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides a web-based "Portal" to access LSST data
+products and user storage resources.
+
+The Portal is defined by further requirements.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T601}{LVV-T601}
+    - Verify LSP provides a notebook aspect}\label{lvv-t601}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9810}{LVV-9810} - DMS-LSP-REQ-0003-V-01: Notebook Aspect\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides an interactive Python computing
+environment, accessible via web browser, with access to LSST data
+products and user storage resources.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T602}{LVV-T602}
+    - Verify LSP provides web API}\label{lvv-t602}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9808}{LVV-9808} - DMS-LSP-REQ-0004-V-01: API (Data Access) Aspect\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides a web API for access to LSST data products
+and user storage resources.~
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T603}{LVV-T603}
+    - Verify data access through multiple linked aspects}\label{lvv-t603}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9809}{LVV-9809} - DMS-LSP-REQ-0005-V-01: Linkage of Aspects\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP facilitates access of the same LSST or user data
+through multiple aspects.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T604}{LVV-T604}
+    - Verify use of VO standards}\label{lvv-t604}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9812}{LVV-9812} - DMS-LSP-REQ-0006-V-01: Use of VO Standards\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP utilizes stable and accepted Virtual Observatory
+standards for public APIs.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T605}{LVV-T605}
+    - Verify that LSP complies with LSST data access policies}\label{lvv-t605}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9806}{LVV-9806} - DMS-LSP-REQ-0007-V-01: Abide by the Data Access Policies\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP complies with the public data access policy and
+access restrictions defined by the LSST Project.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T606}{LVV-T606}
+    - Verify semantic linkages between data items}\label{lvv-t606}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9814}{LVV-9814} - DMS-LSP-REQ-0008-V-01: Semantic Linkage\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides access to linkages between data items that
+reflect their provenance and data dependencies.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T607}{LVV-T607}
+    - Verify semantic linkages between data items and uncertainties}\label{lvv-t607}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9813}{LVV-9813} - DMS-LSP-REQ-0009-V-01: Semantic Linkage: Uncertainties\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides methods to identify uncertainties
+associated with a given quantity.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T608}{LVV-T608}
+    - Verify transfer of Portal data references to Notebook aspect}\label{lvv-t608}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9815}{LVV-9815} - DMS-LSP-REQ-0010-V-01: Transfer of Portal Data References to Notebook\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that data references derived from Portal exploration can be
+transferred and used in to retrieve the same data in the Notebook
+aspect.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T609}{LVV-T609}
+    - Verify providing user file storage in LSP}\label{lvv-t609}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9817}{LVV-9817} - DMS-LSP-REQ-0011-V-01: User File Workspace\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides a user file workspace for storage of user
+generated data files. These shall be accessible from all three aspects.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T610}{LVV-T610}
+    - Verify providing user generated database in LSP}\label{lvv-t610}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9816}{LVV-9816} - DMS-LSP-REQ-0012-V-01: User Database Workspace\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP allows for creation, use, and management of User
+Generated databases, and interaction with user databases by the same
+facilities as Project databases, where feasible.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T611}{LVV-T611}
+    - Verify access controls in user workspace}\label{lvv-t611}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9818}{LVV-9818} - DMS-LSP-REQ-0013-V-01: User Workspace Access Controls\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that LSP users can place access restrictions on data in the User
+File and Database workspaces, and that these restrictions are enforced
+across all aspects.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T612}{LVV-T612}
+    - Verify ability to download data from LSP}\label{lvv-t612}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9819}{LVV-9819} - DMS-LSP-REQ-0014-V-01: Download Data\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides a means to download data from queries, user
+workspaces, or other operations, to the user's system.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T613}{LVV-T613}
+    - Verify ability to upload data to LSP}\label{lvv-t613}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9823}{LVV-9823} - DMS-LSP-REQ-0015-V-01: Upload Data\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that LSP users can upload data from their system for use in the
+LSP aspects and storage in their user workspace.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T614}{LVV-T614}
+    - Verify ability to transfer data to and from the Workspace}\label{lvv-t614}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9822}{LVV-9822} - DMS-LSP-REQ-0016-V-01: Transfer Data to Workspace\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that users can transfer data between all features of the LSP that
+allow for upload and download of data.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T615}{LVV-T615}
+    - Verify file formats provided for tabular data download}\label{lvv-t615}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9821}{LVV-9821} - DMS-LSP-REQ-0017-V-01: Tabular Data Download File Formats\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP allows tabular data from search results to be
+downloaded in FITS, VOTable, and ASCII delimiter-separated tables (e.g.,
+CSV).
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T616}{LVV-T616}
+    - Verify file formats provided for image data download}\label{lvv-t616}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9820}{LVV-9820} - DMS-LSP-REQ-0018-V-01: Image Data Download File Format\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that LSST image data products can be downloaded via the LSP in
+FITS format, with appropriate metadata included.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T617}{LVV-T617}
+    - Verify support for peak volume of moderate-sized queries}\label{lvv-t617}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9824}{LVV-9824} - DMS-LSP-REQ-0028-V-01: Peak Volume for Moderate-Sized Queries\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP can handle a peak usage of 50 simultaneous queries
+without degradation, where the queries include input selection of up to
+1E7 objects in the catalog, result data set of up to 0.1GB, and a
+response time of 10 seconds.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T618}{LVV-T618}
+    - Verify support for peak volume of queries on all Objects}\label{lvv-t618}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9825}{LVV-9825} - DMS-LSP-REQ-0029-V-01: Peak Volume for Queries on all Objects\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP can handle a peak usage of 20 simultaneous queries
+without degradation, where the queries include input selection of up to
+the entire object database, result data set of up to 6 GB, and a
+response time of 1 hour.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T619}{LVV-T619}
+    - Verify LSP handles peak volume of queries}\label{lvv-t619}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9826}{LVV-9826} - DMS-LSP-REQ-0030-V-01: Peak Volume of In-process Queries\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP can simultaneously handle peak usage of 20*6 GB =
+120 GB of downloads.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T620}{LVV-T620}
+    - Verify LSP supports required download bandwidth}\label{lvv-t620}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9827}{LVV-9827} - DMS-LSP-REQ-0031-V-01: Query Result Download Bandwidth\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP supports a download rate of at least 6 Gbps for
+query results including tables and images.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T621}{LVV-T621}
+    - Verify LSP user reference and documentation}\label{lvv-t621}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9828}{LVV-9828} - DMS-LSP-REQ-0019-V-01: Documentation\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP provides user reference and documentation for all of
+its aspects.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T622}{LVV-T622}
+    - Verify LSP only available to authenticated users}\label{lvv-t622}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9830}{LVV-9830} - DMS-LSP-REQ-0020-V-01: Authenticated User Access\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the functions and services of all three aspects of the LSP
+are accessible only to authenticated users.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T623}{LVV-T623}
+    - Verify support for new LSP users}\label{lvv-t623}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9832}{LVV-9832} - DMS-LSP-REQ-0021-V-01: New-user Support\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that guidance is provided to new users about how to become
+authenticated users of the LSP.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T624}{LVV-T624}
+    - Verify implementation of common identity across LSP aspects}\label{lvv-t624}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9831}{LVV-9831} - DMS-LSP-REQ-0022-V-01: Common Identity\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that users can authenticate and access all three aspects of the
+LSP using the same credentials.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T625}{LVV-T625}
+    - Verify authentication via external identity providers}\label{lvv-t625}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9834}{LVV-9834} - DMS-LSP-REQ-0023-V-01: Use of External Identity Providers\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that LSP users can be authenticated using external credentials
+from trusted identity providers.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T626}{LVV-T626}
+    - Verify LSP identity can have multiple associated credentials}\label{lvv-t626}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9835}{LVV-9835} - DMS-LSP-REQ-0024-V-01: Use of Multiple Sets of Credentials\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that an LSP user can have multiple credentials, from different
+providers, associated with the same identity within the LSP.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T627}{LVV-T627}
+    - Verify implementation of Acceptable Use Policy}\label{lvv-t627}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9829}{LVV-9829} - DMS-LSP-REQ-0025-V-01: Acceptable Use Policy\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that non-Project users of the LSP are required to agree to and
+abide by an Acceptable Use Policy.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T628}{LVV-T628}
+    - Verify LSP connections encrypted}\label{lvv-t628}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9836}{LVV-9836} - DMS-LSP-REQ-0026-V-01: Using secure protocols\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that all external connections to the LSP are encrypted in
+accordance with LSST cybersecurity policy.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T629}{LVV-T629}
+    - Verify privacy of users' activities}\label{lvv-t629}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9833}{LVV-9833} - DMS-LSP-REQ-0027-V-01: Privacy of User Activities\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that users' activities on the LSP are not visible to other users
+without the originating user's explicit permission.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T630}{LVV-T630}
+    - Verify multiple LSP instances}\label{lvv-t630}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9839}{LVV-9839} - DMS-LSP-REQ-0032-V-01: Multiple installations\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that separate instances of the LSP accessible to the public, and
+only within the LSST Project, are available and maintained.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T631}{LVV-T631}
+    - Verify LSP access from the public Internet (IPv4)}\label{lvv-t631}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9837}{LVV-9837} - DMS-LSP-REQ-0033-V-01: Internet-Accessible (IPv4)\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP is accessible from the public Internet using IPv4
+protocols.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T632}{LVV-T632}
+    - Verify LSP access from the public Internet (IPv6)}\label{lvv-t632}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9838}{LVV-9838} - DMS-LSP-REQ-0034-V-01: Internet-Accessible (IPv6)\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP is accessible from the public Internet using IPv6
+protocols.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T633}{LVV-T633}
+    - Verify indication of system availability}\label{lvv-t633}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9840}{LVV-9840} - DMS-LSP-REQ-0035-V-01: System-Availability Indication\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the LSP informs users when services are unavailable due to
+maintenance or excessive load.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T668}{LVV-T668}
+    - Verify access to original alert state}\label{lvv-t668}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9871}{LVV-9871} - DMS-PRTL-REQ-0034-V-01: Access to Original Alert State\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that alerts as they were originally raised are accessible via the
+Portal.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T669}{LVV-T669}
+    - Verify query for single-epoch visit images}\label{lvv-t669}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9878}{LVV-9878} - DMS-PRTL-REQ-0035-V-01: Query for Single Epoch Visit Images\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that users with a list of visits (either directly, or from a
+visit-selection query) can query for single-epoch images corresponding
+to those visits.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T670}{LVV-T670}
+    - Verify query for single-epoch raft images}\label{lvv-t670}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9877}{LVV-9877} - DMS-PRTL-REQ-0036-V-01: Query for Single Epoch Raft Images\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that users of the single-epoch query service
+(\href{https://jira.lsstcorp.org/browse/LVV-9878}{LVV-9878}) can limit
+the returned visit images to only a specified raft.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T671}{LVV-T671}
+    - Verify query for single-epoch CCD images}\label{lvv-t671}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9876}{LVV-9876} - DMS-PRTL-REQ-0037-V-01: Query for Single Epoch CCD Image\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that users of the single-epoch query service
+(\href{https://jira.lsstcorp.org/browse/LVV-9878}{LVV-9878}) can limit
+the returned visit images to only a specified CCD.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T672}{LVV-T672}
+    - Verify metadata query for single-epoch images}\label{lvv-t672}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9879}{LVV-9879} - DMS-PRTL-REQ-0038-V-01: Single-Epoch Image Query Specifications\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the Portal provides an option to query for visits and
+single-epoch images of a certain type based on image metadata or
+parameters from the reformatted EFD.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T673}{LVV-T673}
+    - Verify query for coadds by image metadata}\label{lvv-t673}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9875}{LVV-9875} - DMS-PRTL-REQ-0039-V-01: Coadded Image Query Specifications\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that the Portal aspect supports queries based on image metadata
+describing the provenance of the contributing images, that return the
+corresponding coadd image(s).
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T674}{LVV-T674}
+    - Verify query for coadd image cutouts}\label{lvv-t674}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9880}{LVV-9880} - DMS-PRTL-REQ-0041-V-01: Query for Coadded Image Cutouts\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that Portal users can query based on image metadata for coadds,
+then obtain a list of sub-images (cutouts) with a specified center
+position and size.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T675}{LVV-T675}
+    - Verify query for single-epoch image cutouts}\label{lvv-t675}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Inspection & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-9881}{LVV-9881} - DMS-PRTL-REQ-0040-V-01: Query for Single Epoch Image Cutouts\_1
+
+\end{itemize}
+
+\subsubsection{Test Items}
+Verify that Portal users can query based on image metadata for
+single-epoch images, then obtain a list of sub-images (cutouts) with a
+specified center position and size.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\appendix
+% generated from JIRA project LVV
+% using template at /usr/local/lib/python3.6/site-packages/docsteady/templates/dm-spec-appendix.latex.jinja2.
+% Collecting ATM data from folder: "/Data Management/Services/LSP Services"
+% using dosteady version 1.1
+% Please do not edit -- update information in Jira instead
+
+\section{Traceability}
+\scriptsize{
+\begin{longtable}[]{p{13cm}p{3cm}}
+\toprule
+Verification Elements & Test Cases\tabularnewline
+\midrule
+\endhead
+
+\href{https://jira.lsstcorp.org/browse/LVV-9807}{LVV-9807 - DMS-LSP-REQ-0001-V-01: Access to All Released or Authorized Data
+Products\_1
+}
+& {
+\hyperref[lvv-t2]{LVV-T2}
+\hyperref[lvv-t598]{LVV-T598}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9809}{LVV-9809 - DMS-LSP-REQ-0005-V-01: Linkage of Aspects\_1
+}
+& {
+\hyperref[lvv-t2]{LVV-T2}
+\hyperref[lvv-t603]{LVV-T603}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9808}{LVV-9808 - DMS-LSP-REQ-0004-V-01: API (Data Access) Aspect\_1
+}
+& {
+\hyperref[lvv-t3]{LVV-T3}
+\hyperref[lvv-t602]{LVV-T602}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9824}{LVV-9824 - DMS-LSP-REQ-0028-V-01: Peak Volume for Moderate-Sized Queries\_1
+}
+& {
+\hyperref[lvv-t4]{LVV-T4}
+\hyperref[lvv-t617]{LVV-T617}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9825}{LVV-9825 - DMS-LSP-REQ-0029-V-01: Peak Volume for Queries on all Objects\_1
+}
+& {
+\hyperref[lvv-t4]{LVV-T4}
+\hyperref[lvv-t618]{LVV-T618}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9811}{LVV-9811 - DMS-LSP-REQ-0002-V-01: Portal Aspect\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+\hyperref[lvv-t600]{LVV-T600}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9819}{LVV-9819 - DMS-LSP-REQ-0014-V-01: Download Data\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+\hyperref[lvv-t6]{LVV-T6}
+\hyperref[lvv-t7]{LVV-T7}
+\hyperref[lvv-t612]{LVV-T612}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9862}{LVV-9862 - DMS-PRTL-REQ-0022-V-01: Positional Query: Astrophysical Coordinate
+Systems\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9865}{LVV-9865 - DMS-PRTL-REQ-0021-V-01: Positional Query: Multiple Positions/Objects\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9869}{LVV-9869 - DMS-PRTL-REQ-0026-V-01: Positional Query by Region: Cone-Search\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9868}{LVV-9868 - DMS-PRTL-REQ-0027-V-01: Positional Query by Region: Box-Search\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9859}{LVV-9859 - DMS-PRTL-REQ-0028-V-01: Query by Identifier\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9856}{LVV-9856 - DMS-PRTL-REQ-0016-V-01: Generic Query - Form-based\_1
+}
+& {
+\hyperref[lvv-t5]{LVV-T5}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9895}{LVV-9895 - DMS-PRTL-REQ-0056-V-01: Histograms\_1
+}
+& {
+\hyperref[lvv-t6]{LVV-T6}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9901}{LVV-9901 - DMS-PRTL-REQ-0055-V-01: XY Scatter Plots\_1
+}
+& {
+\hyperref[lvv-t6]{LVV-T6}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9893}{LVV-9893 - DMS-PRTL-REQ-0054-V-01: Paging of Tabular Data\_1
+}
+& {
+\hyperref[lvv-t6]{LVV-T6}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9889}{LVV-9889 - DMS-PRTL-REQ-0050-V-01: Column Selection of Tabular Data\_1
+}
+& {
+\hyperref[lvv-t6]{LVV-T6}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9894}{LVV-9894 - DMS-PRTL-REQ-0053-V-01: Row Selection of Tabular Data\_1
+}
+& {
+\hyperref[lvv-t6]{LVV-T6}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9891}{LVV-9891 - DMS-PRTL-REQ-0049-V-01: Display of Tabular Data\_1
+}
+& {
+\hyperref[lvv-t6]{LVV-T6}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9821}{LVV-9821 - DMS-LSP-REQ-0017-V-01: Tabular Data Download File Formats\_1
+}
+& {
+\hyperref[lvv-t6]{LVV-T6}
+\hyperref[lvv-t615]{LVV-T615}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9820}{LVV-9820 - DMS-LSP-REQ-0018-V-01: Image Data Download File Format\_1
+}
+& {
+\hyperref[lvv-t7]{LVV-T7}
+\hyperref[lvv-t616]{LVV-T616}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9881}{LVV-9881 - DMS-PRTL-REQ-0040-V-01: Query for Single Epoch Image Cutouts\_1
+}
+& {
+\hyperref[lvv-t7]{LVV-T7}
+\hyperref[lvv-t675]{LVV-T675}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9880}{LVV-9880 - DMS-PRTL-REQ-0041-V-01: Query for Coadded Image Cutouts\_1
+}
+& {
+\hyperref[lvv-t7]{LVV-T7}
+\hyperref[lvv-t674]{LVV-T674}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9848}{LVV-9848 - DMS-PRTL-REQ-0004-V-01: Semantic Linkage: Portal Workflows\_1
+}
+& {
+\hyperref[lvv-t8]{LVV-T8}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9814}{LVV-9814 - DMS-LSP-REQ-0008-V-01: Semantic Linkage\_1
+}
+& {
+\hyperref[lvv-t8]{LVV-T8}
+\hyperref[lvv-t9]{LVV-T9}
+\hyperref[lvv-t606]{LVV-T606}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9810}{LVV-9810 - DMS-LSP-REQ-0003-V-01: Notebook Aspect\_1
+}
+& {
+\hyperref[lvv-t601]{LVV-T601}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9812}{LVV-9812 - DMS-LSP-REQ-0006-V-01: Use of VO Standards\_1
+}
+& {
+\hyperref[lvv-t604]{LVV-T604}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9806}{LVV-9806 - DMS-LSP-REQ-0007-V-01: Abide by the Data Access Policies\_1
+}
+& {
+\hyperref[lvv-t605]{LVV-T605}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9813}{LVV-9813 - DMS-LSP-REQ-0009-V-01: Semantic Linkage: Uncertainties\_1
+}
+& {
+\hyperref[lvv-t607]{LVV-T607}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9815}{LVV-9815 - DMS-LSP-REQ-0010-V-01: Transfer of Portal Data References to Notebook\_1
+}
+& {
+\hyperref[lvv-t608]{LVV-T608}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9817}{LVV-9817 - DMS-LSP-REQ-0011-V-01: User File Workspace\_1
+}
+& {
+\hyperref[lvv-t609]{LVV-T609}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9816}{LVV-9816 - DMS-LSP-REQ-0012-V-01: User Database Workspace\_1
+}
+& {
+\hyperref[lvv-t610]{LVV-T610}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9818}{LVV-9818 - DMS-LSP-REQ-0013-V-01: User Workspace Access Controls\_1
+}
+& {
+\hyperref[lvv-t611]{LVV-T611}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9823}{LVV-9823 - DMS-LSP-REQ-0015-V-01: Upload Data\_1
+}
+& {
+\hyperref[lvv-t613]{LVV-T613}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9822}{LVV-9822 - DMS-LSP-REQ-0016-V-01: Transfer Data to Workspace\_1
+}
+& {
+\hyperref[lvv-t614]{LVV-T614}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9826}{LVV-9826 - DMS-LSP-REQ-0030-V-01: Peak Volume of In-process Queries\_1
+}
+& {
+\hyperref[lvv-t619]{LVV-T619}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9827}{LVV-9827 - DMS-LSP-REQ-0031-V-01: Query Result Download Bandwidth\_1
+}
+& {
+\hyperref[lvv-t620]{LVV-T620}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9828}{LVV-9828 - DMS-LSP-REQ-0019-V-01: Documentation\_1
+}
+& {
+\hyperref[lvv-t621]{LVV-T621}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9830}{LVV-9830 - DMS-LSP-REQ-0020-V-01: Authenticated User Access\_1
+}
+& {
+\hyperref[lvv-t622]{LVV-T622}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9832}{LVV-9832 - DMS-LSP-REQ-0021-V-01: New-user Support\_1
+}
+& {
+\hyperref[lvv-t623]{LVV-T623}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9831}{LVV-9831 - DMS-LSP-REQ-0022-V-01: Common Identity\_1
+}
+& {
+\hyperref[lvv-t624]{LVV-T624}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9834}{LVV-9834 - DMS-LSP-REQ-0023-V-01: Use of External Identity Providers\_1
+}
+& {
+\hyperref[lvv-t625]{LVV-T625}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9835}{LVV-9835 - DMS-LSP-REQ-0024-V-01: Use of Multiple Sets of Credentials\_1
+}
+& {
+\hyperref[lvv-t626]{LVV-T626}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9829}{LVV-9829 - DMS-LSP-REQ-0025-V-01: Acceptable Use Policy\_1
+}
+& {
+\hyperref[lvv-t627]{LVV-T627}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9836}{LVV-9836 - DMS-LSP-REQ-0026-V-01: Using secure protocols\_1
+}
+& {
+\hyperref[lvv-t628]{LVV-T628}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9833}{LVV-9833 - DMS-LSP-REQ-0027-V-01: Privacy of User Activities\_1
+}
+& {
+\hyperref[lvv-t629]{LVV-T629}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9839}{LVV-9839 - DMS-LSP-REQ-0032-V-01: Multiple installations\_1
+}
+& {
+\hyperref[lvv-t630]{LVV-T630}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9837}{LVV-9837 - DMS-LSP-REQ-0033-V-01: Internet-Accessible (IPv4)\_1
+}
+& {
+\hyperref[lvv-t631]{LVV-T631}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9838}{LVV-9838 - DMS-LSP-REQ-0034-V-01: Internet-Accessible (IPv6)\_1
+}
+& {
+\hyperref[lvv-t632]{LVV-T632}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9840}{LVV-9840 - DMS-LSP-REQ-0035-V-01: System-Availability Indication\_1
+}
+& {
+\hyperref[lvv-t633]{LVV-T633}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9871}{LVV-9871 - DMS-PRTL-REQ-0034-V-01: Access to Original Alert State\_1
+}
+& {
+\hyperref[lvv-t668]{LVV-T668}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9878}{LVV-9878 - DMS-PRTL-REQ-0035-V-01: Query for Single Epoch Visit Images\_1
+}
+& {
+\hyperref[lvv-t669]{LVV-T669}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9877}{LVV-9877 - DMS-PRTL-REQ-0036-V-01: Query for Single Epoch Raft Images\_1
+}
+& {
+\hyperref[lvv-t670]{LVV-T670}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9876}{LVV-9876 - DMS-PRTL-REQ-0037-V-01: Query for Single Epoch CCD Image\_1
+}
+& {
+\hyperref[lvv-t671]{LVV-T671}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9879}{LVV-9879 - DMS-PRTL-REQ-0038-V-01: Single-Epoch Image Query Specifications\_1
+}
+& {
+\hyperref[lvv-t672]{LVV-T672}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-9875}{LVV-9875 - DMS-PRTL-REQ-0039-V-01: Coadded Image Query Specifications\_1
+}
+& {
+\hyperref[lvv-t673]{LVV-T673}
+} \\
+\tabularnewline
+\bottomrule
+\end{longtable}
+} % end scriptsize
