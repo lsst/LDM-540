@@ -1,8 +1,7 @@
 % generated from JIRA project LVV
-% on 2019-03-12 10:49:52
 % using template at /Users/GComoretto/anaconda3/lib/python3.6/site-packages/docsteady/templates/dm-spec.latex.jinja2.
-% Collecting ATM data from folder: "/Data Management/Services/LSP Services/"
-% using docsteady version 1.1rc5
+% Collecting ATM data from folder: "/Data Management/Services/LSP Services/LSP Integrated Platform"
+% using docsteady version 1.1
 % Please do not edit -- update information in Jira instead
 
 \section{Test Cases Summary}\label{test-cases-summary}
@@ -98,6 +97,7 @@ Test Id & Test Name\tabularnewline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T632}{Verify LSP access from the public Internet (IPv6)} \tabularnewline
     \hyperref[lvv-t633]{LVV-T633} &
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T633}{Verify indication of system availability} \tabularnewline
+    
     \hyperref[lvv-t762]{LVV-T762} &
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T762}{Verify availability of interactive Python environment} \tabularnewline
     \hyperref[lvv-t763]{LVV-T763} &
@@ -2241,6 +2241,9 @@ The Portal is defined by further requirements.
 \paragraph{Hardware}
 
 \subsubsection{Input Specification}
+LSP test account\\
+Processed dataset available in LSP
+
 
 \subsubsection{Output Specification}
 
@@ -2252,7 +2255,8 @@ The Portal is defined by further requirements.
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            Open LSP Portal Aspect in a browser
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -2261,6 +2265,246 @@ The Portal is defined by further requirements.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                LSP Portal Home Page appears
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log in through LSP credentials
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                SSO Login page presented and log-in successful. ~Success of login is
+indicated by some visual cue.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Look for available datasets and releases.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                LSP will show available datasets and data releases.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Look for user-stored data. ~Upload a sample catalog. ~Upload a sample
+image.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                LSP should show user products in an easy-to-find way.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Upload a sample catalog. ~Upload a sample image.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Sample catalog and image should appear in user data area.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Visually navigate to a selected region of the sky.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Image will be shown for regions of sky with imaging. ~If navigating to a
+region of sky not in the selected dataset, then a clear indication of no
+image available will be shown.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 7 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Navigate to a specific RA, Dec.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Image shown for given RA, Dec.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 8 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Ask for overlay of catalog of objects at current image view.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Boxes or circles or similar markers should apear on image.~
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 9 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Mouse-over a catalog object.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Information about that catalog object should appear
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 10 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Select a region on the image. ~Look at table display.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                See that table display is now restricted to images within the select
+area.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 11 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Initiate a query against some other dataset.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Expect to see a new table with results from same region of sky.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 12 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Download image of selected region
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Download interface presents to user with offer to download selected file
+in available formats (presumably at least FITS).
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 13 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Download tables for selected region
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Download interface will present offering option to download tables in
+any of the supported formats.
+
+                \vspace{\dp0}
+                } \end{minipage}
         \\ \midrule
     \end{longtable}
 
@@ -2298,6 +2542,9 @@ products and user storage resources.
 \paragraph{Hardware}
 
 \subsubsection{Input Specification}
+LSP test account\\
+Processed dataset available in LSP
+
 
 \subsubsection{Output Specification}
 
@@ -2308,6 +2555,160 @@ products and user storage resources.
     \endhead
 
             \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log in to Portal
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                SSO interface to authenticate to Protal service.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Launch/Access Notebook interface
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notebook will present with loaded Python environment and give an input
+cell for entry.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Use Python API to query for available images that cover a given RA, Dec
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                List of available images will be return
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Use Python API to download an image
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Image object will be returned to user
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Inspect Image object
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Image metadata will be shown to user
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Save Image object to user storage area.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                An inspection of the user-storage area will reveal a newly created
+image.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 7 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Retrieve a table of objects in the region of the selected image.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Table object available in Notebook kernel.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 8 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Plot a color-color diagram for retrieved objects from image.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Rendered plot in notebook about color-color diagram.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 9 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             
             \vspace{\dp0}
@@ -2354,6 +2755,10 @@ and user storage resources.~
 \paragraph{Hardware}
 
 \subsubsection{Input Specification}
+LSP test account with empty User Storage area\\
+Processed dataset available in LSP\\
+Example image and tables to upload.
+
 
 \subsubsection{Output Specification}
 
@@ -2365,7 +2770,9 @@ and user storage resources.~
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            Upload a table to the LSP using the web API. ~Likely launched from a
+Python session or shell.
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -2374,6 +2781,87 @@ and user storage resources.~
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Inspection of user area will show file now uploaded
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Upload 5 tables to LSP using the web API.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Inspection of user area will show 5 tables.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Query contents of LSP User Storage area
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                One image and Five tables
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Download one of the tables using the web API
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                local file created that matches table
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Query RA, Dec region for table of objects using web API
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                File or object returned with requested objects
+
+                \vspace{\dp0}
+                } \end{minipage}
         \\ \midrule
     \end{longtable}
 
@@ -13312,6 +13800,8 @@ load.
     \end{longtable}
 
 
+\section{Test Cases}
+
 \subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T796}{LVV-T796}
     - Verify web APIs use CAOM2}\label{lvv-t796}
 
@@ -13485,9 +13975,8 @@ databases.
 
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Instantiate a connection to the TAP service with the pyVO library, by
-running:\\[2\baselineskip]import pyvo\\[2\baselineskip]service =
-pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\baselineskip]service.describe()\\[2\baselineskip]
+            Instantiate a connection to the TAP service with the pyVO
+library.\\[4\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13506,7 +13995,7 @@ pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\bas
 
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Execute:\\[2\baselineskip]service.tables.describe()
+            List the available tables.\\[2\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13527,10 +14016,7 @@ Prompt Processing data products.
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Execute an example query on one of the DRP tables, such as the Object
-table (inserting the correct table name from Step
-3):\\[2\baselineskip]results = service.search(``SELECT * from
-DRP\_schema.example\_DRP\_table LIMIT 5'')\\
-results.to\_table().show\_in\_notebook()\\[3\baselineskip]
+table (inserting the correct table name from Step 3):\\[3\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -14223,8 +14709,7 @@ pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\base
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                A list of available tables should be printed, including both DRP and
-Prompt Processing data products.
+                A list of available tables should be printed.
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -14840,7 +15325,8 @@ available output format.
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            Open a Terminal window on the Science Platform.
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -14849,6 +15335,96 @@ available output format.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Retrieve the TAP capabilities description by
+executing:\\[2\baselineskip]curl
+https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/capabilities
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Inspect the capabilities file. Under the TAP capability, one of the
+outputFormat elements should correspond to VOTable.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected XML looks like:\\[2\baselineskip]\textless{}outputFormat
+ivo-id=``ivo://ivoa.net/std/TAPRegExt\#output-votable-td''\textgreater{}\\
+\hspace*{0.333em}
+\textless{}mime\textgreater{}application/x-votable+xml\textless{}/mime\textgreater{}\\
+\hspace*{0.333em}
+\textless{}alias\textgreater{}votable\textless{}/alias\textgreater{}\\
+\textless{}/outputFormat\textgreater{}\\[2\baselineskip]
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Create a Notebook instance in the Science Platform.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Make a request to the TAP service and print the raw output returned by
+executing:\\[2\baselineskip]import pyvo\\
+service =
+pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\
+query = service.create\_query(``SELECT * FROM TAP\_SCHEMA.tables'', )\\
+output = q.execute\_raw()\\
+print(output)
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The result should be a VOTable file; which is indicated by these initial
+elements in the XML:\\
+
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+\end{verbatim}
+
+\begin{verbatim}
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.3">
+\end{verbatim}
+
+                \vspace{\dp0}
+                } \end{minipage}
         \\ \midrule
     \end{longtable}
 
@@ -15756,8 +16332,13 @@ capabilities for the purpose of supporting service operators.
         \\ \midrule
     \end{longtable}
 
-\newpage
 \appendix
+% generated from JIRA project LVV
+% using template at /Users/GComoretto/anaconda3/lib/python3.6/site-packages/docsteady/templates/dm-spec-appendix.latex.jinja2.
+% Collecting ATM data from folder: "/Data Management/Services/LSP Services/LSP Integrated Platform"
+% using dosteady version 1.1
+% Please do not edit -- update information in Jira instead
+
 \section{Traceability}
 \scriptsize{
 \begin{longtable}[]{p{13cm}p{3cm}}
