@@ -1,7 +1,7 @@
 % generated from JIRA project LVV
-% using template at <template>.
+% using template at /usr/local/lib/python3.6/site-packages/docsteady/templates/dm-spec.latex.jinja2.
 % Collecting ATM data from folder: "/Data Management/Services/LSP Services"
-% using docsteady version 1.1.post3+ge96fb3d
+% using docsteady version 1.1.1
 % Please do not edit -- update information in Jira instead
 
 \section{Test Cases Summary}\label{test-cases-summary}
@@ -784,8 +784,10 @@ performed against the WISE catalogs via the API Aspect.
 The tests will record their performance for comparison against similar
 queries in the produc- tion WISE archive at IRSA, and the returned data
 will be compared to that for similar queries against the API services
-provided by IRSA.\\[2\baselineskip]\textbf{Requirement (to remove once
-requirements are synchronized from magic draw)}\\
+provided by IRSA.\\
+~\\
+\textbf{Requirement (to remove once requirements are synchronized from
+magic draw)}\\
 DMS-LSP-REQ-004
 
 
@@ -814,7 +816,8 @@ identity of which shall be documented in the test report.\\
 The tests will be captured in a Jupyter notebook run locally on the
 client computer, so the client system must have a recent production
 version of Jupyter installed.~(The test does not depend on features of
-JupyterLab in any way, only the standard Notebook.)\\[2\baselineskip]
+JupyterLab in any way, only the standard Notebook.)\\
+~\\
 
 
 \subsubsection{Input Specification}
@@ -839,8 +842,8 @@ systems:
 (The 3-band and 2-band Single-exposure Source Database tables from the
 pre-hibernation mission are not queried in this test case, for the sake
 of simplicity. These tables are smaller than the two Single-exposure
-Source Database tables that are included in the test
-case.)\\[2\baselineskip]
+Source Database tables that are included in the test case.)\\
+~\\
 
 
 \subsubsection{Output Specification}
@@ -996,9 +999,11 @@ may not be realistic because of the lack of a system capable of
 performing the equivalent queries in the production WISE archive.\\
 At a later date it may be possible to attempt equivalent queries using a
 non-database sys- tem and verify the exact correspondence of results,
-but the non-database system does not presently
-exist1.\\[3\baselineskip]\textbf{Requirements (to be removed when Reqs
-are synchronized from magic draw)}
+but the non-database system does not presently exist1.\\
+~\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
 
 \begin{itemize}
 \tightlist
@@ -1197,8 +1202,10 @@ range of basic queries through the Portal Aspect of the LSP:
 \end{itemize}
 
 In addition, it tests the ability to download tabular query results from
-the Portal Aspect.\\[2\baselineskip]\textbf{Requirements (to be removed
-when Reqs are synchronized from magic draw)}
+the Portal Aspect.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
 
 \begin{itemize}
 \tightlist
@@ -1427,8 +1434,10 @@ results in the Portal Aspect UI:
 This test does not address the limits of scaling of these capabilities
 to large query results. That will be addressed in future test
 specifications. The test report should include notes on the sizes of
-results that were used.\\[2\baselineskip]\textbf{Requirements (to be
-removed when Reqs are synchronized from magic draw)}
+results that were used.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
 
 \begin{itemize}
 \tightlist
@@ -1635,8 +1644,10 @@ Science Platform:
 Because of limited staff resources, these tests will be based on the
 original PDAC dataset, the LSST Summer 2013 processing of the SDSS
 Stripe 82 data. The image data for the WISE and NEOWISE missions have
-not been loaded into PDAC.\\[2\baselineskip]\textbf{Requirements (to be
-removed when Reqs are synchronized from magic draw)}
+not been loaded into PDAC.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
 
 \begin{itemize}
 \tightlist
@@ -1672,8 +1683,8 @@ identity of which shall be documented in the test report.\\
 The API Aspect tests will be captured in a Jupyter notebook run locally
 on the client computer, so the client system must have a recent
 production version of Jupyter installed.~(The test does not depend on
-features of JupyterLab in any way, only the standard
-Notebook.\\[2\baselineskip]
+features of JupyterLab in any way, only the standard Notebook.\\
+~\\
 
 
 \subsubsection{Input Specification}
@@ -1865,8 +1876,10 @@ measurements were performed, specifically:
 Because of limited staff resources, these tests will be based on the
 original PDAC dataset, the LSST Summer 2013 processing of the SDSS
 Stripe 82 data. The image data for the WISE and NEOWISE missions have
-not been loaded into PDAC.\\[2\baselineskip]\textbf{Requirements (to be
-removed when Reqs are synchronized from magic draw)}
+not been loaded into PDAC.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
 
 \begin{itemize}
 \tightlist
@@ -2023,9 +2036,10 @@ Test & Gregory Dubois-Felsmann
 This test will check for the ability, in the Portal Aspect of the LSST
 Science Platform, to match catalog data with related catalog data.
 Specifically, the test verifies the ability to navigate from a coadded
-source catalog entry to the associated forced
-photometry.\\[2\baselineskip]\textbf{Requirements (to be removed when
-Reqs are synchronized from magic draw)}
+source catalog entry to the associated forced photometry.\\
+~\\
+\textbf{Requirements (to be removed when Reqs are synchronized from
+magic draw)}
 
 \begin{itemize}
 \tightlist
@@ -2223,7 +2237,7 @@ Inspection & Jeffrey Carlin
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the LSP provides a web-based ``Portal'' to access LSST data
+Verify that the LSP provides a web-based "Portal" to access LSST data
 products and user storage resources.
 
 The Portal is defined by further requirements.
@@ -7373,11 +7387,11 @@ Inspection & Jeffrey Carlin
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the Portal aspect provides for the users a ``property
-sheet'' for the contents of an alert packet including, but not
-necessarily limited to, the alert postage stamp image, the postage stamp
-time series, the photometric time series, the source and object
-information (e.g., position, brightness).
+Verify that the Portal aspect provides for the users a "property sheet"
+for the contents of an alert packet including, but not necessarily
+limited to, the alert postage stamp image, the postage stamp time
+series, the photometric time series, the source and object information
+(e.g., position, brightness).
 
 
 
@@ -12218,7 +12232,7 @@ Inspection & Jeffrey Carlin
 \subsubsection{Test Items}
 Verify that the Notebook Aspect has a process that allows users to add
 new packages to their environment It is intended that operations like
-``pip install'' will be usable.
+"pip install" will be usable.
 
 
 
@@ -13244,7 +13258,7 @@ Inspection & Jeffrey Carlin
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the Notebook Aspect provides ``drill down'' functionality in
+Verify that the Notebook Aspect provides "drill down" functionality in
 plots, including brushing and linking between plots, interactive
 discovery of metadata about particular points, drill down to imaging
 from measurements.
@@ -13472,7 +13486,7 @@ Inspection & Jeffrey Carlin
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the Notebook Aspect provides a mechanism for ``pushing''
+Verify that the Notebook Aspect provides a mechanism for "pushing"
 specific types of data to the Portal API. For instance, this allows a
 user to plot a catalog of coordinates over an image display using the
 Portal's Firefly components. This is supported by DMS-PRTL-REQ-0115 on
@@ -13968,8 +13982,10 @@ databases.
 
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Instantiate a connection to the TAP service with the pyVO
-library.\\[4\baselineskip]
+            Instantiate a connection to the TAP service with the pyVO library.\\
+~\\
+~\\
+~\\
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13980,8 +13996,12 @@ library.\\[4\baselineskip]
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ import pyvo\\[2\baselineskip]service =
-pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\baselineskip]service.describe()
+                \texttt{ import pyvo\\
+~\\
+service =
+pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\
+~\\
+service.describe()
  }
                 \vspace{\dp0}
                 } \end{minipage} \\ \cline{2-3}
@@ -13995,7 +14015,8 @@ pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\bas
 
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            List the available tables.\\[2\baselineskip]
+            List the available tables.\\
+~\\
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -14022,7 +14043,9 @@ Prompt Processing data products.
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Execute an example query on one of the DRP tables, such as the Object
-table (inserting the correct table name from Step 3):\\[3\baselineskip]
+table (inserting the correct table name from Step 3):\\
+~\\
+~\\
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -14033,9 +14056,10 @@ table (inserting the correct table name from Step 3):\\[3\baselineskip]
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ results = service.search(``SELECT * from DRP\_schema.example\_DRP\_table
-LIMIT 5'')\\
-results.to\_table().show\_in\_notebook()\\[2\baselineskip]
+                \texttt{ results = service.search("SELECT * from DRP\_schema.example\_DRP\_table
+LIMIT 5")\\
+results.to\_table().show\_in\_notebook()\\
+~\\
  }
                 \vspace{\dp0}
                 } \end{minipage} \\ \cline{2-3}
@@ -14201,8 +14225,8 @@ Inspection & Jeffrey Carlin
 \subsubsection{Test Items}
 Verify that the API Aspect provides for retrieval of all reference
 catalog data via TAP ADQL queries. For the purposes of this requirement
-a ``reference catalog'' is an externally sourced catalog used during
-data production activities.
+a "reference catalog" is an externally sourced catalog used during data
+production activities.
 
 
 
@@ -14692,8 +14716,15 @@ An example table must be loaded into an LSP database.
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Instantiate a connection to the TAP service with the pyVO library by
-running:\\[2\baselineskip]import pyvo\\[2\baselineskip]service =
-pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\baselineskip]service.describe()\\[2\baselineskip]
+running:\\
+~\\
+import pyvo\\
+~\\
+service =
+pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\
+~\\
+service.describe()\\
+~\\
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -14712,7 +14743,9 @@ pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\base
 
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Execute:\\[2\baselineskip]service.tables.describe()
+            Execute:\\
+~\\
+service.tables.describe()
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -14732,9 +14765,13 @@ pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\base
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Execute an example query on one of the available tables (inserting the
-correct table name from Step 3):\\[2\baselineskip]results =
-service.search(``SELECT * from schema.example\_table LIMIT 5'')\\
-results.to\_table().show\_in\_notebook()\\[3\baselineskip]
+correct table name from Step 3):\\
+~\\
+results = service.search("SELECT * from schema.example\_table LIMIT
+5")\\
+results.to\_table().show\_in\_notebook()\\
+~\\
+~\\
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -15353,9 +15390,9 @@ available output format.
 
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Retrieve the TAP capabilities description by
-executing:\\[2\baselineskip]curl
-https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/capabilities
+            Retrieve the TAP capabilities description by executing:\\
+~\\
+curl https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/capabilities
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -15381,13 +15418,16 @@ outputFormat elements should correspond to VOTable.
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                The expected XML looks like:\\[2\baselineskip]\textless{}outputFormat
-ivo-id=``ivo://ivoa.net/std/TAPRegExt\#output-votable-td''\textgreater{}\\
+                The expected XML looks like:\\
+~\\
+\textless{}outputFormat
+ivo-id="ivo://ivoa.net/std/TAPRegExt\#output-votable-td"\textgreater{}\\
 \hspace*{0.333em}
 \textless{}mime\textgreater{}application/x-votable+xml\textless{}/mime\textgreater{}\\
 \hspace*{0.333em}
 \textless{}alias\textgreater{}votable\textless{}/alias\textgreater{}\\
-\textless{}/outputFormat\textgreater{}\\[2\baselineskip]
+\textless{}/outputFormat\textgreater{}\\
+~\\
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -15410,10 +15450,12 @@ ivo-id=``ivo://ivoa.net/std/TAPRegExt\#output-votable-td''\textgreater{}\\
             \multirow{3}{*}{ 5 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Make a request to the TAP service and print the raw output returned by
-executing:\\[2\baselineskip]import pyvo\\
+executing:\\
+~\\
+import pyvo\\
 service =
 pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\
-query = service.create\_query(``SELECT * FROM TAP\_SCHEMA.tables'', )\\
+query = service.create\_query("SELECT * FROM TAP\_SCHEMA.tables", )\\
 output = q.execute\_raw()\\
 print(output)
 
@@ -16465,9 +16507,9 @@ motions of objects that have been properly matched.
 
 \appendix
 % generated from JIRA project LVV
-% using template at <template>.
+% using template at /usr/local/lib/python3.6/site-packages/docsteady/templates/dm-spec-appendix.latex.jinja2.
 % Collecting ATM data from folder: "/Data Management/Services/LSP Services"
-% using dosteady version 1.1.post3+ge96fb3d
+% using dosteady version 1.1.1
 % Please do not edit -- update information in Jira instead
 
 \section{Traceability}
