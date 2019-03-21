@@ -2226,7 +2226,7 @@ and additional data products.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Michael Wood-Vasey
 \\\bottomrule
 \end{longtable}
 
@@ -2528,7 +2528,7 @@ any of the supported formats.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Michael Wood-Vasey
 \\\bottomrule
 \end{longtable}
 
@@ -2742,7 +2742,7 @@ image.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Test & Jeffrey Carlin
+Test & Michael Wood-Vasey
 \\\bottomrule
 \end{longtable}
 
@@ -4069,7 +4069,7 @@ authenticated users of the LSP.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Leanne Guy
 \\\bottomrule
 \end{longtable}
 
@@ -4125,7 +4125,7 @@ LSP using the same credentials.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Leanne Guy
 \\\bottomrule
 \end{longtable}
 
@@ -11874,7 +11874,7 @@ load.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Simon Krughoff
 \\\bottomrule
 \end{longtable}
 
@@ -11911,7 +11911,10 @@ interactive interpreter.
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -11920,6 +11923,87 @@ interactive interpreter.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Access the interactive Python environment by:\\
+1) creating a new launcher by clicking the '+' symbol in the upper left
+of the UI\\
+2) choosing the icon that says "LSST" from the notebook section
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                A notebook with a single empty cell.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Click in the empty cell to get a cursor.\\
+Enter the example code.\\
+Execute the example code by pressing shift+enter on the keyboard.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ import lsst.afw.image as afw\_image\\
+im = afw\_image.Image(10, 10)\\
+isinstance(im, lsst.afw.ImageF)
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected result of this code is the value True without error or
+warning.
+
+                \vspace{\dp0}
+                } \end{minipage}
         \\ \midrule
     \end{longtable}
 
@@ -11931,7 +12015,7 @@ interactive interpreter.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Simon Krughoff
 \\\bottomrule
 \end{longtable}
 
@@ -11987,7 +12071,7 @@ shell with the same environment as the interactive Python environment.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Simon Krughoff
 \\\bottomrule
 \end{longtable}
 
@@ -12219,7 +12303,7 @@ example, Astropy and S-Extractor.
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Simon Krughoff
 \\\bottomrule
 \end{longtable}
 
@@ -12334,7 +12418,7 @@ development environment.~
 Version & Status & Priority & Verification Type & Owner
 \\\midrule
 1 & Draft & Normal &
-Inspection & Jeffrey Carlin
+Inspection & Simon Krughoff
 \\\bottomrule
 \end{longtable}
 
