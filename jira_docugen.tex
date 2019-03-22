@@ -501,6 +501,10 @@ Test Id & Test Name\tabularnewline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T835}{Verify API logging and monitoring} \tabularnewline
     \hyperref[lvv-t836]{LVV-T836} &
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T836}{Validate ability to identify cool dwarfs via cross-matched survey datasets in LSP} \tabularnewline
+    \hyperref[lvv-t844]{LVV-T844} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T844}{Validate separation of stars and galaxies using the Notebook Aspect} \tabularnewline
+    \hyperref[lvv-t845]{LVV-T845} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T845}{Validate separation of stars and galaxies using the Portal Aspect} \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -11911,73 +11915,6 @@ interactive interpreter.
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Authenticate to the notebook aspect of the LSST Science Platform
-(NB-LSP). ~This is currently at
-https://lsst-lsp-stable.ncsa.illinois.edu/nb.
-
-            \vspace{\dp0}
-            } \end{minipage} \\ \cline{2-3}
-            & Test Data &
-            \begin{minipage}[t]{13cm}{\footnotesize
-                No data.
-                \vspace{\dp0}
-            } \end{minipage} \\ \cline{2-3}
-            & Expected Result &
-                \begin{minipage}[t]{13cm}{\footnotesize
-                Redirection to the spawner page of the NB-LSP allowing selection of the
-containerized stack version and machine flavor.
-
-                \vspace{\dp0}
-                } \end{minipage}
-        \\ \midrule
-
-            \multirow{3}{*}{ 2 } & Description &
-            \begin{minipage}[t]{13cm}{\footnotesize
-            Spawn a container by:\\
-1) choosing an appropriate stack version: e.g. the latest weekly.\\
-2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
-
-            \vspace{\dp0}
-            } \end{minipage} \\ \cline{2-3}
-            & Test Data &
-            \begin{minipage}[t]{13cm}{\footnotesize
-                No data.
-                \vspace{\dp0}
-            } \end{minipage} \\ \cline{2-3}
-            & Expected Result &
-                \begin{minipage}[t]{13cm}{\footnotesize
-                Redirection to the JupyterLab environment served from the chosen
-container containing the correct stack version.
-
-                \vspace{\dp0}
-                } \end{minipage}
-        \\ \midrule
-
-            \multirow{3}{*}{ 3 } & Description &
-            \begin{minipage}[t]{13cm}{\footnotesize
-            Access the interactive Python environment by:\\
-1) creating a new launcher by clicking the '+' symbol in the upper left
-of the UI\\
-2) choosing the icon that says "LSST" from the notebook section
-
-            \vspace{\dp0}
-            } \end{minipage} \\ \cline{2-3}
-            & Test Data &
-            \begin{minipage}[t]{13cm}{\footnotesize
-                No data.
-                \vspace{\dp0}
-            } \end{minipage} \\ \cline{2-3}
-            & Expected Result &
-                \begin{minipage}[t]{13cm}{\footnotesize
-                A notebook with a single empty cell.
-
-                \vspace{\dp0}
-                } \end{minipage}
-        \\ \midrule
-
-            \multirow{3}{*}{ 4 } & Description &
-            \begin{minipage}[t]{13cm}{\footnotesize
             Click in the empty cell to get a cursor.\\
 Enter the example code.\\
 Execute the example code by pressing shift+enter on the keyboard.
@@ -11992,8 +11929,8 @@ Execute the example code by pressing shift+enter on the keyboard.
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
                 \texttt{ import lsst.afw.image as afw\_image\\
-im = afw\_image.Image(10, 10)\\
-isinstance(im, lsst.afw.ImageF)
+im = afw\_image.ImageF(10, 10)\\
+isinstance(im, afw\_image.ImageF)
  }
                 \vspace{\dp0}
                 } \end{minipage} \\ \cline{2-3}
@@ -12001,6 +11938,129 @@ isinstance(im, lsst.afw.ImageF)
                 \begin{minipage}[t]{13cm}{\footnotesize
                 The expected result of this code is the value True without error or
 warning.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 3-1
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Open a new launcher by navigating in the top menu bar "File"
+-\textgreater{} "New Launcher"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A launcher window with several sections, potentially with several kernel
+versions for each.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 3-2
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Select the option under "Notebook" labeled "LSST" by clicking on the
+icon.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    An empty notebook with a single empty cell. ~The kernel show up as
+"LSST" in the top right of the notebook.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
+Notebook Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -12049,9 +12109,94 @@ shell with the same environment as the interactive Python environment.
     Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
     \endhead
 
-            \multirow{3}{*}{ 1 } & Description &
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            Verify that the STDOUT and STDERR output streams are attached to an
+interactive terminal using the example test code.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ case "\$-" in\\
+*i*) ~ ~echo This shell is interactive ;;\\
+*) ~ ~echo This shell is not interactive ;;\\
+esac
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The shell should print "This shell is interactive" to the terminal
+window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
+Notebook Aspect.
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -12060,6 +12205,61 @@ shell with the same environment as the interactive Python environment.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 4-1
+                {\scriptsize from \hyperref[lvv-t839]
+                {LVV-T839} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Open a new launcher by navigating in the top menu bar "File"
+-\textgreater{} "New Launcher".
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A launcher window with several sections, potentially with several kernel
+versions for each.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 4-2
+                {\scriptsize from \hyperref[lvv-t839]
+                {LVV-T839} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Select the option under "Other" labeled "Terminal" by clicking on the
+icon.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A terminal window appears with command line access to the user's file
+system.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
         \\ \midrule
     \end{longtable}
 
@@ -12109,7 +12309,9 @@ execute in.
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
+Notebook Aspect.
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -12118,6 +12320,377 @@ execute in.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Click in the empty cell to get a cursor.\\
+Enter the example code.\\
+Execute the example code by pressing shift+enter on the keyboard, and
+confirm that the version listed on the screen is the one you requested.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ !eups list -s \textbar{} grep lsst\_distrib
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected result of this code is something similar to the
+following:\\
+
+\begin{verbatim}
+lsst_distrib          17.0+10        current w_2019_11 setup
+\end{verbatim}
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            After logging out, log back into the Notebook Aspect, and try a
+container with a different stack version.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 5-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 5-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Click in the empty cell to get a cursor.\\
+Enter the example code.\\
+Execute the example code by pressing shift+enter on the keyboard.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ import lsst.afw.image as afw\_image\\
+im = afw\_image.ImageF(10, 10)\\
+isinstance(im, afw\_image.ImageF)
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected result of this code is the value True without error or
+warning.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 7 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
+Notebook Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 8 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Enter the example code.\\
+Execute the example code by pressing shift+enter on the keyboard.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ import lsst.afw.image as afw\_image\\
+im = afw\_image.ImageF(10, 10)\\
+isinstance(im, afw\_image.ImageF)
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected result of this code is the value True without error or
+warning.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 9 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Click in the empty cell to get a cursor.\\
+Enter the example code.\\
+Execute the example code by pressing shift+enter on the keyboard, and
+confirm that the version listed on the screen is the one you requested.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ !eups list -s \textbar{} grep lsst\_distrib
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected result of this code is something similar to the
+following:\\
+
+\begin{verbatim}
+lsst_distrib          17.0+10        current w_2019_11 setup
+\end{verbatim}
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 10-1
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Open a new launcher by navigating in the top menu bar "File"
+-\textgreater{} "New Launcher"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A launcher window with several sections, potentially with several kernel
+versions for each.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 10-2
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Select the option under "Notebook" labeled "LSST" by clicking on the
+icon.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    An empty notebook with a single empty cell. ~The kernel show up as
+"LSST" in the top right of the notebook.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 11-1
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Open a new launcher by navigating in the top menu bar "File"
+-\textgreater{} "New Launcher"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A launcher window with several sections, potentially with several kernel
+versions for each.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 11-2
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Select the option under "Notebook" labeled "LSST" by clicking on the
+icon.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    An empty notebook with a single empty cell. ~The kernel show up as
+"LSST" in the top right of the notebook.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
         \\ \midrule
     \end{longtable}
 
@@ -12340,7 +12913,9 @@ new packages to their environment It is intended that operations like
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            Open a new terminal window by navigating the top menu bar "File"
+-\textgreater{} "New" -\textgreater{} "Terminal".
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -12349,6 +12924,383 @@ new packages to their environment It is intended that operations like
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                A shell prompt (bash by default) with cursor focus.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Verify the pip based module is not already installed ~by:\\
+1) entering the example code in the empty cell\\
+2) running the cell by pressing shift+enter on the keyboard.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ import pip\_install\_test
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected result is a ModuleNotFoundError exception with a second
+empty cell under the first.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Verify the local file module is not already installed by:\\
+1) entering the example code in the second empty cell\\
+2) running the cell by pressing shift+enter on the keyboard.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ import local\_file\_test
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The expected result is a ModuleNotFoundError exception with a third
+empty cell under the first two.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Install the pip test package by entering the example code at the shell
+prompt.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ pip install -\/-user sqre-pip\_install\_test
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                A message in the terminal indicating success installing the package.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Install a local python package on the PYTHONPATH in the notebook by
+executing the example code at the shell prompt.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ TMPDIR=`mktemp -d`\\
+echo 'print("Hello: this is a test of the user import system")'
+\textgreater{} \$\{TMPDIR\}/local\_file\_test.py\\
+if {[} -e \$\{HOME\}/notebooks/.user\_setups {]}; then\\
+\hspace*{0.333em} ~ mv \$\{HOME\}/notebooks/.user\_setups \$\{TMPDIR\}\\
+fi\\
+echo 'export PYTHONPATH='\$\{TMPDIR\}':\$\{PYTHONPATH\}' \textgreater{}
+\$HOME/notebooks/.user\_setups
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The example code should complete without error or warning.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 7 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Select the notebook created in Step 2 by clicking on the appropriate
+tab.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 8 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Clear all errors by navigating the top menu bar "Kernel" -\textgreater{}
+"Restart Kernel and Clear All Outputs..."
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Three cells with code from Step 3 in the first cell, code from Step 4 in
+the second cell, and an empty third cell.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 9 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Check the pip install by:\\
+1) selecting the first cell in the notebook\\
+2) executing the cell by pressing shift+enter on the keyboard.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The cell should execute without error or warning. ~A message may be
+displayed indicating the success of import.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 10 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Check the local file install by:\\
+1) selecting the second cell in the notebook\\
+2) executing teh cell by pressing shift+enter on the keyboard
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The cell should execute without error or warning. ~A message saying
+"Hello: this is a test of the user import system" will be displayed.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 11 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Navigate back to the terminal window by selecting the appropriate tab.
+~Clean up the test installs by executing the example code in the
+terminal window.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ rm -r \$\{TMPDIR\}\\
+rm \$\{HOME\}/notebooks/.user\_setups\\
+if {[} -e \$\{TMPDIR\}/.user\_setups {]}; then\\
+\hspace*{0.333em} ~ mv \$\{TMPDIR\}/.user\_setups
+\$\{HOME\}/notebooks/\\
+fi\\
+pip uninstall sqre-pip\_install\_test
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The example code should execute without error or warning.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 12 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Delete the notebook by:\\
+1) right clicking the notebook in the file browser\\
+2) selecting delete from the dropdown.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The notebook should disappear from the file browser.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 13 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
+Notebook Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 14-1
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Open a new launcher by navigating in the top menu bar "File"
+-\textgreater{} "New Launcher"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A launcher window with several sections, potentially with several kernel
+versions for each.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 14-2
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Select the option under "Notebook" labeled "LSST" by clicking on the
+icon.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    An empty notebook with a single empty cell. ~The kernel show up as
+"LSST" in the top right of the notebook.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
         \\ \midrule
     \end{longtable}
 
@@ -12455,9 +13407,126 @@ the Unix shell environment. This includes things like .bashrc,
     Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
     \endhead
 
-            \multirow{3}{*}{ 1 } & Description &
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            Create a dummy ASCII text file in your home directory by typing the
+following at the command line. The second line confirms that the file
+was created with some text.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ \$ echo '1 2 3 4 5' \textgreater{} tmp.txt\\
+\$ cat tmp.txt
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The file ('tmp.txt' in this example) is present in the home directory,
+and its contents print to the screen ('1 2 3 4 5' in this example).
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Check to see that a .bashrc file exists by typing "ls .bashrc" at the
+command line. If it does not exist, create one by typing "touch
+.bashrc".\\
+~\\
+Then make a change to the .bashrc file by opening it with your favorite
+text editor, and adding the example code below. Save the .bashrc file.\\
+~\\
+Confirm that the new line is in your .bashrc file by typing "cat
+.bashrc".
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ echo "This is a test. This is only a test."
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                User's .bashrc file exists, and contains a line with the example code.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
+Notebook Aspect.
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -12466,6 +13535,182 @@ the Unix shell environment. This includes things like .bashrc,
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 5-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 5-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            After logging back in, check whether your changes have been retained.\\
+~\\
+Open a terminal, and confirm that the message entered into your .bashrc
+file prints to the screen.\\
+~\\
+Confirm that the temporary file you created is still present (e.g., by
+typing "cat tmp.txt" and observing that the contents print to the
+screen).
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The message entered into the .bashrc file prints to the screen upon
+opening a terminal, and the dummy text placed in the .txt file displays
+when the "cat" command is executed.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 7 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Remove the file created above (using "rm test.txt" from the command
+line), and delete the added line from .bashrc.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 8 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
+Notebook Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Notification of successful logout, OK to close browser window.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 9-1
+                {\scriptsize from \hyperref[lvv-t839]
+                {LVV-T839} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Open a new launcher by navigating in the top menu bar "File"
+-\textgreater{} "New Launcher".
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A launcher window with several sections, potentially with several kernel
+versions for each.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 9-2
+                {\scriptsize from \hyperref[lvv-t839]
+                {LVV-T839} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Select the option under "Other" labeled "Terminal" by clicking on the
+icon.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A terminal window appears with command line access to the user's file
+system.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
         \\ \midrule
     \end{longtable}
 
@@ -16589,6 +17834,223 @@ motions of objects that have been properly matched.
         \\ \midrule
     \end{longtable}
 
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T844}{LVV-T844}
+    - Validate separation of stars and galaxies using the Notebook Aspect}\label{lvv-t844}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Analysis & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-10985}{LVV-10985} - Separate stars and galaxies using photometry and morphology
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test is to validate that an LSP user in the Notebook Aspect can use
+available photometry and morphology measurements to do star/galaxy
+separation.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-1
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Authenticate to the notebook aspect of the LSST Science Platform
+(NB-LSP). ~This is currently at
+https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the spawner page of the NB-LSP allowing selection of the
+containerized stack version and machine flavor.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 2-2
+                {\scriptsize from \hyperref[lvv-t837]
+                {LVV-T837} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Spawn a container by:\\
+1) choosing an appropriate stack version: e.g. the latest weekly.\\
+2) choosing an appropriate machine flavor: e.g. medium\\
+3) click "Spawn"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    Redirection to the JupyterLab environment served from the chosen
+container containing the correct stack version.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 3-1
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Open a new launcher by navigating in the top menu bar "File"
+-\textgreater{} "New Launcher"
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A launcher window with several sections, potentially with several kernel
+versions for each.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 3-2
+                {\scriptsize from \hyperref[lvv-t838]
+                {LVV-T838} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Select the option under "Notebook" labeled "LSST" by clicking on the
+icon.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    An empty notebook with a single empty cell. ~The kernel show up as
+"LSST" in the top right of the notebook.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T845}{LVV-T845}
+    - Validate separation of stars and galaxies using the Portal Aspect}\label{lvv-t845}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Analysis & Jeffrey Carlin
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-10985}{LVV-10985} - Separate stars and galaxies using photometry and morphology
+
+\end{itemize}
+
+\subsubsection{Test Items}
+This test is to validate that an LSP user in the Portal Aspect can use
+available photometry and morphology measurements to do star/galaxy
+separation.
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
 \appendix
 % generated from JIRA project LVV
 % using template at /usr/local/lib/python3.6/site-packages/docsteady/templates/dm-spec-appendix.latex.jinja2.
@@ -17831,6 +19293,12 @@ Images\_1
 }
 & {
 \hyperref[lvv-t836]{LVV-T836}
+} \\
+\href{https://jira.lsstcorp.org/browse/LVV-10985}{LVV-10985 - Separate stars and galaxies using photometry and morphology
+}
+& {
+\hyperref[lvv-t844]{LVV-T844}
+\hyperref[lvv-t845]{LVV-T845}
 } \\
 \tabularnewline
 \bottomrule
