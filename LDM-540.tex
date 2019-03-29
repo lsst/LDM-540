@@ -23,12 +23,15 @@
 \setDocDate{\vcsdate}
 
 \setDocAbstract {
-This document describes the detailed test specification for the \product{}.
+This document describes the detailed test specification for the \product{}. 
+It is a work in progress; the current version provides Test Cases covering all requirements on the \product{}, however only $\approx$~10\% are currently fully specified. 
+This document will be updated as work continues on completing Test Cases.
 }
 
 % Most recent last
 \setDocChangeRecord{%
-s	\addtohist{1.0}{2018-05-01}{Adopted under \jira{RFC-468}.  Used to drive test LSP--00.}{G. P. Dubois-Felsmann}
+	\addtohist{2.0}{2019-03-29}{Adopted under \jira{RFC-586}. All Test Cases baselined from Jira. Issued for LSP review, April 2019}{G. P. Dubois-Felsmann, L. P. Guy}
+	\addtohist{1.0}{2018-05-01}{Adopted under \jira{RFC-468}.  Used to drive test LSP--00.}{G. P. Dubois-Felsmann}
 	\addtohist{0.1}{2018-01-26}{Early drafting}{G. P. Dubois-Felsmann}
 }
 
@@ -42,9 +45,7 @@ s	\addtohist{1.0}{2018-05-01}{Adopted under \jira{RFC-468}.  Used to drive test 
 \label{sec:intro}
 
 This document specifies the test procedure for the \product{}.
-
 The \product{} is the component of the LSST system which is responsible for providing data access and data analysis capabilities to users.
-
 It is aimed at meeting the needs of several categories of users, including:
 
 \begin{itemize}
