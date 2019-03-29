@@ -1,8 +1,16 @@
 \documentclass[DM,lsstdraft,STS,toc]{lsstdoc}
 \usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{arydshln}
+
 \input meta.tex
 
+\setcounter{tocdepth}{2}
+
 \begin{document}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \def\product{LSST Science Platform}
 
@@ -10,16 +18,19 @@
 
 \title[Test Spec for \product]{\product~Test Specification}
 
-\author{G. P. Dubois-Felsmann} 
+\author{G. P. Dubois-Felsmann, L.P.~Guy,  J. Carlin, K.S.~Krughoff, C.~Slater, M.~Wood-Vasey} 
 \setDocRef{\lsstDocType-\lsstDocNum}
 \setDocDate{\vcsdate}
 
 \setDocAbstract {
-This document describes the detailed test specification for the \product{}.
+This document describes the detailed test specification for the \product{}. 
+It is a work in progress; the current version provides Test Cases covering all requirements on the \product{}, however only $\approx$~10\% are currently fully specified. 
+This document will be updated as work continues on completing Test Cases.
 }
 
 % Most recent last
 \setDocChangeRecord{%
+	\addtohist{2.0}{2019-03-29}{Adopted under \jira{RFC-586}. All Test Cases baselined from Jira. Issued for LSP review, April 2019}{G. P. Dubois-Felsmann, L. P. Guy}
 	\addtohist{1.0}{2018-05-01}{Adopted under \jira{RFC-468}.  Used to drive test LSP--00.}{G. P. Dubois-Felsmann}
 	\addtohist{0.1}{2018-01-26}{Early drafting}{G. P. Dubois-Felsmann}
 }
@@ -34,9 +45,7 @@ This document describes the detailed test specification for the \product{}.
 \label{sec:intro}
 
 This document specifies the test procedure for the \product{}.
-
 The \product{} is the component of the LSST system which is responsible for providing data access and data analysis capabilities to users.
-
 It is aimed at meeting the needs of several categories of users, including:
 
 \begin{itemize}
@@ -196,7 +205,16 @@ Refer to individual test cases where applicable.
 
 \subsection{Naming convention}
 
-All tests are named according to the pattern \textsc{LSP-xx-yy} where:
+With the introduction of Jira ATM plugin, the adopted naming convention is based on the corresponding Jira objects:
+
+\begin{description}
+  \item[LVV]{: Is the label for the ``LSST Verification and Validation'' project in Jira.}
+  \item[LVV-XXX]{: Are Verification Elements, where XXX is the Verification Element identifier.  Each Verification Element has at least one Test Case. }
+  \item[LVV-TYYY]{: Are Test Cases. Each Test Case is associated with a Verification Element, where YYY is the Test Case identifier.}
+\end{description}
+
+
+A few deprecated test cases are still reporting in the name the old identification, that was according to the pattern \textsc{LSP-xx-yy} where:
 
 \begin{description}
 
@@ -206,15 +224,6 @@ All tests are named according to the pattern \textsc{LSP-xx-yy} where:
 
 \end{description}
 
-\input{specs/specs.tex}
-\input{cases/cases.tex}
-
-\appendix
-
-\section{Precursor test datasets}
-
-\subsection{Summer 2013 SDSS Stripe 82 Processing}
-
-\subsection{Data from the WISE and NEOWISE missions}
+\input{jira_docugen.tex}
 
 \end{document}
