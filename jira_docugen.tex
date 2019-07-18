@@ -1,7 +1,7 @@
 % generated from JIRA project LVV
-% using template at /var/jenkins_home/.local/lib/python3.7/site-packages/docsteady/templates/dm-spec.latex.jinja2.
+% using template at <template>.
 % Collecting ATM data from folder: "/Data Management/Services/LSP Services|LDM-540"
-% using docsteady version 1.2rc3
+% using docsteady version 1.2rc2.post34+g8122980
 % Please do not edit -- update information in Jira instead
 
 \section{Test Cases Summary}\label{test-cases-summary}
@@ -810,7 +810,7 @@ Inspection & Michael Wood-Vasey
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the LSP provides a web-based "Portal" to access LSST data
+Verify that the LSP provides a web-based ``Portal'' to access LSST data
 products and user storage resources.
 
 The Portal is defined by further requirements.
@@ -4730,15 +4730,12 @@ step and the previous one should be updated as the system evolves.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 The default catalog (SDSS Stripe 82, 2013 LSST Processing) is fine for
-this.\\
-~\\
-Choose columns to return by:\\
+this.\\[2\baselineskip]Choose columns to return by:\\
 1) unchecking the top box in the column selection box\\
-2) checking columns for id, coord\_ra, coord\_dec, and parent.\\
-~\\
-The result should look like the following:\\
+2) checking columns for id, coord\_ra, coord\_dec, and
+parent.\\[2\baselineskip]The result should look like the following:\\
 \hspace*{0.333em}\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/244.png}\\
+\includegraphics[width=4.68750in]{jira_imgs/244.png}\\
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -4762,14 +4759,10 @@ columns.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Enter an object name for the portal to resolve. ~We will use NGC 359, a
-large elliptical galaxy in the Stripe 82 coverage.\\
-~\\
-To do this, enter the name "NGC 359" in the "Name or Position" text
-input box.\\
-~\\
-Leave the other defaults in place.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/245.png}
+large elliptical galaxy in the Stripe 82 coverage.\\[2\baselineskip]To
+do this, enter the name ``NGC 359'' in the ``Name or Position'' text
+input box.\\[2\baselineskip]Leave the other defaults in
+place.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/245.png}
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -4778,7 +4771,7 @@ Leave the other defaults in place.\\
                 } \end{minipage} \\ \cdashline{2-3}
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
-                    There should be a message like "NGC 359 resolved by NED". ~The example
+                    There should be a message like ``NGC 359 resolved by NED''. ~The example
 coordinates should also changed to the coordinates of NGC 359.
 
                     \vspace{\dp0}
@@ -4792,7 +4785,7 @@ coordinates should also changed to the coordinates of NGC 359.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Submit the query to the portal query engine by clicking the "Search"
+                Submit the query to the portal query engine by clicking the ``Search''
 button in the lower left corner of the interface.
 
                 \vspace{\dp0}
@@ -4804,9 +4797,7 @@ button in the lower left corner of the interface.
                     \begin{minipage}[t]{13cm}{\scriptsize
                     A firefly app with the summary image overlay and catalog widgets side by
 side. ~A plot of RA vs. Dec is displayed below the side by side
-widgets.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/246.png}
+widgets.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/246.png}
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -4822,9 +4813,8 @@ widgets.\\
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Currently, there is no logout mechanism on the portal.\\
-This should be updated as the system matures.\\
-~\\
-Simply close the browser window.
+This should be updated as the system matures.\\[2\baselineskip]Simply
+close the browser window.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -5055,14 +5045,11 @@ step and the previous one should be updated as the system evolves.
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             The default catalog (SDSS Stripe 82, 2013 LSST Processing) is fine for
-this.\\
-~\\
-Choose columns to return by:\\
+this.\\[2\baselineskip]Choose columns to return by:\\
 1) unchecking the top box in the column selection box\\
-2) checking columns for id, coord\_ra, coord\_dec, and parent.\\
-~\\
-The result should look like the following:\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/247.png}\\
+2) checking columns for id, coord\_ra, coord\_dec, and
+parent.\\[2\baselineskip]The result should look like the following:\\
+\includegraphics[width=4.68750in]{jira_imgs/247.png}\\
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -5084,9 +5071,9 @@ columns.
             \begin{minipage}[t]{13cm}{\footnotesize
             Attempt to access data using sexagesimal format by:\\
 1) entering an arbitrary position in the Stripe 82 footprint into the
-"Name or Position:" input text box: 22h2m1s 0d15m0.3s\\
+``Name or Position:'' input text box: 22h2m1s 0d15m0.3s\\
 2) change the radius of the query by changing the default value in the
-"Radius:" box to 15.
+``Radius:'' box to 15.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -5106,7 +5093,7 @@ return data from the service.
 
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Call the service by clicking the "Search" button in the lower left
+            Call the service by clicking the ``Search'' button in the lower left
 corner of the interface.
 
             \vspace{\dp0}
@@ -5120,7 +5107,7 @@ corner of the interface.
                 \begin{minipage}[t]{13cm}{\footnotesize
                 A firefly instance with the image summary and catalog widgets side by
 side with the plot of sky coordinates below:\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/248.png}
+\includegraphics[width=4.68750in]{jira_imgs/248.png}
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -5128,8 +5115,8 @@ side with the plot of sky coordinates below:\\
 
             \multirow{3}{*}{ 5 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Return to the query interface by clicking the "LSST Data" button in the
-upper left of the interface.
+            Return to the query interface by clicking the ``LSST Data'' button in
+the upper left of the interface.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -5149,8 +5136,8 @@ criteria pre-filled in the appropriate boxes.
 
             \multirow{3}{*}{ 6 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Modify the query to use decimal inputs by changing "22h2m1s 0d15m0.3s"
-to "330.504167 0.250083".
+            Modify the query to use decimal inputs by changing ``22h2m1s 0d15m0.3s''
+to ``330.504167 0.250083''.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -5169,8 +5156,8 @@ to "330.504167 0.250083".
 
             \multirow{3}{*}{ 7 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Execute the modified query by clicking the "Search" button at the bottom
-left of the interface.
+            Execute the modified query by clicking the ``Search'' button at the
+bottom left of the interface.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -5183,7 +5170,7 @@ left of the interface.
                 \begin{minipage}[t]{13cm}{\footnotesize
                 A firefly instance as in step 4 but with two catalog tabs instead of
 just one:\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/249.png}
+\includegraphics[width=4.68750in]{jira_imgs/249.png}
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -5216,9 +5203,8 @@ two catalog tabs.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Currently, there is no logout mechanism on the portal.\\
-This should be updated as the system matures.\\
-~\\
-Simply close the browser window.
+This should be updated as the system matures.\\[2\baselineskip]Simply
+close the browser window.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -6150,15 +6136,12 @@ step and the previous one should be updated as the system evolves.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 The default catalog (SDSS Stripe 82, 2013 LSST Processing) is fine for
-this.\\
-~\\
-Choose columns to return by:\\
+this.\\[2\baselineskip]Choose columns to return by:\\
 1) unchecking the top box in the column selection box\\
-2) checking columns for id, coord\_ra, coord\_dec, and parent.\\
-~\\
-The result should look like the following:\\
+2) checking columns for id, coord\_ra, coord\_dec, and
+parent.\\[2\baselineskip]The result should look like the following:\\
 \hspace*{0.333em}\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/244.png}\\
+\includegraphics[width=4.68750in]{jira_imgs/244.png}\\
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -6182,14 +6165,10 @@ columns.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Enter an object name for the portal to resolve. ~We will use NGC 359, a
-large elliptical galaxy in the Stripe 82 coverage.\\
-~\\
-To do this, enter the name "NGC 359" in the "Name or Position" text
-input box.\\
-~\\
-Leave the other defaults in place.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/245.png}
+large elliptical galaxy in the Stripe 82 coverage.\\[2\baselineskip]To
+do this, enter the name ``NGC 359'' in the ``Name or Position'' text
+input box.\\[2\baselineskip]Leave the other defaults in
+place.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/245.png}
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -6198,7 +6177,7 @@ Leave the other defaults in place.\\
                 } \end{minipage} \\ \cdashline{2-3}
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
-                    There should be a message like "NGC 359 resolved by NED". ~The example
+                    There should be a message like ``NGC 359 resolved by NED''. ~The example
 coordinates should also changed to the coordinates of NGC 359.
 
                     \vspace{\dp0}
@@ -6212,7 +6191,7 @@ coordinates should also changed to the coordinates of NGC 359.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Submit the query to the portal query engine by clicking the "Search"
+                Submit the query to the portal query engine by clicking the ``Search''
 button in the lower left corner of the interface.
 
                 \vspace{\dp0}
@@ -6224,9 +6203,7 @@ button in the lower left corner of the interface.
                     \begin{minipage}[t]{13cm}{\scriptsize
                     A firefly app with the summary image overlay and catalog widgets side by
 side. ~A plot of RA vs. Dec is displayed below the side by side
-widgets.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/246.png}
+widgets.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/246.png}
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -6567,11 +6544,11 @@ Inspection & Jeffrey Carlin
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the Portal aspect provides for the users a "property sheet"
-for the contents of an alert packet including, but not necessarily
-limited to, the alert postage stamp image, the postage stamp time
-series, the photometric time series, the source and object information
-(e.g., position, brightness).
+Verify that the Portal aspect provides for the users a ``property
+sheet'' for the contents of an alert packet including, but not
+necessarily limited to, the alert postage stamp image, the postage stamp
+time series, the photometric time series, the source and object
+information (e.g., position, brightness).
 
 
 
@@ -6992,15 +6969,12 @@ step and the previous one should be updated as the system evolves.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 The default catalog (SDSS Stripe 82, 2013 LSST Processing) is fine for
-this.\\
-~\\
-Choose columns to return by:\\
+this.\\[2\baselineskip]Choose columns to return by:\\
 1) unchecking the top box in the column selection box\\
-2) checking columns for id, coord\_ra, coord\_dec, and parent.\\
-~\\
-The result should look like the following:\\
+2) checking columns for id, coord\_ra, coord\_dec, and
+parent.\\[2\baselineskip]The result should look like the following:\\
 \hspace*{0.333em}\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/244.png}\\
+\includegraphics[width=4.68750in]{jira_imgs/244.png}\\
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -7024,14 +6998,10 @@ columns.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Enter an object name for the portal to resolve. ~We will use NGC 359, a
-large elliptical galaxy in the Stripe 82 coverage.\\
-~\\
-To do this, enter the name "NGC 359" in the "Name or Position" text
-input box.\\
-~\\
-Leave the other defaults in place.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/245.png}
+large elliptical galaxy in the Stripe 82 coverage.\\[2\baselineskip]To
+do this, enter the name ``NGC 359'' in the ``Name or Position'' text
+input box.\\[2\baselineskip]Leave the other defaults in
+place.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/245.png}
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -7040,7 +7010,7 @@ Leave the other defaults in place.\\
                 } \end{minipage} \\ \cdashline{2-3}
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
-                    There should be a message like "NGC 359 resolved by NED". ~The example
+                    There should be a message like ``NGC 359 resolved by NED''. ~The example
 coordinates should also changed to the coordinates of NGC 359.
 
                     \vspace{\dp0}
@@ -7054,7 +7024,7 @@ coordinates should also changed to the coordinates of NGC 359.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Submit the query to the portal query engine by clicking the "Search"
+                Submit the query to the portal query engine by clicking the ``Search''
 button in the lower left corner of the interface.
 
                 \vspace{\dp0}
@@ -7066,9 +7036,7 @@ button in the lower left corner of the interface.
                     \begin{minipage}[t]{13cm}{\scriptsize
                     A firefly app with the summary image overlay and catalog widgets side by
 side. ~A plot of RA vs. Dec is displayed below the side by side
-widgets.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/246.png}
+widgets.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/246.png}
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -7080,11 +7048,11 @@ widgets.\\
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Extend the size of the returned table by:\\
-1) returning to the query interface by clicking the "LSST Data" button
+1) returning to the query interface by clicking the ``LSST Data'' button
 in the upper left of the interface\\
 2) update the query by increasing the query radius from 10 to 60
 arcseconds\\
-3) execute the modified query by clicking the "Search" button in the
+3) execute the modified query by clicking the ``Search'' button in the
 lower left of the query interface
 
             \vspace{\dp0}
@@ -7097,7 +7065,7 @@ lower left of the query interface
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
                 An additional table tab of the catalog visualization widget:\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/251.png}
+\includegraphics[width=4.68750in]{jira_imgs/251.png}
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -7107,7 +7075,7 @@ lower left of the query interface
             \begin{minipage}[t]{13cm}{\footnotesize
             Verify the ability to page through the catalog by using the navigation
 icons at the upper left of the catalog visualization widget. ~Page
-forward to the end of the catalog. ~Use the "back to beginning"
+forward to the end of the catalog. ~Use the ``back to beginning''
 button.\\
 \includegraphics{jira_imgs/253.png}\\
 
@@ -7134,9 +7102,8 @@ first or last page from any intervening page.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Currently, there is no logout mechanism on the portal.\\
-This should be updated as the system matures.\\
-~\\
-Simply close the browser window.
+This should be updated as the system matures.\\[2\baselineskip]Simply
+close the browser window.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -9164,15 +9131,12 @@ step and the previous one should be updated as the system evolves.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 The default catalog (SDSS Stripe 82, 2013 LSST Processing) is fine for
-this.\\
-~\\
-Choose columns to return by:\\
+this.\\[2\baselineskip]Choose columns to return by:\\
 1) unchecking the top box in the column selection box\\
-2) checking columns for id, coord\_ra, coord\_dec, and parent.\\
-~\\
-The result should look like the following:\\
+2) checking columns for id, coord\_ra, coord\_dec, and
+parent.\\[2\baselineskip]The result should look like the following:\\
 \hspace*{0.333em}\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/244.png}\\
+\includegraphics[width=4.68750in]{jira_imgs/244.png}\\
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -9196,14 +9160,10 @@ columns.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Enter an object name for the portal to resolve. ~We will use NGC 359, a
-large elliptical galaxy in the Stripe 82 coverage.\\
-~\\
-To do this, enter the name "NGC 359" in the "Name or Position" text
-input box.\\
-~\\
-Leave the other defaults in place.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/245.png}
+large elliptical galaxy in the Stripe 82 coverage.\\[2\baselineskip]To
+do this, enter the name ``NGC 359'' in the ``Name or Position'' text
+input box.\\[2\baselineskip]Leave the other defaults in
+place.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/245.png}
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -9212,7 +9172,7 @@ Leave the other defaults in place.\\
                 } \end{minipage} \\ \cdashline{2-3}
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
-                    There should be a message like "NGC 359 resolved by NED". ~The example
+                    There should be a message like ``NGC 359 resolved by NED''. ~The example
 coordinates should also changed to the coordinates of NGC 359.
 
                     \vspace{\dp0}
@@ -9226,7 +9186,7 @@ coordinates should also changed to the coordinates of NGC 359.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Submit the query to the portal query engine by clicking the "Search"
+                Submit the query to the portal query engine by clicking the ``Search''
 button in the lower left corner of the interface.
 
                 \vspace{\dp0}
@@ -9238,9 +9198,7 @@ button in the lower left corner of the interface.
                     \begin{minipage}[t]{13cm}{\scriptsize
                     A firefly app with the summary image overlay and catalog widgets side by
 side. ~A plot of RA vs. Dec is displayed below the side by side
-widgets.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/246.png}
+widgets.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/246.png}
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -9251,9 +9209,9 @@ widgets.\\
 
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Click on the column header that reads "coord\_ra". This should re-sort
+            Click on the column header that reads ``coord\_ra''. This should re-sort
 the table so that objects are sorted in ascending order by RA. Click on
-the "coord\_ra" header again, and the sorting should change to
+the ``coord\_ra'' header again, and the sorting should change to
 descending order by RA.
 
             \vspace{\dp0}
@@ -9266,11 +9224,11 @@ descending order by RA.
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
                 Default view (when you first search):\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/256.png}After
-clicking once on "coord\_ra", it sorts by RA in ascending order:\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/257.png}After
-clicking again on "coord\_ra", it sorts by RA in descending order:\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/258.png}
+\includegraphics[width=4.68750in]{jira_imgs/256.png}After clicking once
+on ``coord\_ra'', it sorts by RA in ascending order:\\
+\includegraphics[width=4.68750in]{jira_imgs/257.png}After clicking again
+on ``coord\_ra'', it sorts by RA in descending order:\\
+\includegraphics[width=4.68750in]{jira_imgs/258.png}
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -9278,7 +9236,7 @@ clicking again on "coord\_ra", it sorts by RA in descending order:\\
 
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Try sorting by another column (e.g., "Id") by clicking on that column
+            Try sorting by another column (e.g., ``Id'') by clicking on that column
 header, and confirm that the table updates.
 
             \vspace{\dp0}
@@ -9303,9 +9261,8 @@ header, and confirm that the table updates.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Currently, there is no logout mechanism on the portal.\\
-This should be updated as the system matures.\\
-~\\
-Simply close the browser window.
+This should be updated as the system matures.\\[2\baselineskip]Simply
+close the browser window.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -9427,15 +9384,12 @@ step and the previous one should be updated as the system evolves.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 The default catalog (SDSS Stripe 82, 2013 LSST Processing) is fine for
-this.\\
-~\\
-Choose columns to return by:\\
+this.\\[2\baselineskip]Choose columns to return by:\\
 1) unchecking the top box in the column selection box\\
-2) checking columns for id, coord\_ra, coord\_dec, and parent.\\
-~\\
-The result should look like the following:\\
+2) checking columns for id, coord\_ra, coord\_dec, and
+parent.\\[2\baselineskip]The result should look like the following:\\
 \hspace*{0.333em}\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/244.png}\\
+\includegraphics[width=4.68750in]{jira_imgs/244.png}\\
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -9459,14 +9413,10 @@ columns.
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Enter an object name for the portal to resolve. ~We will use NGC 359, a
-large elliptical galaxy in the Stripe 82 coverage.\\
-~\\
-To do this, enter the name "NGC 359" in the "Name or Position" text
-input box.\\
-~\\
-Leave the other defaults in place.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/245.png}
+large elliptical galaxy in the Stripe 82 coverage.\\[2\baselineskip]To
+do this, enter the name ``NGC 359'' in the ``Name or Position'' text
+input box.\\[2\baselineskip]Leave the other defaults in
+place.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/245.png}
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -9475,7 +9425,7 @@ Leave the other defaults in place.\\
                 } \end{minipage} \\ \cdashline{2-3}
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
-                    There should be a message like "NGC 359 resolved by NED". ~The example
+                    There should be a message like ``NGC 359 resolved by NED''. ~The example
 coordinates should also changed to the coordinates of NGC 359.
 
                     \vspace{\dp0}
@@ -9489,7 +9439,7 @@ coordinates should also changed to the coordinates of NGC 359.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Submit the query to the portal query engine by clicking the "Search"
+                Submit the query to the portal query engine by clicking the ``Search''
 button in the lower left corner of the interface.
 
                 \vspace{\dp0}
@@ -9501,9 +9451,7 @@ button in the lower left corner of the interface.
                     \begin{minipage}[t]{13cm}{\scriptsize
                     A firefly app with the summary image overlay and catalog widgets side by
 side. ~A plot of RA vs. Dec is displayed below the side by side
-widgets.\\
-~\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/246.png}
+widgets.\\[2\baselineskip]\includegraphics[width=4.68750in]{jira_imgs/246.png}
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -9515,7 +9463,7 @@ widgets.\\
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Verify the table can be filtered by:\\
-1. choosing the "filter" icon:~\\
+1. choosing the ``filter'' icon:~\\
 \includegraphics{jira_imgs/254.png}2. entering a filter criterion in the
 filter box: e.g. coadd\_ra is less than 16.06905.\\
 3. pressing return to execute the filtering
@@ -9530,7 +9478,7 @@ filter box: e.g. coadd\_ra is less than 16.06905.\\
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
                 Expect only a single row to be selected:\\
-\includegraphics[width=4.6875in,height=\textheight]{jira_imgs/255.png}
+\includegraphics[width=4.68750in]{jira_imgs/255.png}
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -9543,9 +9491,8 @@ filter box: e.g. coadd\_ra is less than 16.06905.\\
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
                 Currently, there is no logout mechanism on the portal.\\
-This should be updated as the system matures.\\
-~\\
-Simply close the browser window.
+This should be updated as the system matures.\\[2\baselineskip]Simply
+close the browser window.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -11792,7 +11739,7 @@ containerized stack version and machine flavor.
                 Spawn a container by:\\
 1) choosing an appropriate stack version: e.g. the latest weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
+3) click ``Spawn''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -11817,8 +11764,8 @@ container containing the correct stack version.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Open a new launcher by navigating in the top menu bar "File"
--\textgreater{} "New Launcher"
+                Open a new launcher by navigating in the top menu bar ``File''
+-\textgreater{} ``New Launcher''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -11841,7 +11788,7 @@ versions for each.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Select the option under "Notebook" labeled "LSST" by clicking on the
+                Select the option under ``Notebook'' labeled ``LSST'' by clicking on the
 icon.
 
                 \vspace{\dp0}
@@ -11852,7 +11799,7 @@ icon.
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
                     An empty notebook with a single empty cell. ~The kernel show up as
-"LSST" in the top right of the notebook.
+``LSST'' in the top right of the notebook.
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -11893,8 +11840,8 @@ warning.
 
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
-Notebook Aspect.
+            From the ``File'' menu, select ``Save All, Exit, and Log Out'' to exit
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -11989,7 +11936,7 @@ containerized stack version and machine flavor.
                 Spawn a container by:\\
 1) choosing an appropriate stack version: e.g. the latest weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
+3) click ``Spawn''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12014,8 +11961,8 @@ container containing the correct stack version.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Open a new launcher by navigating in the top menu bar "File"
--\textgreater{} "New Launcher".
+                Open a new launcher by navigating in the top menu bar ``File''
+-\textgreater{} ``New Launcher''.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12038,8 +11985,8 @@ versions for each.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Select the option under "Other" labeled "Terminal" by clicking on the
-icon.
+                Select the option under ``Other'' labeled ``Terminal'' by clicking on
+the icon.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12072,7 +12019,7 @@ interactive terminal using the example test code.
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ case "\$-" in\\
+                \texttt{ case ``\$-'' in\\
 *i*) ~ ~echo This shell is interactive ;;\\
 *) ~ ~echo This shell is not interactive ;;\\
 esac
@@ -12081,7 +12028,7 @@ esac
                 } \end{minipage} \\ \cline{2-3}
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                The shell should print "This shell is interactive" to the terminal
+                The shell should print ``This shell is interactive'' to the terminal
 window.
 
                 \vspace{\dp0}
@@ -12090,8 +12037,8 @@ window.
 
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
-Notebook Aspect.
+            From the ``File'' menu, select ``Save All, Exit, and Log Out'' to exit
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -12188,7 +12135,7 @@ containerized stack version and machine flavor.
                 Spawn a container by:\\
 1) choosing an appropriate stack version: e.g. the latest weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
+3) click ``Spawn''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12213,8 +12160,8 @@ container containing the correct stack version.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Open a new launcher by navigating in the top menu bar "File"
--\textgreater{} "New Launcher"
+                Open a new launcher by navigating in the top menu bar ``File''
+-\textgreater{} ``New Launcher''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12237,7 +12184,7 @@ versions for each.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Select the option under "Notebook" labeled "LSST" by clicking on the
+                Select the option under ``Notebook'' labeled ``LSST'' by clicking on the
 icon.
 
                 \vspace{\dp0}
@@ -12248,7 +12195,7 @@ icon.
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
                     An empty notebook with a single empty cell. ~The kernel show up as
-"LSST" in the top right of the notebook.
+``LSST'' in the top right of the notebook.
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -12321,8 +12268,8 @@ warning.
 
             \multirow{3}{*}{ 5 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
-Notebook Aspect.
+            From the ``File'' menu, select ``Save All, Exit, and Log Out'' to exit
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -12388,7 +12335,7 @@ containerized stack version and machine flavor.
                 Spawn a container by:\\
 1) choosing an appropriate stack version: e.g. the latest weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
+3) click ``Spawn''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12413,8 +12360,8 @@ container containing the correct stack version.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Open a new launcher by navigating in the top menu bar "File"
--\textgreater{} "New Launcher"
+                Open a new launcher by navigating in the top menu bar ``File''
+-\textgreater{} ``New Launcher''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12437,7 +12384,7 @@ versions for each.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Select the option under "Notebook" labeled "LSST" by clicking on the
+                Select the option under ``Notebook'' labeled ``LSST'' by clicking on the
 icon.
 
                 \vspace{\dp0}
@@ -12448,7 +12395,7 @@ icon.
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
                     An empty notebook with a single empty cell. ~The kernel show up as
-"LSST" in the top right of the notebook.
+``LSST'' in the top right of the notebook.
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -12522,8 +12469,8 @@ warning.
 
             \multirow{3}{*}{ 11 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
-Notebook Aspect.
+            From the ``File'' menu, select ``Save All, Exit, and Log Out'' to exit
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -12740,7 +12687,7 @@ Inspection & Simon Krughoff
 \subsubsection{Test Items}
 Verify that the Notebook Aspect has a process that allows users to add
 new packages to their environment It is intended that operations like
-"pip install" will be usable.
+``pip install'' will be usable.
 
 
 
@@ -12796,7 +12743,7 @@ containerized stack version and machine flavor.
                 Spawn a container by:\\
 1) choosing an appropriate stack version: e.g. the latest weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
+3) click ``Spawn''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12821,8 +12768,8 @@ container containing the correct stack version.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Open a new launcher by navigating in the top menu bar "File"
--\textgreater{} "New Launcher"
+                Open a new launcher by navigating in the top menu bar ``File''
+-\textgreater{} ``New Launcher''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -12845,7 +12792,7 @@ versions for each.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Select the option under "Notebook" labeled "LSST" by clicking on the
+                Select the option under ``Notebook'' labeled ``LSST'' by clicking on the
 icon.
 
                 \vspace{\dp0}
@@ -12856,7 +12803,7 @@ icon.
                 & {\small Expected Result} &
                     \begin{minipage}[t]{13cm}{\scriptsize
                     An empty notebook with a single empty cell. ~The kernel show up as
-"LSST" in the top right of the notebook.
+``LSST'' in the top right of the notebook.
 
                     \vspace{\dp0}
                     } \end{minipage}
@@ -12923,8 +12870,8 @@ empty cell under the first two.
 
             \multirow{3}{*}{ 5 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            ~Open a new terminal window by navigating the top menu bar "File"
--\textgreater{} "New" -\textgreater{} "Terminal".
+            ~Open a new terminal window by navigating the top menu bar ``File''
+-\textgreater{} ``New'' -\textgreater{} ``Terminal''.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -12955,7 +12902,7 @@ prompt.
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ pip install -\/-user pip-install-test
+                \texttt{ pip install --user pip-install-test
  }
                 \vspace{\dp0}
                 } \end{minipage} \\ \cline{2-3}
@@ -12982,12 +12929,12 @@ executing the example code at the shell prompt.
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
                 \texttt{ TMPDIR=`mktemp -d`\\
-echo 'print("Hello: this is a test of the user import system")'
+echo `print(``Hello: this is a test of the user import system'')'
 \textgreater{} \$\{TMPDIR\}/local\_file\_test.py\\
 if {[} -e \$\{HOME\}/notebooks/.user\_setups {]}; then\\
 \hspace*{0.333em} ~ mv \$\{HOME\}/notebooks/.user\_setups \$\{TMPDIR\}\\
 fi\\
-echo 'export PYTHONPATH='\$\{TMPDIR\}':\$\{PYTHONPATH\}' \textgreater{}
+echo `export PYTHONPATH='\$\{TMPDIR\}':\$\{PYTHONPATH\}' \textgreater{}
 \$HOME/notebooks/.user\_setups
  }
                 \vspace{\dp0}
@@ -13017,8 +12964,8 @@ tab.
 
             \multirow{3}{*}{ 9 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Clear all errors by navigating the top menu bar "Kernel" -\textgreater{}
-"Restart Kernel and Clear All Outputs..."
+            Clear all errors by navigating the top menu bar ``Kernel''
+-\textgreater{} ``Restart Kernel and Clear All Outputs\ldots{}''
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13074,7 +13021,7 @@ displayed indicating the success of import.
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
                 The cell should execute without error or warning. ~A message saying
-"Hello: this is a test of the user import system" will be displayed.
+``Hello: this is a test of the user import system'' will be displayed.
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -13136,8 +13083,8 @@ pip uninstall -y pip-install-test
 
             \multirow{3}{*}{ 14 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
-Notebook Aspect.
+            From the ``File'' menu, select ``Save All, Exit, and Log Out'' to exit
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13294,7 +13241,7 @@ containerized stack version and machine flavor.
                 Spawn a container by:\\
 1) choosing an appropriate stack version: e.g. the latest weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
+3) click ``Spawn''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -13319,8 +13266,8 @@ container containing the correct stack version.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Open a new launcher by navigating in the top menu bar "File"
--\textgreater{} "New Launcher".
+                Open a new launcher by navigating in the top menu bar ``File''
+-\textgreater{} ``New Launcher''.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -13343,8 +13290,8 @@ versions for each.
 
                 & {\small Description} &
                 \begin{minipage}[t]{13cm}{\scriptsize
-                Select the option under "Other" labeled "Terminal" by clicking on the
-icon.
+                Select the option under ``Other'' labeled ``Terminal'' by clicking on
+the icon.
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -13378,7 +13325,7 @@ was created with some text.
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ \$ echo '1 2 3 4 5' \textgreater{} tmp.txt\\
+                \texttt{ \$ echo `1 2 3 4 5' \textgreater{} tmp.txt\\
 \$ cat tmp.txt
  }
                 \vspace{\dp0}
@@ -13394,15 +13341,12 @@ and its contents print to the screen ('1 2 3 4 5' in this example).
 
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Check to see that a .bashrc file exists by typing "ls .bashrc" at the
-command line. If it does not exist, create one by typing "touch
-.bashrc".\\
-~\\
-Then make a change to the .bashrc file by opening it with your favorite
-text editor, and adding the example code below. Save the .bashrc file.\\
-~\\
-Confirm that the new line is in your .bashrc file by typing "cat
-.bashrc".
+            Check to see that a .bashrc file exists by typing ``ls .bashrc'' at the
+command line. If it does not exist, create one by typing ``touch
+.bashrc''.\\[2\baselineskip]Then make a change to the .bashrc file by
+opening it with your favorite text editor, and adding the example code
+below. Save the .bashrc file.\\[2\baselineskip]Confirm that the new line
+is in your .bashrc file by typing ``cat .bashrc''.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13413,7 +13357,7 @@ Confirm that the new line is in your .bashrc file by typing "cat
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ echo "This is a test. This is only a test."
+                \texttt{ echo ``This is a test. This is only a test.''
  }
                 \vspace{\dp0}
                 } \end{minipage} \\ \cline{2-3}
@@ -13427,8 +13371,8 @@ Confirm that the new line is in your .bashrc file by typing "cat
 
             \multirow{3}{*}{ 5 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
-Notebook Aspect.
+            From the ``File'' menu, select ``Save All, Exit, and Log Out'' to exit
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13479,7 +13423,7 @@ containerized stack version and machine flavor.
                 Spawn a container by:\\
 1) choosing an appropriate stack version: e.g. the latest weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
-3) click "Spawn"
+3) click ``Spawn''
 
                 \vspace{\dp0}
                 } \end{minipage} \\ \cdashline{2-3}
@@ -13500,14 +13444,12 @@ container containing the correct stack version.
 
             \multirow{3}{*}{ 7 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            After logging back in, check whether your changes have been retained.\\
-~\\
-Open a terminal, and confirm that the message entered into your .bashrc
-file prints to the screen.\\
-~\\
-Confirm that the temporary file you created is still present (e.g., by
-typing "cat tmp.txt" and observing that the contents print to the
-screen).
+            After logging back in, check whether your changes have been
+retained.\\[2\baselineskip]Open a terminal, and confirm that the message
+entered into your .bashrc file prints to the
+screen.\\[2\baselineskip]Confirm that the temporary file you created is
+still present (e.g., by typing ``cat tmp.txt'' and observing that the
+contents print to the screen).
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -13520,7 +13462,7 @@ screen).
                 \begin{minipage}[t]{13cm}{\footnotesize
                 The message entered into the .bashrc file prints to the screen upon
 opening a terminal, and the dummy text placed in the .txt file displays
-when the "cat" command is executed.
+when the ``cat'' command is executed.
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -13528,7 +13470,7 @@ when the "cat" command is executed.
 
             \multirow{3}{*}{ 8 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Remove the file created above (using "rm test.txt" from the command
+            Remove the file created above (using ``rm test.txt'' from the command
 line), and delete the added line from .bashrc.
 
             \vspace{\dp0}
@@ -13548,8 +13490,8 @@ line), and delete the added line from .bashrc.
 
             \multirow{3}{*}{ 9 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            From the "File" menu, select "Save All, Exit, and Log Out" to exit the
-Notebook Aspect.
+            From the ``File'' menu, select ``Save All, Exit, and Log Out'' to exit
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -14456,7 +14398,7 @@ Inspection & Jeffrey Carlin
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the Notebook Aspect provides "drill down" functionality in
+Verify that the Notebook Aspect provides ``drill down'' functionality in
 plots, including brushing and linking between plots, interactive
 discovery of metadata about particular points, drill down to imaging
 from measurements.
@@ -14688,7 +14630,7 @@ Inspection & Jeffrey Carlin
 \end{itemize}
 
 \subsubsection{Test Items}
-Verify that the Notebook Aspect provides a mechanism for "pushing"
+Verify that the Notebook Aspect provides a mechanism for ``pushing''
 specific types of data to the Portal API. For instance, this allows a
 user to plot a catalog of coordinates over an image display using the
 Portal's Firefly components. This is supported by DMS-PRTL-REQ-0115 on
@@ -15193,10 +15135,8 @@ databases.
 
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Instantiate a connection to the TAP service with the pyVO library.\\
-~\\
-~\\
-~\\
+            Instantiate a connection to the TAP service with the pyVO
+library.\\[4\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -15207,12 +15147,8 @@ databases.
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ import pyvo\\
-~\\
-service =
-pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\
-~\\
-service.describe()
+                \texttt{ import pyvo\\[2\baselineskip]service =
+pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\baselineskip]service.describe()
  }
                 \vspace{\dp0}
                 } \end{minipage} \\ \cline{2-3}
@@ -15226,8 +15162,7 @@ service.describe()
 
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            List the available tables.\\
-~\\
+            List the available tables.\\[2\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -15254,9 +15189,7 @@ Prompt Processing data products.
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Execute an example query on one of the DRP tables, such as the Object
-table (inserting the correct table name from Step 3):\\
-~\\
-~\\
+table (inserting the correct table name from Step 3):\\[3\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -15267,10 +15200,9 @@ table (inserting the correct table name from Step 3):\\
             } \end{minipage} \\ \cline{2-3}
                 & Example Code &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                \texttt{ results = service.search("SELECT * from DRP\_schema.example\_DRP\_table
-LIMIT 5")\\
-results.to\_table().show\_in\_notebook()\\
-~\\
+                \texttt{ results = service.search(``SELECT * from DRP\_schema.example\_DRP\_table
+LIMIT 5'')\\
+results.to\_table().show\_in\_notebook()\\[2\baselineskip]
  }
                 \vspace{\dp0}
                 } \end{minipage} \\ \cline{2-3}
@@ -15439,8 +15371,8 @@ Inspection & Jeffrey Carlin
 \subsubsection{Test Items}
 Verify that the API Aspect provides for retrieval of all reference
 catalog data via TAP ADQL queries. For the purposes of this requirement
-a "reference catalog" is an externally sourced catalog used during data
-production activities.
+a ``reference catalog'' is an externally sourced catalog used during
+data production activities.
 
 
 
@@ -15938,15 +15870,8 @@ An example table must be loaded into an LSP database.
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Instantiate a connection to the TAP service with the pyVO library by
-running:\\
-~\\
-import pyvo\\
-~\\
-service =
-pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\
-~\\
-service.describe()\\
-~\\
+running:\\[2\baselineskip]import pyvo\\[2\baselineskip]service =
+pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\[2\baselineskip]service.describe()\\[2\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -15965,9 +15890,7 @@ service.describe()\\
 
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Execute:\\
-~\\
-service.tables.describe()
+            Execute:\\[2\baselineskip]service.tables.describe()
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -15987,13 +15910,9 @@ service.tables.describe()
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Execute an example query on one of the available tables (inserting the
-correct table name from Step 3):\\
-~\\
-results = service.search("SELECT * from schema.example\_table LIMIT
-5")\\
-results.to\_table().show\_in\_notebook()\\
-~\\
-~\\
+correct table name from Step 3):\\[2\baselineskip]results =
+service.search(``SELECT * from schema.example\_table LIMIT 5'')\\
+results.to\_table().show\_in\_notebook()\\[3\baselineskip]
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -16622,9 +16541,9 @@ available output format.
 
             \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Retrieve the TAP capabilities description by executing:\\
-~\\
-curl https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/capabilities
+            Retrieve the TAP capabilities description by
+executing:\\[2\baselineskip]curl
+https://lsst-lsp-stable.ncsa.illinois.edu/api/tap/capabilities
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -16650,16 +16569,13 @@ outputFormat elements should correspond to VOTable.
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
-                The expected XML looks like:\\
-~\\
-\textless{}outputFormat
-ivo-id="ivo://ivoa.net/std/TAPRegExt\#output-votable-td"\textgreater{}\\
+                The expected XML looks like:\\[2\baselineskip]\textless{}outputFormat
+ivo-id=``ivo://ivoa.net/std/TAPRegExt\#output-votable-td''\textgreater{}\\
 \hspace*{0.333em}
 \textless{}mime\textgreater{}application/x-votable+xml\textless{}/mime\textgreater{}\\
 \hspace*{0.333em}
 \textless{}alias\textgreater{}votable\textless{}/alias\textgreater{}\\
-\textless{}/outputFormat\textgreater{}\\
-~\\
+\textless{}/outputFormat\textgreater{}\\[2\baselineskip]
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -16682,12 +16598,10 @@ ivo-id="ivo://ivoa.net/std/TAPRegExt\#output-votable-td"\textgreater{}\\
             \multirow{3}{*}{ 5 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Make a request to the TAP service and print the raw output returned by
-executing:\\
-~\\
-import pyvo\\
+executing:\\[2\baselineskip]import pyvo\\
 service =
 pyvo.dal.TAPService('https://lsst-lsp-stable.ncsa.illinois.edu/api/tap')\\
-query = service.create\_query("SELECT * FROM TAP\_SCHEMA.tables", )\\
+query = service.create\_query(``SELECT * FROM TAP\_SCHEMA.tables'', )\\
 output = q.execute\_raw()\\
 print(output)
 
@@ -17721,7 +17635,7 @@ Test & Jeffrey Carlin
 \end{longtable}
 
 \subsubsection{Test Items}
-Not specifically a test -\/- modular script to be used in multiple other
+Not specifically a test -- modular script to be used in multiple other
 Test Scripts.
 
 
@@ -17872,10 +17786,8 @@ performed against the WISE catalogs via the API Aspect.
 The tests will record their performance for comparison against similar
 queries in the produc- tion WISE archive at IRSA, and the returned data
 will be compared to that for similar queries against the API services
-provided by IRSA.\\
-~\\
-\textbf{Requirement (to remove once requirements are synchronized from
-magic draw)}\\
+provided by IRSA.\\[2\baselineskip]\textbf{Requirement (to remove once
+requirements are synchronized from magic draw)}\\
 DMS-LSP-REQ-004
 
 
@@ -17941,11 +17853,9 @@ may not be realistic because of the lack of a system capable of
 performing the equivalent queries in the production WISE archive.\\
 At a later date it may be possible to attempt equivalent queries using a
 non-database sys- tem and verify the exact correspondence of results,
-but the non-database system does not presently exist1.\\
-~\\
-~\\
-\textbf{Requirements (to be removed when Reqs are synchronized from
-magic draw)}
+but the non-database system does not presently
+exist1.\\[3\baselineskip]\textbf{Requirements (to be removed when Reqs
+are synchronized from magic draw)}
 
 \begin{itemize}
 \tightlist
@@ -18124,8 +18034,7 @@ Science Platform:
 Because of limited staff resources, these tests will be based on the
 original PDAC dataset, the LSST Summer 2013 processing of the SDSS
 Stripe 82 data. The image data for the WISE and NEOWISE missions have
-not been loaded into PDAC.\\
-~\\
+not been loaded into PDAC.\\[2\baselineskip]
 
 
 
@@ -18195,10 +18104,9 @@ Test & Gregory Dubois-Felsmann
 This test will check for the ability, in the Portal Aspect of the LSST
 Science Platform, to match catalog data with related catalog data.
 Specifically, the test verifies the ability to navigate from a coadded
-source catalog entry to the associated forced photometry.\\
-~\\
-\textbf{Requirements (to be removed when Reqs are synchronized from
-magic draw)}
+source catalog entry to the associated forced
+photometry.\\[2\baselineskip]\textbf{Requirements (to be removed when
+Reqs are synchronized from magic draw)}
 
 \begin{itemize}
 \tightlist
