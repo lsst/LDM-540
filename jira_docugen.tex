@@ -721,6 +721,10 @@ Notebook aspect
     \hyperref[lvv-t835]{LVV-T835} &
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T835}{Verify API logging and monitoring
 } \tabularnewline
+    \hyperref[lvv-t1334]{LVV-T1334} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
+milestone
+} \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -17547,6 +17551,207 @@ capabilities for the purpose of supporting service operators.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334}
+    - LDM-503-10a: Portal Aspect tests for LSP with Authentication and TAP
+milestone
+}\label{lvv-t1334}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Verification Elements}
+    None.
+
+\subsubsection{Test Items}
+This test case verifies that the Portal Aspect of the Science Platform
+is accessible to authorized users through a login process, and that TAP
+searches can be performed from the Portal Aspect UI.\\[2\baselineskip]In
+so doing and in conjunction with the other LDM-503-10a test cases
+collected under LVV-P48, it addresses all or part of the following
+requirements:
+
+\begin{itemize}
+\tightlist
+\item
+  DMS-LSP-REQ-0002, DMS-LSP-REQ-0005, DMS-LSP-REQ-0006,
+  DMS-LSP-REQ-0020, DMS-LSP-REQ-0022, DMS-LSP-REQ-0023, DMS-LSP-REQ-0024
+\item
+  DMS-PRTL-REQ-0001, DMS-PRTL-REQ-0015, DMS-PRTL-REQ-0016,
+  DMS-PRTL-REQ-0017, DMS-PRTL-REQ-0020, DMS-PRTL-REQ-0023,
+  DMS-PRTL-REQ-0026, DMS-PRTL-REQ-0049, primarily
+\end{itemize}
+
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+The test requires only the use of a Web browser. ~Depending on the
+location / IP address of the browser host, a VPN connection to NCSA may
+be required.
+
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Navigate to the \url{https://lsst-lsp-stable.ncsa.illinois.edu/}
+endpoint of the LSP at the LDF. ~From the displayed page, navigate to
+the Portal Aspect.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                n/a
+
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                A login screen should be displayed.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log in to the Portal Aspect with NCSA credentials. ~Verify that a Portal
+TAP search screen comes up. ~Note the user name displayed in the upper
+left of the Portal. ~Log out.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                (NCSA credentials for an authorized user)
+
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Following login, the Portal Aspect TAP search screen should be
+displayed, or a clearly visible UI element allowing one-click access to
+that screen. ~A user name corresponding to the credentials entered
+should be displayed.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Log in to the Portal Aspect with alternate credentials that are
+associated with the same identity. ~
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The Portal application should come up just as in the previous step; the
+user name displayed in the upper left of the Portal should be the same
+as in the previous step.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 4 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Navigate to the TAP search screen, if necessary, and ensure that the
+LSST TAP service associated with the chosen LSP instance is selected.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                A TAP search screen should either already be displayed after the
+previous step, or should be displayed after a one-click action from the
+Portal's initial page. ~On the TAP screen, a UI element allowing the
+choice of TAP service to user should be available, and an LSST TAP
+service associated with the LSP instance under test should be
+pre-selected as the default.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 5 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Verify that the same WISE and SDSS catalog tables that were explored in
+DMTR-52 are now visible in the TAP service.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The SDSS Stripe 82 2013 processing's deep detection and forced
+photometry catalogs, and the WISE mission's principal catalog, forced
+photometry catalog, and single-epoch source catalog should be
+accessible.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 6 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Perform a TAP search on the AllWISE source catalog around the equatorial
+coordinates (2, 0) (degrees), with a 30 arcminute radius, using the
+Portal UI to specify the query.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                This query should return about 12,000 rows of data. ~It should be
+displayed in a table, as an overlay on a context image, and as a
+configurable 2D density plot.
+
+                \vspace{\dp0}
+                } \end{minipage}
         \\ \midrule
     \end{longtable}
 
