@@ -17743,7 +17743,9 @@ accessible.
             \begin{minipage}[t]{13cm}{\footnotesize
             Perform a TAP search on the AllWISE source catalog around the equatorial
 coordinates (2, 0) (degrees), with a 30 arcminute radius, using the
-Portal UI to specify the query.
+Portal UI to specify the query (select the ``Single Table'' radio
+button). ~When the query completes, note the total number of rows in the
+table, as displayed in the table header, and record it.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -17760,6 +17762,88 @@ configurable 2D density plot.
 
                 \vspace{\dp0}
                 } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 7 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Using the table viewer UI, save the result of this search as a text file
+in CSV format. ~Use a line-counting tool to find the number of rows in
+the result, record it, and compare it with the reported number from the
+previous step. ~Ensure that the CSV file's name is
+``LVV-T1334-output.csv'' and save it to the designated repository for
+test outputs.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                Allowing for the CSV header row, the number of ~rows in the file should
+match the number of rows in the table header in the UI.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 8 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Return to the TAP search screen in the UI (this can be done with the
+``TAP Searches'' button near the top of the window), select the ``ADQL''
+radio button, and view and record the ADQL text displayed for the query
+performed. ~Select ``Cancel'' to dismiss the search screen.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                The query should appear to have the expected form for an ADQL cone
+search, using the CONTAINS() and CIRCLE() functions.
+
+                \vspace{\dp0}
+                } \end{minipage}
+        \\ \midrule
+
+            \multirow{3}{*}{ 9 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Select the ``i''-in-a-circle button in the table header. ~In the
+resulting dialog box, click on the copy-to-clipboard icon for the TAP
+job URL for the query and paste the URL into the test record.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 10 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            In a separate browser window, access the page available at the URL
+obtained from the previous step. ~Observe and record the ADQL text for
+the query, in the `\textless{}uws:parameter id=``query''\textgreater{}'
+XML element. ~Verify that it matches the ADQL text obtained from the UI
+in a previous step.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
         \\ \midrule
     \end{longtable}
 
@@ -17801,6 +17885,9 @@ dedicated test notebook is required.
 \paragraph{Hardware}
 
 \subsubsection{Input Specification}
+Test case LVV-T1334 must have already been executed and the prescribed
+outputs saved, notably including the ``LVV-T1334-output.csv'' file.
+
 
 \subsubsection{Output Specification}
 
@@ -17814,12 +17901,11 @@ dedicated test notebook is required.
             \begin{minipage}[t]{13cm}{\footnotesize
             If~\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1334}{LVV-T1334
 (1.0)} has just been carried out, the tester will already be logged in
-to the Portal Aspect.\\
-Otherwise, use a Web browser to navigate to the landing page of the LSP
-instance under test, and click through to the Portal Aspect link. ~This
-should trigger a login process; the tester should log in. ~Non-NCSA
-credentials should be used (or have been used) to log in to the Portal
-Aspect.
+to the Portal Aspect; skip to the next step.\\[2\baselineskip]Otherwise,
+use a Web browser to navigate to the landing page of the LSP instance
+under test, and click through to the Portal Aspect link. ~This should
+trigger a login process; the tester should log in. ~Non-NCSA credentials
+should be used (or have been used) to log in to the Portal Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18019,9 +18105,10 @@ credentials lead to the same Notebook Aspect user environment.)
 
             \multirow{3}{*}{ 11 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Clone the TBD test notebook for LDM-503-10a into the user environment
-from the TBD tag of the TBD Github repository. ~Note the SHA that
-applies to the version of the test notebook that has been cloned.
+            Clone the test notebook for LDM-503-10a, ``LDM-503-10a-test.ipynb'',
+into the user environment from the TBD tag of the TBD Github repository.
+~Record the SHA that applies to the version of the test notebook that
+has been cloned.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18035,7 +18122,9 @@ applies to the version of the test notebook that has been cloned.
 
             \multirow{3}{*}{ 12 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Open the test notebook and execute all of its steps.\\[2\baselineskip]
+            Copy the file ``LVV-T1334-output.csv'' that was saved in the output
+repository for the LVV-T1334 test case into the home directory of the
+notebook session.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18048,6 +18137,20 @@ applies to the version of the test notebook that has been cloned.
         \\ \midrule
 
             \multirow{3}{*}{ 13 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Open the test notebook and execute all of its steps.\\[2\baselineskip]
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 14 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Note the success and/or failure indications that appear in the output of
 the notebook.
@@ -18062,7 +18165,7 @@ the notebook.
             & Expected Result &
         \\ \midrule
 
-            \multirow{3}{*}{ 14 } & Description &
+            \multirow{3}{*}{ 15 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Save and close the test notebook. ~Save the fully-executed notebook in
 TBD location as a record of the test.
@@ -18077,7 +18180,7 @@ TBD location as a record of the test.
             & Expected Result &
         \\ \midrule
 
-            \multirow{3}{*}{ 15 } & Description &
+            \multirow{3}{*}{ 16 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Without logging out, open a new browser window or tab, and navigate to
 the Portal Aspect of the LSP instance under test. ~Verify that the
@@ -18095,7 +18198,7 @@ username displayed at the upper right is the same one as in \textbf{Step
             & Expected Result &
         \\ \midrule
 
-            \multirow{3}{*}{ 16 } & Description &
+            \multirow{3}{*}{ 17 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Log out of the Notebook Aspect, close the Portal Aspect windows, and
 quit the Web browser in use.
@@ -18145,6 +18248,9 @@ protocol from remote sites.
 \paragraph{Hardware}
 
 \subsubsection{Input Specification}
+Test case LVV-T1334 must have already been executed and the prescribed
+outputs saved, notably including the ``LVV-T1334-output.csv'' file.
+
 
 \subsubsection{Output Specification}
 
@@ -18156,10 +18262,10 @@ protocol from remote sites.
 
             \multirow{3}{*}{ 1 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            On the local computer, clone the TBD test notebook for LDM-503-10a into
-the user environment from the TBD tag of the TBD Github repository.
-~Note the SHA that applies to the version of the test notebook that has
-been cloned.
+            On the local computer, clone the test notebook for LDM-503-10a,
+``LDM-503-10a-test.ipynb'', into the user environment from the TBD tag
+of the TBD Github repository. ~Note the SHA that applies to the version
+of the test notebook that has been cloned.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18175,7 +18281,8 @@ been cloned.
             \begin{minipage}[t]{13cm}{\footnotesize
             Launch a LOCAL instance of JupyterLab (i.e., by running ``jupyter lab'')
 on the computer to be used for testing. ~Ensure that the test notebook
-is visible from within JupyterLab.
+is visible from within JupyterLab. ~This test case must NOT be run in
+the Notebook Aspect.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18189,9 +18296,9 @@ is visible from within JupyterLab.
 
             \multirow{3}{*}{ 3 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Obtain an access token for the TAP service from the LSP instance under
-test, by navigating to the XXX endpoint in a web browser and logging in.
-~NCSA credentials for the tester should be used.
+            Copy the file ``LVV-T1334-output.csv'' that was saved in the output
+repository for the LVV-T1334 test case into the home directory of the
+JupyterLab session.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18205,9 +18312,10 @@ test, by navigating to the XXX endpoint in a web browser and logging in.
 
             \multirow{3}{*}{ 4 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Open the test notebook and paste the access token into the appropriate
-cell in the notebook. ~The text ``LVV-T1437'' should be found in the
-notebook just before the appropriate line of code.
+            Obtain an access token for the TAP service from the LSP instance under
+test, by navigating to the
+https://lsst-lsp-stable.ncsa.illinois.edu/auth/tokens endpoint in a web
+browser and logging in. ~NCSA credentials for the tester should be used.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18221,7 +18329,10 @@ notebook just before the appropriate line of code.
 
             \multirow{3}{*}{ 5 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Execute the entire notebook.
+            Open the test notebook and paste the access token into the appropriate
+cell in the notebook. ~The text ``LVV-T1437 access token'', followed by
+instructions, should be found in the notebook just before the
+appropriate line of code.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18235,8 +18346,7 @@ notebook just before the appropriate line of code.
 
             \multirow{3}{*}{ 6 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Note the success and/or failure indications that appear in the output of
-the notebook.
+            Execute the entire notebook.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18250,7 +18360,8 @@ the notebook.
 
             \multirow{3}{*}{ 7 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            Delete the access token from the test notebook.
+            Record the success and/or failure indications that appear in the output
+of the notebook.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -18263,6 +18374,20 @@ the notebook.
         \\ \midrule
 
             \multirow{3}{*}{ 8 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Delete the access token from the test notebook.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 9 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
             Save and close the test notebook. ~Save the fully-executed notebook in
 TBD location as a record of the test.
