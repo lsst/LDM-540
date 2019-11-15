@@ -15989,9 +15989,127 @@ described by the IVOA TAP 1.1 specification. ~ ~
     Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
     \endhead
 
-            \multirow{3}{*}{ 1 } & Description &
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-1
+                {\scriptsize from \hyperref[lvv-t1591]
+                {LVV-T1591} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Using a Web browser, navigate to the\\
+``/auth/tokens'' endpoint of the LSP instance under test.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A credential-entry screen should be displayed, unless the test user is
+already logged in in another window or tab of the browser.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-2
+                {\scriptsize from \hyperref[lvv-t1591]
+                {LVV-T1591} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                If necessary, enter a valid set of credentials. ~They may be NCSA or
+non-NCSA credentials.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    The token-request UI is displayed.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-3
+                {\scriptsize from \hyperref[lvv-t1591]
+                {LVV-T1591} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Request a token for the ``read:tap'' capability.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                    \begin{minipage}[t]{13cm}{\scriptsize
+                    A screen confirming the creation of the token.
+
+                    \vspace{\dp0}
+                    } \end{minipage}
+                \\ \hdashline
+
+
+                \multirow{3}{*}{\parbox{1.3cm}{ 1-4
+                {\scriptsize from \hyperref[lvv-t1591]
+                {LVV-T1591} } } }
+
+                & {\small Description} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                Leave the resulting page's browser tab/window open for use in subsequent
+test steps.\\[2\baselineskip]In many cases you may be asked in a
+subsequent step to use the ``copy token to clipboard'' UI element on
+this page in order to transfer your token to a prompt in another window.
+
+                \vspace{\dp0}
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Test Data} &
+                \begin{minipage}[t]{13cm}{\scriptsize
+                } \end{minipage} \\ \cdashline{2-3}
+                & {\small Expected Result} &
+                \\ \hdashline
+
+
+        \\ \midrule
+
+            \multirow{3}{*}{ 2 } & Description &
             \begin{minipage}[t]{13cm}{\footnotesize
-            
+            From a Unix prompt on a system with network access to the TAP service in
+the LSP instance under test, and a ``bash''-style shell, verify using
+the ``export'' and ``curl'' commands below that an attempt to access the
+TAP service with the token from the previous step is
+successful.\\[2\baselineskip]Use the ``copy to clipboard'' function from
+the token-access page from the previous step to paste the token into the
+(blind) prompt that results from the ``read''
+command.\\[2\baselineskip]Ensure that the token is deleted from the test
+environment after the ``curl'' command is complete, and that the token
+is invalidated via the token-access web interface.
+
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+
+            \multirow{3}{*}{ 3 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            Verify by inspection that the file resulting from the ``curl'' command
+above has the general form of a VOTable. ~(A separate test case will
+verify the VOTable format itself.)\\[2\baselineskip]Save this file as
+part of the test records using LSST standard procedures.~
+
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
@@ -18962,6 +19080,27 @@ Test & Jeffrey Carlin
 \subsubsection{Test Items}
 The steps here cover just those necessary to gain access to a terminal
 after authentication is complete.
+
+
+
+
+\subsection{\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1591}{LVV-T1591}
+    - Obtain an access token for the TAP service in an LSP instance
+}\label{lvv-t1591}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\end{longtable}
+
+\subsubsection{Test Items}
+Obtain an access token for the TAP service in an LSP instance, enabling
+subsequent test steps to connect to the TAP service as an authorized
+user.
 
 
 
