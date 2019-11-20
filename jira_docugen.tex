@@ -2787,7 +2787,9 @@ rejected.~
             From a Unix prompt on a system with network access to the TAP service in
 the LSP instance under test, verify using the ``curl'' command below
 that an attempt to access the TAP service with invalid credentials is
-rejected.
+rejected.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu'' in
+the ``curl'' command with the appropriate root URL for the LSP instance
+under test.
 
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
@@ -2796,6 +2798,18 @@ rejected.
                 No data.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ curl -w `HTTP status code:
+\%\{http\_code\}\textbackslash{}nContent-Type:
+\%\{content\_type\}\textbackslash{}nTotal time:
+\%\{time\_total\}\textbackslash{}nBytes received:
+\%\{size\_download\}\textbackslash{}nFinal URL:
+\%\{url\_effective\}\textbackslash{}n' -L
+`https://lsst-lsp-int.ncsa.illinois.edu/api/tap/sync?LANG=ADQL\&REQUEST=doQuery\&QUERY=SELECT+*+FROM+TAP\_SCHEMA.tables'
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
             & Expected Result &
         \\ \midrule
 
@@ -2828,9 +2842,11 @@ the full token text.
 the LSP instance under test, and a ``bash''-style shell, verify using
 the ``export'' and ``curl'' commands below that an attempt to access the
 TAP service with the token from the previous step is
-successful.\\[2\baselineskip]Use the ``copy to clipboard'' function from
-the token-access page from the previous step to paste the token into the
-(blind) prompt that results from the first ``export''
+successful.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu''
+in the ``curl'' command with the appropriate root URL for the LSP
+instance under test.\\[2\baselineskip]Use the ``copy to clipboard''
+function from the token-access page from the previous step to paste the
+token into the (blind) prompt that results from the first ``export''
 command.\\[2\baselineskip]Ensure that the token is deleted from the test
 environment after the ``curl'' command is complete, and that the token
 is invalidated via the token-access web interface.
@@ -2842,10 +2858,27 @@ is invalidated via the token-access web interface.
                 No data.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ export ACCESS\_TOKEN\\
+read -p token -s ACCESS\_TOKEN\\
+curl -w `HTTP status code:
+\%\{http\_code\}\textbackslash{}nContent-Type:
+\%\{content\_type\}\textbackslash{}nTotal time:
+\%\{time\_total\}\textbackslash{}nBytes received:
+\%\{size\_download\}\textbackslash{}nFinal URL:
+\%\{url\_effective\}\textbackslash{}n' -L --header ``Authorization:
+Bearer \$\{ACCESS\_TOKEN\}'' -o tap-tables.xml
+`https://lsst-lsp-int.ncsa.illinois.edu/api/tap/sync?LANG=ADQL\&REQUEST=doQuery\&QUERY=SELECT+*+FROM+TAP\_SCHEMA.tables'\\
+unset ACCESS\_TOKEN
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
             & Expected Result &
                 \begin{minipage}[t]{13cm}{\footnotesize
                 The ``curl'' command should return HTTP status code 200 and a VOTable
-containing a list of schemas in the TAP service should be obtained.
+containing a list of tables in the TAP service should be
+obtained.\\[2\baselineskip]Retain the VOTable file in the test records.
 
                 \vspace{\dp0}
                 } \end{minipage}
@@ -16086,9 +16119,11 @@ this page in order to transfer your token to a prompt in another window.
 the LSP instance under test, and a ``bash''-style shell, verify using
 the ``export'' and ``curl'' commands below that an attempt to access the
 TAP service with the token from the previous step is
-successful.\\[2\baselineskip]Use the ``copy to clipboard'' function from
-the token-access page from the previous step to paste the token into the
-(blind) prompt that results from the ``read''
+successful.\\[2\baselineskip]Replace ``lsst-lsp-int.ncsa.illinois.edu''
+in the ``curl'' command with the appropriate root URL for the LSP
+instance under test.\\[2\baselineskip]Use the ``copy to clipboard''
+function from the token-access page from the previous step to paste the
+token into the (blind) prompt that results from the ``read''
 command.\\[2\baselineskip]Ensure that the token is deleted from the test
 environment after the ``curl'' command is complete, and that the token
 is invalidated via the token-access web interface.
@@ -16100,6 +16135,22 @@ is invalidated via the token-access web interface.
                 No data.
                 \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
+                & Example Code &
+                \begin{minipage}[t]{13cm}{\footnotesize
+                \texttt{ export ACCESS\_TOKEN\\
+read -p token -s ACCESS\_TOKEN\\
+curl -w `HTTP status code:
+\%\{http\_code\}\textbackslash{}nContent-Type:
+\%\{content\_type\}\textbackslash{}nTotal time:
+\%\{time\_total\}\textbackslash{}nBytes received:
+\%\{size\_download\}\textbackslash{}nFinal URL:
+\%\{url\_effective\}\textbackslash{}n' -L --header ``Authorization:
+Bearer \$\{ACCESS\_TOKEN\}'' -o tap-tables.xml
+`https://lsst-lsp-int.ncsa.illinois.edu/api/tap/sync?LANG=ADQL\&REQUEST=doQuery\&QUERY=SELECT+*+FROM+TAP\_SCHEMA.tables'\\
+unset ACCESS\_TOKEN
+ }
+                \vspace{\dp0}
+                } \end{minipage} \\ \cline{2-3}
             & Expected Result &
         \\ \midrule
 
