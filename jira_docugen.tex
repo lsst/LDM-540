@@ -494,6 +494,8 @@ milestone} \tabularnewline
     \hyperref[lvv-t1437]{LVV-T1437} &
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1437}{LDM-503-10a: API Aspect tests for LSP with Authentication and TAP
 milestone} \tabularnewline
+    \hyperref[lvv-t1818]{LVV-T1818} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{DM-DAX-8: Verify Portal integration with workspace (via WebDAV)} \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -18266,6 +18268,69 @@ If the notebook execution produced an exception, record that.
             Save and close the test notebook. ~Save the fully-executed notebook in
 TBD location as a record of the test.
 
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{LVV-T1818 - DM-DAX-8: Verify Portal integration with workspace (via WebDAV)}\label{lvv-t1818}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Demonstration & Gregory Dubois-Felsmann
+\\\bottomrule
+\multicolumn{6}{c}{ Open \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{LVV-T1818} in Jira } \\
+\end{longtable}
+
+\subsubsection{Verification Elements}
+    None.
+
+\subsubsection{Test Items}
+This test case verifies that the Portal Aspect software is capable of
+accessing a file-oriented workspace via the WebDAV
+protocol.\\[2\baselineskip]In so doing, it partially verifies several
+Portal Aspect requirements that relate to this capability.
+~``Partially'' because some of these requirements depend on workspace
+capabilities which were not present in the prototype WebDAV service
+delivered by the DAX group.
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+A Web browser
+
+\paragraph{Hardware}
+A computer with access, whitelisted or via VPN, to the NCSA-hosted LSP
+instances
+
+\subsubsection{Input Specification}
+A read/write WebDAV service, accessible to the user performing the test,
+must be available and under the same authentication redirect coverage as
+the Portal Aspect and the TAP service used for the test.
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
             \vspace{\dp0}
             } \end{minipage} \\ \cline{2-3}
             & Test Data &
