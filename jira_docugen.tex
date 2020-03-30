@@ -497,7 +497,9 @@ milestone} \tabularnewline
     \hyperref[lvv-t1818]{LVV-T1818} &
     \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1818}{DM-SUIT-8: Verify Portal integration with workspace (via WebDAV)} \tabularnewline
     \hyperref[lvv-t1824]{LVV-T1824} &
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1824}{LDM-503-xxx - Deployment of processed HSC data in the LSP} \tabularnewline
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1824}{LDM-503-xxx - Portal Aspect access to processed HSC data in the LSP} \tabularnewline
+    \hyperref[lvv-t1825]{LVV-T1825} &
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1825}{LDM-503-xxx - Notebook Aspect access to processed HSC data in the LSP} \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -18726,7 +18728,7 @@ rows as previously.
         \\ \midrule
     \end{longtable}
 
-\subsection{LVV-T1824 - LDM-503-xxx - Deployment of processed HSC data in the LSP}\label{lvv-t1824}
+\subsection{LVV-T1824 - LDM-503-xxx - Portal Aspect access to processed HSC data in the LSP}\label{lvv-t1824}
 
 \begin{longtable}[]{llllll}
 \toprule
@@ -18742,17 +18744,14 @@ Test & Gregory Dubois-Felsmann
     None.
 
 \subsubsection{Test Items}
-Verify the deployment of Rubin/LSST-processed HSC public release data,
-including at a minimum DRP-style products such as an Object-like
-catalog, coadded images, and calibrated single-epoch images, with image
-metadata, available through all three LSP Aspects. ~This includes
-Notebook Aspect access to catalogs and images, Portal Aspect access (via
-TAP) to catalogs and image metadata (ObsTAP-style) and through that to
-images, and API Aspect access to catalogs, image metadata, images, and
-image cutouts.\\[2\baselineskip]Access to single-epoch catalog data such
-as Source or ForcedSource, and access to AP-style products, including
-DIA* catalogs and difference images, are possible stretch goals, but
-they would be represented by additional test cases in the test cycle.
+Verify the availability through the Portal Aspect of a dataset of
+Rubin/LSST-processed HSC public release data, including DRP-style
+products such as an Object-like catalog, coadded images, and calibrated
+single-epoch images, with image metadata. ~Access will be based on TAP
+service of catalogs and image metadata (ObsTAP-style) and through that
+to images.\\[2\baselineskip]If additional data products are available,
+such as DIA* outputs or Source/ForcedSource, testing those should be
+represented by an additional stretch-goal test case.
 
 
 \subsubsection{Predecessors}
@@ -18761,13 +18760,79 @@ they would be represented by additional test cases in the test cycle.
 
 \paragraph{Software}
 Testing will largely be performed using a web browser to access the
-Notebook Aspect and Portal Aspect.
+Portal Aspect.
 
 \paragraph{Hardware}
 
 \subsubsection{Input Specification}
 Execution of a DRP-style processing of a TBD-sized collection of HSC
-data, up to the full HSC PDR2 dataset.
+data, up to the full HSC PDR2 dataset. ~Deployment of this dataset in
+databases accessible to an LSP instance and to a TAP service in that
+instance.
+
+\subsubsection{Output Specification}
+
+\subsubsection{Test Procedure}
+    \begin{longtable}[]{p{1.3cm}p{2cm}p{13cm}}
+    %\toprule
+    Step & \multicolumn{2}{@{}l}{Description, Input Data and Expected Result} \\ \toprule
+    \endhead
+
+            \multirow{3}{*}{ 1 } & Description &
+            \begin{minipage}[t]{13cm}{\footnotesize
+            
+            \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Test Data &
+            \begin{minipage}[t]{13cm}{\footnotesize
+                No data.
+                \vspace{\dp0}
+            } \end{minipage} \\ \cline{2-3}
+            & Expected Result &
+        \\ \midrule
+    \end{longtable}
+
+\subsection{LVV-T1825 - LDM-503-xxx - Notebook Aspect access to processed HSC data in the LSP}\label{lvv-t1825}
+
+\begin{longtable}[]{llllll}
+\toprule
+Version & Status & Priority & Verification Type & Owner
+\\\midrule
+1 & Draft & Normal &
+Test & Gregory Dubois-Felsmann
+\\\bottomrule
+\multicolumn{6}{c}{ Open \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1825}{LVV-T1825} in Jira } \\
+\end{longtable}
+
+\subsubsection{Verification Elements}
+    None.
+
+\subsubsection{Test Items}
+Verify the availability through the Notebook Aspect of a dataset of
+Rubin/LSST-processed HSC public release data, including DRP-style
+products such as an Object-like catalog, coadded images, and calibrated
+single-epoch images, with image metadata. ~\\[2\baselineskip]If
+additional data products are available, such as DIA* outputs or
+Source/ForcedSource, testing those should be represented by an
+additional stretch-goal test case.
+
+
+\subsubsection{Predecessors}
+
+\subsubsection{Environment Needs}
+
+\paragraph{Software}
+Testing will largely be performed using a web browser to access the
+Notebook Aspect.
+
+\paragraph{Hardware}
+
+\subsubsection{Input Specification}
+Execution of a DRP-style processing of a TBD-sized collection of HSC
+data, up to the full HSC PDR2 dataset. ~Deployment of this dataset in
+databases accessible to an LSP instance, to a TAP service in that
+instance, to an image cutout (SODA) service, and in a Gen3 Butler
+repository accessible from a notebook.
 
 \subsubsection{Output Specification}
 
